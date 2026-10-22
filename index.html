@@ -631,6 +631,17 @@ body{background-color:#cdbdad!important;background-image:
 .copy{color:var(--accent)!important;border-bottom-color:var(--accent)!important}
 .clist a{border-bottom-color:var(--accent)!important}
 
+
+.legal{flex-basis:100%;display:flex;flex-wrap:wrap;gap:8px 22px;padding-top:16px;border-top:1px solid var(--line);font-size:13.5px}
+.legal span{margin-right:auto}
+.legal a{color:var(--muted)!important}
+.stat a{color:var(--accent)}
+.cookie{position:fixed;left:max(16px,env(safe-area-inset-left,0px));right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:80;max-width:720px;margin:0 auto;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 18px;display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;box-shadow:0 20px 40px -20px rgba(40,25,10,.45);font-size:14px}
+.cookie p{margin:0;flex:1 1 320px}
+.cookie div{display:flex;gap:8px}
+.cookie button{font:600 13px var(--f-b);padding:10px 14px;border-radius:99px;border:1px solid var(--accent);background:transparent;color:var(--ink);cursor:pointer}
+.cookie button[data-ck="all"]{background:var(--accent);color:var(--accent-ink)}
+@media (max-width:760px){.cookie{bottom:calc(84px + env(safe-area-inset-bottom,0px))}}
 </style>
 
 <script>document.documentElement.classList.add('js')</script>
@@ -901,6 +912,7 @@ body{background-color:#cdbdad!important;background-image:
       <label class="fld">Кому<input id="certToIn" type="text" maxlength="28" placeholder="Например, Анне"></label>
       <label class="fld">От кого<input id="certFromIn" type="text" maxlength="28" placeholder="Например, от Сергея"></label>
       <div class="btns"><a class="btn" id="certGo" href="https://vk.me/nata_shuga_sml" target="_blank" rel="noopener">Заказать во ВК</a></div>
+      <p class="stat" style="font-size:12.5px">Оформляя заказ, вы соглашаетесь с <a href="offer.html">публичной офертой</a> и <a href="policy.html">политикой конфиденциальности</a>.</p>
       <p class="stat" id="certStat" role="status">Нажмите, и текст заказа скопируется. Вставьте его в открывшийся чат.</p>
     </div>
   </div>
@@ -927,6 +939,7 @@ body{background-color:#cdbdad!important;background-image:
       <a class="btn" id="calcGo" href="https://vk.me/nata_shuga_sml" target="_blank" rel="noopener" style="justify-content:center">Отправить во ВК</a>
       <p class="stat" id="calcStat" role="status">Текст скопируется, а чат откроется сразу. Останется вставить и отправить.</p>
       <p class="stat" style="font-size:13px">Сумма по прайсу, итог подтверждает мастер.</p>
+      <p class="stat" style="font-size:12.5px">Отправляя сообщение, вы соглашаетесь с <a href="policy.html">политикой конфиденциальности</a> и даёте <a href="consent.html">согласие на обработку данных</a>.</p>
     </aside>
   </div>
 </section>
@@ -972,9 +985,12 @@ body{background-color:#cdbdad!important;background-image:
 <footer>
   <div><b style="font:500 20px var(--f-d)">Студия эстетики лица и тела Натальи Марусиной</b><div style="margin-top:8px">Смоленск, ул. Тухачевского, 5</div></div>
   <div>+7 (903) 892-74-78 · ежедневно 9:00–21:00<br><a href="https://vk.ru/nata_shuga_sml" target="_blank" rel="noopener">ВКонтакте</a></div>
+  <div class="legal"><span>© 2026 Студия эстетики лица и тела Натальи Марусиной</span><a href="policy.html">Политика конфиденциальности</a><a href="offer.html">Публичная оферта</a><a href="consent.html">Согласие на обработку данных</a></div>
 </footer>
 </main>
 
+<div class="cookie" id="cookie" hidden><p>Мы используем файлы cookie, чтобы сайт и карта работали корректно. Оставаясь на сайте, вы соглашаетесь с обработкой данных согласно <a href="policy.html">Политике конфиденциальности</a>.</p><div><button type="button" data-ck="min">Только необходимые</button><button type="button" data-ck="all">Принять все</button></div></div>
+<script>(function(){try{var c=document.getElementById('cookie'),k='marusyaCookie',v=null;try{v=localStorage.getItem(k)}catch(e){}if(!v)c.hidden=false;c.addEventListener('click',function(e){var b=e.target.closest('[data-ck]');if(!b)return;try{localStorage.setItem(k,b.getAttribute('data-ck'))}catch(x){}c.hidden=true})}catch(e){}})();</script>
 <nav class="dock" aria-label="Быстрая связь"><a href="#zapis">Записаться</a><a href="https://vk.me/nata_shuga_sml" target="_blank" rel="noopener">ВК</a><a href="tel:+79038927478">Звонок</a></nav>
 
 <script>
