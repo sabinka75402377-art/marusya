@@ -311,10 +311,12 @@ body{background:radial-gradient(120% 80% at 20% 10%,#d9c4a3,transparent 60%),rad
 #silk{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;display:block}
 #fx{position:fixed;inset:0;width:100%;height:100%;z-index:90;pointer-events:none}
 .top,main,footer,.dock{position:relative;z-index:2}
-.top{position:sticky}
+.top{position:sticky;z-index:50}
+.dock{z-index:60}
 .dock{position:fixed}
 .top{background:rgba(232,216,190,.72);border-bottom-color:rgba(140,100,40,.35)}
 .top nav a{color:#4a3824}
+@media (max-width:900px){.top nav{background:#eadcc4;box-shadow:0 24px 40px -24px rgba(60,35,10,.55)}}
 html:not(.js) #home{display:block}
 /* золотые заголовки */
 @supports ((-webkit-background-clip:text) or (background-clip:text)){
@@ -908,6 +910,7 @@ footer{color:#4a3824}
     top.classList.remove('open');mb.setAttribute('aria-expanded','false');window.scrollTo(0,0)}
   addEventListener('hashchange',show);show();
   mb.addEventListener('click',function(){var o=top.classList.toggle('open');mb.setAttribute('aria-expanded',String(o))});
+  document.addEventListener('click',function(e){if(top.classList.contains('open')&&!top.contains(e.target)){top.classList.remove('open');mb.setAttribute('aria-expanded','false')}});
 
   var addr='Смоленск, ул. Тухачевского, 5',ym='https://yandex.ru/maps/?text='+encodeURIComponent(addr);
   ['mapLink','revLink'].forEach(function(id){var a=document.getElementById(id);if(a)a.href=ym});
