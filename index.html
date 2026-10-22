@@ -15,9 +15,9 @@
 <style>
 /* Layout: люкс на шёлке. Тёмный бежевый шёлк течёт на фоне, золото в заголовках и кнопках, искры за курсором. Слоновая кость и графит, латунь только в линиях и цифрах. Один вау-момент: шёлковый занавес при входе. */
 :root{
-  --bg:#bfa684; --paper:rgba(253,247,237,.58); --paper-solid:#f3e8d6; --ink:#21170d; --muted:#43331f; --line:rgba(98,70,34,.26); --brass:#8a611d; --brass-2:#e6c67e;
+  --bg:#bfa684; --paper:rgba(253,247,237,.58); --paper-solid:#f3e8d6; --ink:#160e06; --muted:#2f2314; --line:rgba(98,70,34,.26); --brass:#8a611d; --brass-2:#e6c67e;
   --inv-bg:#1d140b; --inv-ink:#f4e8d4; --inv-muted:#c9b495;
-  --gold-grad:linear-gradient(100deg,#4e3109 0%,#8a6018 20%,#d9b05a 34%,#8f651b 48%,#4e3109 66%,#8a6018 84%,#d4aa55 100%);
+  --gold-grad:linear-gradient(100deg,#3a2306 0%,#6e4a10 20%,#c2953e 34%,#734e12 48%,#3a2306 66%,#6e4a10 84%,#bd8f3a 100%);
   --btn-grad:linear-gradient(100deg,#d9b46a,#f4dc9c 30%,#c99a45 62%,#efd290);
   color-scheme:light;
   --f-d:'Cormorant Garamond',Georgia,'Times New Roman',serif; --f-b:'Onest',system-ui,-apple-system,sans-serif;
@@ -71,6 +71,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 /* страницы */
 .page{display:none}
 .page.on{display:block}
+.page{scroll-margin-top:96px}
 section{padding-block:clamp(64px,10vw,128px)}
 section+section{border-top:1px solid var(--line)}
 
@@ -331,7 +332,7 @@ h1,h2{filter:drop-shadow(0 1px 0 rgba(255,246,226,.55)) drop-shadow(0 0 18px rgb
 .card .ca{background:linear-gradient(100deg,#c9993a,#f8e2a4 35%,#d6a84c 55%,#f5dc95);background-size:260% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
 h2::after{content:"";display:block;width:84px;height:2px;margin-top:18px;background:var(--gold-grad)}
 .band h2::after{background:linear-gradient(90deg,#c9993a,#f5dc95,#c9993a)}
-.k{color:#7a5214}
+.k{color:#5e3d0c}
 /* золотые кнопки */
 .btn{position:relative;overflow:hidden;background:var(--btn-grad);color:#2a1c0a;border:1px solid #a87b2e;border-radius:99px;font-weight:600;box-shadow:0 10px 24px -12px rgba(120,80,20,.75),inset 0 1px 0 rgba(255,255,255,.6);transition:transform .3s,box-shadow .3s}
 .btn::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.75) 50%,transparent 65%);transform:translateX(-130%);pointer-events:none}
@@ -427,6 +428,13 @@ h2::after{content:"";display:block;width:84px;height:2px;margin-top:18px;backgro
 /* капля света */
 .btn .drop{position:absolute;width:12px;height:12px;border-radius:50%;pointer-events:none;transform:translate(-50%,-50%) scale(0);background:radial-gradient(circle,rgba(255,250,225,.95),rgba(255,215,130,.55) 45%,transparent 70%);animation:drop .8s cubic-bezier(.2,.7,.2,1) forwards}
 @keyframes drop{to{transform:translate(-50%,-50%) scale(26);opacity:0}}
+
+/* кнопка «На главную» */
+.backhome{display:inline-flex;align-items:center;gap:10px;margin:22px 0 0;padding:10px 18px 10px 14px;border:1px solid #a87b2e;border-radius:99px;background:rgba(253,247,237,.55);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:var(--ink);text-decoration:none;font:600 12px var(--f-b);letter-spacing:.14em;text-transform:uppercase;transition:transform .3s,box-shadow .3s}
+.backhome span{display:inline-block;transition:transform .35s}
+.backhome:hover{transform:translateY(-2px);box-shadow:0 12px 24px -14px rgba(120,80,20,.8)}
+.backhome:hover span{transform:translateX(-4px)}
+.page>.backhome+.phead{padding-top:clamp(24px,4vw,48px)}
 /* бегущая строка */
 .ribbon{overflow:hidden;border-block:1px solid rgba(150,105,40,.45);padding-block:14px;margin-top:-28px;margin-bottom:8px;-webkit-mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
 .rb{display:flex;width:max-content;gap:28px;font:400 19px var(--f-d);letter-spacing:.22em;text-transform:uppercase;color:#6e4a14;white-space:nowrap}
@@ -460,6 +468,7 @@ footer{color:#4a3824}
   <div class="w">
     <a class="logo" href="#home" aria-label="Маруся, на главную">Маруся</a>
     <nav id="nav" aria-label="Разделы">
+      <a href="#home" data-g="home">Главная</a>
       <a href="#uslugi" data-g="uslugi">Услуги и цены</a>
       <a href="#mastera" data-g="mastera">Мастера</a>
       <a href="#o-studii" data-g="o-studii">О студии</a>
@@ -907,7 +916,8 @@ footer{color:#4a3824}
   function show(){var h=(location.hash||'').slice(1);h=alias[h]||h;if(ids.indexOf(h)<0)h='home';
     ids.forEach(function(i){document.getElementById(i).classList.toggle('on',i===h)});
     var g=grp[h]||h;document.querySelectorAll('#nav a').forEach(function(a){if(a.getAttribute('data-g')===g)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
-    top.classList.remove('open');mb.setAttribute('aria-expanded','false');window.scrollTo(0,0)}
+    top.classList.remove('open');mb.setAttribute('aria-expanded','false');window.scrollTo(0,0);setTimeout(function(){window.scrollTo(0,0)},0);requestAnimationFrame(function(){window.scrollTo(0,0)})}
+  try{history.scrollRestoration='manual'}catch(e){}
   addEventListener('hashchange',show);show();
   mb.addEventListener('click',function(){var o=top.classList.toggle('open');mb.setAttribute('aria-expanded',String(o))});
   document.addEventListener('click',function(e){if(top.classList.contains('open')&&!top.contains(e.target)){top.classList.remove('open');mb.setAttribute('aria-expanded','false')}});
@@ -1122,6 +1132,19 @@ footer{color:#4a3824}
   document.addEventListener('pointerdown',function(e){var b=e.target.closest&&e.target.closest('.btn,.chips button,.dock a');if(!b||calm)return;
     var r=b.getBoundingClientRect(),d=document.createElement('span');d.className='drop';d.style.left=(e.clientX-r.left)+'px';d.style.top=(e.clientY-r.top)+'px';
     if(getComputedStyle(b).position==='static')b.style.position='relative';b.style.overflow='hidden';b.appendChild(d);setTimeout(function(){d.remove()},850)},{passive:true});
+}catch(e){console.error(e)}})();
+
+
+/* ===== кнопка «На главную» ===== */
+(function(){try{
+  var sub={shugaring:1,epilyaciya:1,litso:1,massazh:1};
+  document.querySelectorAll('.page').forEach(function(pg){if(pg.id==='home')return;
+    var a=document.createElement('a');a.className='backhome';
+    if(sub[pg.id]){a.href='#uslugi';a.innerHTML='<span>←</span> Все услуги';
+      var h=document.createElement('a');h.className='backhome';h.href='#home';h.style.marginLeft='10px';h.innerHTML='<span>⌂</span> Главная';
+      pg.insertBefore(h,pg.firstChild)}
+    else{a.href='#home';a.innerHTML='<span>←</span> На главную'}
+    pg.insertBefore(a,pg.firstChild)});
 }catch(e){console.error(e)}})();
 
 /* ===== шёлковый занавес ===== */
