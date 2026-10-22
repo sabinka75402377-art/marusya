@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="ru"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Студия «Маруся» — шугаринг, эпиляция, уход за лицом и массаж в Смоленске</title>
-<meta name="description" content="Студия эстетики лица и тела Натальи Марусиной, чемпионки по депиляции и судьи чемпионатов. Шугаринг, аппаратная эпиляция, Кобидо, уход за лицом, массаж. Смоленск, ул. Тухачевского, 5. Ежедневно 9:00–21:00.">
-<meta property="og:title" content="Студия «Маруся», Смоленск">
+<title>Студия эстетики и тела Натальи Марусиной — шугаринг, эпиляция, уход за лицом, массаж в Смоленске</title>
+<meta name="description" content="Студия эстетики и тела Натальи Марусиной, чемпионки по депиляции и судьи чемпионатов. Шугаринг, аппаратная эпиляция, Кобидо, уход за лицом, массаж. Смоленск, ул. Тухачевского, 5. Ежедневно 9:00–21:00.">
+<meta property="og:title" content="Студия эстетики и тела Натальи Марусиной, Смоленск">
 <meta property="og:description" content="Гладкость по стандарту чемпионки. Шугаринг, эпиляция, уход за лицом, массаж.">
 <meta property="og:image" content="img/hero.jpg">
 <meta property="og:type" content="website">
@@ -435,6 +435,92 @@ h2::after{content:"";display:block;width:84px;height:2px;margin-top:18px;backgro
 .backhome:hover{transform:translateY(-2px);box-shadow:0 12px 24px -14px rgba(120,80,20,.8)}
 .backhome:hover span{transform:translateX(-4px)}
 .page>.backhome+.phead{padding-top:clamp(24px,4vw,48px)}
+
+/* ===== лендинг по образцу ===== */
+main>section,main>.band>section{scroll-margin-top:84px}
+section[id]{scroll-margin-top:84px}
+.hero{padding-block:clamp(28px,5vw,64px) clamp(36px,6vw,72px)}
+.hl-list{list-style:none;padding:0;margin:0 0 30px;display:grid;gap:10px;max-width:52ch}
+.hl-list li{position:relative;padding-left:26px;font-size:16.5px;color:var(--ink)}
+.hl-list li::before{content:"✦";position:absolute;left:0;top:1px;color:#a87b2e}
+.trust{margin:22px 0 0;font-size:13.5px;letter-spacing:.04em;color:var(--muted)}
+.topchips{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:22px 0 8px}
+.topchips .tc-k{font:600 11.5px var(--f-b);letter-spacing:.2em;text-transform:uppercase;color:#5e3d0c;margin-right:6px}
+.topchips a{display:inline-flex;gap:10px;align-items:center;padding:10px 16px;border-radius:99px;border:1px solid rgba(140,100,40,.45);background:var(--paper);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);text-decoration:none;color:var(--ink);font-size:14px;transition:transform .3s,box-shadow .3s}
+.topchips a b{color:#6e4a10;font-weight:700;white-space:nowrap}
+.topchips a:hover{transform:translateY(-2px);box-shadow:0 12px 22px -14px rgba(120,80,20,.8)}
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:36px clamp(28px,5vw,72px);align-items:center}
+@media (max-width:860px){.about{grid-template-columns:1fr}}
+.about figure{margin:0}
+.fcards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:6px}
+.fcards div{display:flex;gap:12px;align-items:center;padding:16px;background:var(--paper);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid rgba(140,100,40,.35);border-radius:14px;font-weight:600;font-size:14.5px;box-shadow:0 20px 34px -28px rgba(60,35,10,.7)}
+.fcards i{font-style:normal;font-size:20px}
+@media (max-width:480px){.fcards{grid-template-columns:1fr}}
+.scar,.rcar{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 2px 18px;margin-top:30px;scrollbar-width:none}
+.scar::-webkit-scrollbar,.rcar::-webkit-scrollbar{display:none}
+.scar figure{flex:0 0 auto;height:clamp(260px,34vw,420px);margin:0;scroll-snap-align:start;position:relative}
+.scar img{display:block;height:100%;width:auto;max-width:none;border-radius:14px;outline:1px solid rgba(214,170,90,.7);outline-offset:-8px;box-shadow:0 30px 50px -34px rgba(50,28,8,.8)}
+.scar figcaption{position:absolute;left:12px;bottom:12px;padding:6px 12px;border-radius:99px;background:rgba(253,247,237,.85);font-size:12.5px;font-weight:600}
+.cnav{display:flex;justify-content:center;gap:10px;margin-top:8px}
+.cnav button{width:46px;height:46px;border-radius:50%;border:1px solid #a87b2e;background:var(--paper);color:var(--ink);font-size:22px;line-height:1;cursor:pointer;transition:transform .3s}
+.cnav button:hover{transform:translateY(-2px)}
+.pains{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:30px}
+.pains div{padding:22px 22px 22px 54px;position:relative;background:var(--paper);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid rgba(140,100,40,.35);border-radius:16px;font-size:16px;box-shadow:0 20px 34px -28px rgba(60,35,10,.7)}
+.pains div::before{content:"?";position:absolute;left:18px;top:20px;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:var(--btn-grad);color:#2a1c0a;font-weight:700;font-size:13px}
+.pains-out{margin-top:22px;font:400 24px/1.35 var(--f-d);color:var(--ink)}
+@media (max-width:700px){.pains{grid-template-columns:1fr}}
+.steps3{list-style:none;counter-reset:s;padding:0;margin:34px 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.steps3 li{counter-increment:s;padding:26px 22px;background:var(--paper);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid rgba(140,100,40,.35);border-radius:16px;display:grid;gap:8px;box-shadow:0 20px 34px -28px rgba(60,35,10,.7)}
+.steps3 li::before{content:counter(s);width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--btn-grad);color:#2a1c0a;font:600 20px var(--f-d)}
+.steps3 b{font:400 25px var(--f-d)}
+.steps3 span{color:var(--muted);font-size:15px}
+@media (max-width:760px){.steps3{grid-template-columns:1fr}}
+.start2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:30px;align-items:start}
+@media (max-width:760px){.start2{grid-template-columns:1fr}}
+.sc{padding:28px;border-radius:18px;background:var(--paper);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid rgba(140,100,40,.35);box-shadow:0 26px 40px -30px rgba(60,35,10,.7)}
+.sc.hi{background:linear-gradient(160deg,#2a1d0f,#17100a);color:var(--inv-ink);border-color:rgba(201,153,58,.6)}
+.sc .tag{display:inline-block;padding:5px 12px;border-radius:99px;background:var(--btn-grad);color:#2a1c0a;font:700 11px var(--f-b);letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
+.sc h3{font-size:28px;margin-bottom:10px}
+.sc ul{padding-left:18px;margin:10px 0 20px;display:grid;gap:8px;font-size:15px}
+.sc.hi ul{color:var(--inv-muted)}
+.sc details summary{cursor:pointer;font-weight:600;color:#6e4a10}
+.big-price{font:300 46px/1 var(--f-d);margin:6px 0 4px;color:#f2d488}
+.ptabs{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 18px}
+.ptabs button{padding:10px 18px;border-radius:99px;border:1px solid rgba(201,153,58,.6);background:transparent;color:var(--inv-ink);font:600 13.5px var(--f-b);cursor:pointer}
+.ptabs button[aria-selected="true"]{background:var(--btn-grad);color:#2a1c0a;border-color:#c9993a}
+.band .price{background:rgba(255,240,210,.05);border-radius:14px;overflow:hidden;margin-bottom:12px}
+.band .price td{border-bottom-color:rgba(201,153,58,.2);padding:14px 16px;color:var(--inv-ink)}
+.band .price td.p{color:#f2d488}
+.band .price td.n small{color:var(--inv-muted)}
+.more-p{margin-top:8px}
+.more-p summary{cursor:pointer;color:#e6c67e;font-weight:600;padding:10px 0}
+.band .note{color:var(--inv-muted)}
+.rhead{text-align:center}
+.rhead .lead{margin-inline:auto}
+.rhead h2::after{margin-inline:auto}
+.rcar .rc{flex:0 0 clamp(260px,30vw,340px);margin:0;scroll-snap-align:start;padding:26px 24px;border-radius:18px;background:var(--paper);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid rgba(140,100,40,.35);box-shadow:0 26px 40px -30px rgba(60,35,10,.7);display:flex;flex-direction:column;gap:14px}
+.rcar blockquote{margin:0;font:400 20px/1.4 var(--f-d)}
+.rcar blockquote::before{content:"«";color:#a87b2e}.rcar blockquote::after{content:"»";color:#a87b2e}
+.rcar figcaption{margin-top:auto;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.train{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:36px clamp(28px,5vw,64px);align-items:center}
+@media (max-width:860px){.train{grid-template-columns:1fr}}
+.train h2{font-size:clamp(30px,4vw,48px)}
+.tlist{list-style:none;margin:0;padding:10px 22px;border-radius:18px;border:1px solid rgba(201,153,58,.45);background:rgba(255,240,210,.05)}
+.tlist li{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid rgba(201,153,58,.2);color:var(--inv-ink);font-size:15px}
+.tlist li:last-child{border-bottom:0}
+.tlist b{color:#f2d488;font-weight:600;white-space:nowrap;text-align:right}
+.contact2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:30px clamp(28px,5vw,64px);align-items:center}
+@media (max-width:860px){.contact2{grid-template-columns:1fr}}
+.clist{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:12px;font-size:16px}
+.clist li{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.clist i{font-style:normal}
+.clist a{color:var(--ink);text-decoration:none;border-bottom:1px solid #a87b2e}
+.map{border-radius:18px;overflow:hidden;border:1px solid rgba(140,100,40,.45);box-shadow:0 30px 50px -34px rgba(50,28,8,.8);aspect-ratio:4/3;background:var(--paper)}
+.map iframe{display:block;width:100%;height:100%;border:0}
+.final{text-align:center}
+.final h2::after{margin-inline:auto}
+.final .lead{margin-inline:auto}
+.band .final h2{font-size:clamp(32px,4.4vw,56px)}
 /* бегущая строка */
 .ribbon{overflow:hidden;border-block:1px solid rgba(150,105,40,.45);padding-block:14px;margin-top:-28px;margin-bottom:8px;-webkit-mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
 .rb{display:flex;width:max-content;gap:28px;font:400 19px var(--f-d);letter-spacing:.22em;text-transform:uppercase;color:#6e4a14;white-space:nowrap}
@@ -456,24 +542,100 @@ footer{color:#4a3824}
 .dir .pr small{color:#4a3824}
 .revs figure{padding-left:20px!important;padding-right:20px}
 @media (prefers-reduced-motion:reduce){.sky,.twinkles,#fx{display:none}}
+
+/* ===== МАТОВАЯ БЕЖЕВАЯ ТЕМА (без золота, шёлка и анимаций) ===== */
+:root{--bg:#e9dfd1;--paper:#f4ede3;--ink:#2b2119;--muted:#5d4e40;--line:#d3c4b2;--accent:#7a5c45;--accent-ink:#f7f1e9;--dark:#3a2d23;--dark-ink:#f3eadf;--dark-muted:#cdbfae}
+*,*::before,*::after{animation:none!important;transition:none!important}
+html{scroll-behavior:smooth}
+body{background:var(--bg)!important;background-image:none!important;color:var(--ink)}
+h1,h2,h3,.logo,.packs .pr,.facts b,.course em,.tot b,.card .ca,.dir .pr,h1 em,h2 em{background:none!important;-webkit-text-fill-color:currentColor!important;color:var(--ink)!important;filter:none!important}
+h1 em,h2 em{color:var(--accent)!important;font-style:italic}
+h2::after{background:var(--accent)!important;height:1px;width:64px}
+.k{color:var(--accent)!important}
+.lead,.muted,.note,.trust,.steps3 span,.rcar figcaption{color:var(--muted)!important}
+.top{background:var(--bg)!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;border-bottom:1px solid var(--line)!important}
+@media (max-width:900px){.top nav{background:var(--paper)!important}}
+.top nav a{color:var(--muted)!important}
+.top nav a:hover,.top nav a[aria-current="page"]{color:var(--ink)!important;border-color:var(--accent)!important}
+.logo{display:flex;flex-direction:column;line-height:1.1;letter-spacing:.04em!important;text-transform:none!important;padding-left:0!important;text-decoration:none}
+.logo span{font:500 11px var(--f-b);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.logo b{font:500 21px var(--f-d);color:var(--ink)}
+.btn,.btn:hover,.band .btn,.dock a:first-child{background:var(--accent)!important;color:var(--accent-ink)!important;border:1px solid var(--accent)!important;box-shadow:none!important;transform:none!important}
+.btn::before,.btn::after{display:none!important}
+.btn.ghost,.btn.ghost:hover{background:transparent!important;color:var(--ink)!important;border-color:var(--ink)!important}
+.band .btn.ghost{color:var(--dark-ink)!important;border-color:var(--dark-ink)!important}
+.band{background:var(--dark)!important;border:0!important;color:var(--dark-ink)}
+.band h2,.band h3{color:var(--dark-ink)!important}
+.band h2::after{background:var(--dark-muted)!important}
+.band .k{color:var(--dark-muted)!important}
+.band .lead,.band .note{color:var(--dark-muted)!important}
+.ptabs button{border-color:var(--dark-muted)!important;color:var(--dark-ink)!important}
+.ptabs button[aria-selected="true"]{background:var(--dark-ink)!important;color:var(--dark)!important;border-color:var(--dark-ink)!important}
+.band .price{background:rgba(255,255,255,.04)!important}
+.band .price td{color:var(--dark-ink)!important;border-bottom-color:rgba(255,255,255,.12)!important}
+.band .price td.p{color:var(--dark-ink)!important;font-weight:600}
+.band .price td.n small{color:var(--dark-muted)!important}
+.more-p summary{color:var(--dark-ink)!important;text-decoration:underline}
+.tlist{border-color:rgba(255,255,255,.18)!important;background:rgba(255,255,255,.04)!important}
+.tlist li{border-bottom-color:rgba(255,255,255,.12)!important;color:var(--dark-ink)!important}
+.tlist b{color:var(--dark-muted)!important}
+.topchips a,.fcards div,.pains div,.steps3 li,.sc,.rcar .rc,.pick,.packs>div,.course>div,.sum,.fld input,.fld select,.fld textarea,.chips button,.mcard li,.cnav button,.qa details,.map{background:var(--paper)!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;box-shadow:none!important;border-color:var(--line)!important;outline:0!important}
+.topchips a b{color:var(--accent)!important}
+.topchips .tc-k{color:var(--accent)!important}
+.pains div::before,.steps3 li::before,.sc .tag{background:var(--accent)!important;color:var(--accent-ink)!important}
+.sc.hi{background:var(--dark)!important;color:var(--dark-ink)!important}
+.sc.hi h3{color:var(--dark-ink)!important}
+.sc.hi ul{color:var(--dark-muted)!important}
+.big-price{color:var(--dark-ink)!important}
+.sc details summary{color:var(--accent)!important}
+.chips button[aria-pressed="true"]{background:var(--accent)!important;color:var(--accent-ink)!important;border-color:var(--accent)!important}
+.hero figure,.photo,.scar img,.founder figure,.std figure img,.gal figure{outline:0!important;box-shadow:none!important;border-radius:6px}
+.hero figure img{animation:none!important;transform:none!important}
+.hero figure figcaption{background:linear-gradient(transparent,rgba(30,22,15,.5))}
+.scar figcaption{background:var(--paper)!important}
+.rcar blockquote::before,.rcar blockquote::after{color:var(--accent)!important}
+.card{background:var(--dark)!important}
+.card::before{border-color:rgba(255,255,255,.25)!important}
+.card .cl,.card .cf{color:var(--dark-muted)!important}
+.card .ca,.card .cf b{color:var(--dark-ink)!important}
+.price td.p{color:var(--ink)!important}
+.pt h3,.calc fieldset{border-color:var(--ink)!important}
+.opt input:checked+.ck{background:var(--accent)!important;border-color:var(--accent)!important}
+.mcard{transform:none!important;animation:none!important}
+.mcard .glare{display:none}
+.team.chosen .mcard{opacity:.5;filter:none}
+.mcard.sel{outline:2px solid var(--accent);outline-offset:8px;border-radius:4px}
+.mcard h3.sr{position:static!important;width:auto!important;height:auto!important;clip:auto!important;white-space:normal!important;font-size:28px}
+.mcard{padding:22px;background:var(--paper);border:1px solid var(--line);border-radius:14px}
+.dock{background:var(--bg)!important;border-top-color:var(--line)!important}
+.dock a{border-color:var(--line)!important;color:var(--ink)}
+::selection{background:#d8c7b2}
+footer{color:var(--muted)!important}
+.band{margin-inline:0!important;padding-inline:0!important;box-shadow:0 0 0 100vmax var(--dark)!important;clip-path:inset(0 -100vmax)}
+.link{border-bottom-color:var(--accent)!important;color:var(--ink)!important}
+.mcard .role{color:var(--accent)!important}
+.qa summary::after{border-color:var(--accent)!important}
+.qa details[open] summary::after{background:none!important}
+.hl-list li::before{color:var(--accent)!important}
+.mcard .other{color:var(--muted)!important}
+.copy{color:var(--accent)!important;border-bottom-color:var(--accent)!important}
+.clist a{border-bottom-color:var(--accent)!important}
+
 </style>
 
 <script>document.documentElement.classList.add('js')</script>
-<canvas id="silk" aria-hidden="true"></canvas>
-<div class="orch" aria-hidden="true"><img class="o1" src="img/orchid.svg" alt=""><img class="o2" src="img/orchid.svg" alt=""></div>
-<div class="sky" aria-hidden="true"></div>
-<div id="veil" aria-hidden="true" hidden><canvas></canvas><div class="mark"><b>Маруся</b><span>Студия эстетики лица и тела</span></div></div>
 
 <header class="top" id="top">
   <div class="w">
-    <a class="logo" href="#home" aria-label="Маруся, на главную">Маруся</a>
+    <a class="logo" href="#home" aria-label="На главную"><span>Студия эстетики и тела</span><b>Натальи Марусиной</b></a>
     <nav id="nav" aria-label="Разделы">
-      <a href="#home" data-g="home">Главная</a>
-      <a href="#uslugi" data-g="uslugi">Услуги и цены</a>
-      <a href="#mastera" data-g="mastera">Мастера</a>
-      <a href="#o-studii" data-g="o-studii">О студии</a>
-      <a href="#podarit" data-g="podarit">Подарить</a>
-      <a href="#zapis" data-g="zapis">Контакты</a>
+      <a href="#o-mastere">О мастере</a>
+      <a href="#uslugi">Услуги</a>
+      <a href="#otzyvy">Отзывы</a>
+      <a href="#mastera">Мастера</a>
+      <a href="#obuchenie">Обучение</a>
+      <a href="#voprosy">Вопросы</a>
+      <a href="#kontakty">Контакты</a>
     </nav>
     <a class="btn" href="#zapis">Записаться</a>
     <button class="menubtn" id="menubtn" type="button" aria-expanded="false" aria-controls="nav">Меню</button>
@@ -482,250 +644,173 @@ footer{color:#4a3824}
 
 <main class="w">
 
-<!-- ГЛАВНАЯ -->
-<div class="page" id="home">
-  <div class="hero">
-    <div class="txt">
-      <p class="k">Студия эстетики лица и тела · Смоленск</p>
-      <h1>Гладкость по&nbsp;стандарту <em>чемпионки</em></h1>
-      <p class="lead">Студию основала Наталья Марусина, чемпионка по депиляции и судья профильных чемпионатов. Шугаринг, эпиляция, уход за лицом и массаж.</p>
-      <div class="btns"><a class="btn" href="#zapis">Записаться</a><a class="btn ghost" href="#uslugi">Услуги и цены</a></div>
-    </div>
-    <figure><img src="img/hero-m.jpg" width="900" height="1097" alt="Наталья Марусина, основательница студии «Маруся»"><div class="sheen"></div><div class="twinkles" aria-hidden="true"></div><figcaption>Наталья Марусина, основательница</figcaption></figure>
+<!-- ПЕРВЫЙ ЭКРАН -->
+<section class="hero" id="home">
+  <div class="txt">
+    <p class="k">Студия эстетики и тела Натальи Марусиной · Смоленск</p>
+    <h1>Гладкость по&nbsp;стандарту <em>чемпионки</em></h1>
+    <ul class="hl-list">
+      <li>Я Наталья Марусина — чемпионка по депиляции и судья профильных чемпионатов</li>
+      <li>Удаляю нежелательные волосы бережно: шугаринг, воск и аппаратная эпиляция</li>
+      <li>Ухаживаю за кожей лица: японский массаж Кобидо, гидроуход, чистки</li>
+      <li>Делаю массаж тела и обучаю мастеров</li>
+    </ul>
+    <div class="btns"><a class="btn" href="#zapis">Записаться →</a><a class="btn ghost" href="#uslugi">Услуги и цены ↓</a></div>
+    <p class="trust">✦ В профессии с 2019 года · ✦ Чемпионка и судья · ✦ Ежедневно 9:00–21:00</p>
   </div>
-  <div class="ribbon" aria-hidden="true"><div class="rb"><span>Шугаринг</span><i>✦</i><span>Аппаратная эпиляция</span><i>✦</i><span>Уход за лицом</span><i>✦</i><span>Кобидо</span><i>✦</i><span>Массаж</span><i>✦</i><span>Обучение мастеров</span><i>✦</i><span>Шугаринг</span><i>✦</i><span>Аппаратная эпиляция</span><i>✦</i><span>Уход за лицом</span><i>✦</i><span>Кобидо</span><i>✦</i><span>Массаж</span><i>✦</i><span>Обучение мастеров</span><i>✦</i></div></div>
-  <div class="facts">
-    <div><b>2019</b><span>Наталья в профессии с октября 2019 года</span></div>
-    <div><b>Судья</b><span>профильных чемпионатов по депиляции</span></div>
-    <div><b>Педагог</b><span>сертифицированный преподаватель-технолог</span></div>
-    <div><b>9–21</b><span>ежедневно, по предварительной записи</span></div>
-  </div>
-
-  <section>
-    <div class="std">
-      <figure><img src="img/trophies.jpg" width="1086" height="1448" alt="Полка с кубками за победы на чемпионатах по депиляции"><figcaption>Кубки Натальи стоят прямо в кабинете</figcaption></figure>
-      <div>
-        <p class="k">Почему «Маруся»</p>
-        <h2>Стандарт <em>чемпионки</em></h2>
-        <p class="lead" style="margin-top:20px">На чемпионате каждое движение оценивает судья. Наталья сама судит чемпионаты и работает по тем же правилам каждый день.</p>
-        <ol>
-          <li><div><b>Мастера проверены лично</b><span>Каждый мастер команды прошёл проверку качества работы у Натальи и совершенствовал навыки под её руководством.</span></div></li>
-          <li><div><b>Сначала разговор, потом процедура</b><span>Мастер уточняет пожелания, оценивает состояние кожи и подбирает процедуру под ваш запрос.</span></div></li>
-          <li><div><b>Внимание к ощущениям</b><span>Скажите заранее, как вы переносите процедуры, и мастер сделает их комфортнее.</span></div></li>
-          <li><div><b>Профессиональные средства</b><span>Сертифицированные составы для подготовки, очищения и восстановления кожи. Подходят даже для чувствительной кожи.</span></div></li>
-          <li><div><b>Уход после визита</b><span>Объясним, как подготовиться и как ухаживать за кожей после процедуры, чтобы результат держался дольше.</span></div></li>
-        </ol>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <p class="k">Услуги</p>
-    <h2>Четыре направления</h2>
-    <div class="dirs">
-      <a class="dir" href="#shugaring"><h3>Шугаринг и ваксинг</h3><p>Природные составы, бережно к чувствительной коже. Женский и мужской прайс.</p><span class="pr"><small>комплексы</small>от 2 000 ₽</span></a>
-      <a class="dir" href="#epilyaciya"><h3>Аппаратная эпиляция</h3><p>Курс даёт стойкую гладкость и помогает при вросших волосах.</p><span class="pr"><small>комплексы</small>от 2 500 ₽</span></a>
-      <a class="dir" href="#litso"><h3>Уход за лицом</h3><p>Вакуумный гидроуход, японский массаж Кобидо, очищение и аппаратные уходы.</p><span class="pr"><small>уходы</small>от 3 000 ₽</span></a>
-      <a class="dir" href="#massazh"><h3>Массаж тела</h3><p>Классический, лимфодренажный, спортивный и антицеллюлитный.</p><span class="pr"><small>программы</small>от 2 500 ₽</span></a>
-    </div>
-  </section>
-
-  <section>
-    <p class="k">Комплексы</p>
-    <h2>Гладкость <em>целиком</em></h2>
-    <div class="tabs" role="tablist" aria-label="Метод">
-      <button type="button" role="tab" id="tb-sh" aria-selected="true" aria-controls="pk-sh">Шугаринг</button>
-      <button type="button" role="tab" id="tb-ep" aria-selected="false" aria-controls="pk-ep">Аппаратная эпиляция</button>
-    </div>
-    <div class="packs" id="pk-sh" role="tabpanel" aria-labelledby="tb-sh">
-      <div><span class="tag"></span><span class="nm">Light</span><span class="zn">Бикини глубокое, подмышки</span><span class="pr">2 000 ₽</span></div>
-      <div class="hi"><span class="tag">Оптимально</span><span class="nm">Standard</span><span class="zn">Бикини глубокое, подмышки, голени</span><span class="pr">3 000 ₽</span></div>
-      <div><span class="tag"></span><span class="nm">Medium</span><span class="zn">Бикини глубокое, подмышки, ноги полностью</span><span class="pr">4 000 ₽</span></div>
-      <div><span class="tag"></span><span class="nm">VIP</span><span class="zn">Бикини глубокое, подмышки, ноги и руки полностью</span><span class="pr">5 000 ₽</span></div>
-    </div>
-    <div class="packs" id="pk-ep" role="tabpanel" aria-labelledby="tb-ep" hidden>
-      <div><span class="tag"></span><span class="nm">S</span><span class="zn">Бикини глубокое, подмышки</span><span class="pr">2 500 ₽</span></div>
-      <div class="hi"><span class="tag">Оптимально</span><span class="nm">M</span><span class="zn">Бикини глубокое, подмышки, голени</span><span class="pr">3 800 ₽</span></div>
-      <div><span class="tag"></span><span class="nm">L</span><span class="zn">Бикини глубокое, подмышки, ноги полностью</span><span class="pr">5 000 ₽</span></div>
-      <div><span class="tag"></span><span class="nm">XL</span><span class="zn">Бикини глубокое, подмышки, ноги и руки полностью</span><span class="pr">7 000 ₽</span></div>
-    </div>
-    <p class="note">Повторять раз в 4 недели. Мастер запишет на следующий визит сразу после процедуры.</p>
-  </section>
-
-  <section>
-    <div class="founder">
-      <figure><img src="img/hero.jpg" width="1536" height="1024" alt="Наталья Марусина в студии"></figure>
-      <div>
-        <p class="k">Основательница</p>
-        <p class="quote">Мне хотелось создать пространство, где профессионализм мастеров сочетается с уютом, вниманием и доброжелательностью.</p>
-        <p class="sign">Наталья Марусина</p>
-        <p class="muted">Путь начался в 2019 году в Смоленске. Потом повышение квалификации в Москве, чемпионаты, победы, судейство. Сегодня в студии проходят семинары и мастер-классы для мастеров.</p>
-        <a class="link" href="#o-studii">История студии <span>→</span></a>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <p class="k">Отзывы</p>
-    <h2>Что говорят гостьи</h2>
-    <div class="revs">
-      <figure><blockquote>Наташенька, сегодня 6-й день после шугаринга, я в полном восторге! Всё как вы и говорили. А ведь мне есть с чем сравнить!</blockquote><figcaption>Гостья студии · Шугаринг</figcaption></figure>
-      <figure><blockquote>Раздражения не было, и совсем не больно. Теперь только к вам, спасибо большое!</blockquote><figcaption>Екатерина · Депиляция</figcaption></figure>
-      <figure><blockquote>Приятная уютная обстановка, которая сразу располагает. И очень важный момент — общение!</blockquote><figcaption>Гостья студии · Атмосфера</figcaption></figure>
-    </div>
-    <p style="margin-top:28px"><a class="link" id="revLink" href="https://yandex.ru/maps/" target="_blank" rel="noopener">Отзывы на Яндекс Картах <span>→</span></a></p>
-  </section>
-
-  <div class="band"><section class="w" style="border:0">
-    <p class="k">Для гостей</p>
-    <h2>Внимание, <em>а не скидки</em></h2>
-    <div class="offer">
-      <div><b>Первый визит</b><p>Консультация мастера и подбор домашнего ухода в подарок.</p></div>
-      <div><b>Курсы ухода</b><p>Кобидо и уходы за лицом курсом выгоднее, чем по одному визиту.</p></div>
-      <div><b>Подарочный сертификат</b><p>На сумму или на конкретный ритуал. Оформим красиво и быстро.</p></div>
-    </div>
-    <div class="btns" style="margin-top:44px"><a class="btn" href="#podarit">Подарить сертификат</a><a class="btn ghost" href="#litso">Курсы ухода</a></div>
-  </section></div>
-
-  <section>
-    <p class="k">Перед визитом</p>
-    <h2>Вопросы</h2>
-    <div class="qa">
-      <details><summary>Больно ли делать шугаринг и эпиляцию?</summary><p>Ощущения зависят от зоны и чувствительности кожи. Скажите мастеру заранее, как вы переносите процедуры: мастер подскажет, как сделать их комфортнее.</p></details>
-      <details><summary>Как подготовиться?</summary><p>Душ, чистое бельё, длина волос около 5 мм. Без кремов и масел, свободная хлопковая одежда. Первые 24 часа после процедуры без спорта, бани и солярия.</p></details>
-      <details><summary>Как часто повторять депиляцию?</summary><p>Обычно раз в 4 недели. Между процедурами не используйте бритву и жёсткие скрабы, ежедневно увлажняйте кожу.</p></details>
-      <details><summary>Принимаете ли вы мужчин?</summary><p>Да, есть мужской прайс на шугаринг. В аппаратной эпиляции для мужских процедур стоимость выше на 20%.</p></details>
-      <details><summary>Есть ли противопоказания?</summary><p>Мастер уточнит пожелания и состояние кожи перед процедурой. Если есть вопросы о здоровье, лучше заранее проконсультироваться с врачом.</p></details>
-    </div>
-  </section>
-
-  <section>
-    <div class="split" style="align-items:end">
-      <div><p class="k">Запись</p><h2>Ждём вас <em>в «Марусе»</em></h2></div>
-      <div><p class="lead">Смоленск, ул. Тухачевского, 5. Ежедневно с 9:00 до 21:00, по предварительной записи.</p><div class="btns"><a class="btn" href="#zapis">Записаться</a><a class="btn ghost" href="https://vk.me/nata_shuga_sml" target="_blank" rel="noopener">Написать во ВК</a></div></div>
-    </div>
-  </section>
+  <figure><img src="img/hero-m.jpg" width="900" height="1097" alt="Наталья Марусина"><figcaption>Наталья Марусина, основательница</figcaption></figure>
+</section>
+<!-- ТОП УСЛУГИ -->
+<div class="topchips">
+  <span class="tc-k">★ Популярные услуги</span>
+  <a href="#uslugi" data-tab="sh">Шугаринг Light: бикини + подмышки <b>2 000 ₽</b></a>
+  <a href="#uslugi" data-tab="ep">Эпиляция S: бикини + подмышки <b>2 500 ₽</b></a>
+  <a href="#uslugi" data-tab="li">Массаж лица Кобидо <b>2 000 ₽</b></a>
+  <a href="#uslugi" data-tab="li">Вакуумный гидроуход <b>4 500 ₽</b></a>
+  <a href="#uslugi" data-tab="ma">Классический массаж, 60 мин <b>2 500 ₽</b></a>
 </div>
 
-<!-- УСЛУГИ -->
-<div class="page" id="uslugi">
-  <div class="phead">
-    <p class="k">Прайс студии</p>
-    <h1>Услуги и цены</h1>
-    <p class="lead">Выберите направление, чтобы увидеть полный прайс. Итоговую стоимость подтверждает мастер.</p>
-  </div>
-  <div class="dirs" style="margin-top:0">
-    <a class="dir" href="#shugaring"><h3>Шугаринг и ваксинг</h3><p>Комплексы, женский и мужской прайс, рекомендации до и после.</p><span class="pr"><small>комплексы</small>от 2 000 ₽</span></a>
-    <a class="dir" href="#epilyaciya"><h3>Аппаратная эпиляция</h3><p>Комплексы S, M, L, XL и отдельные зоны.</p><span class="pr"><small>комплексы</small>от 2 500 ₽</span></a>
-    <a class="dir" href="#litso"><h3>Уход за лицом</h3><p>Гидроуход, Кобидо, очищение, аппаратные уходы, прессотерапия, курсы.</p><span class="pr"><small>уходы</small>от 3 000 ₽</span></a>
-    <a class="dir" href="#massazh"><h3>Массаж тела</h3><p>Классические и спортивные техники, антицеллюлитный, отдельные зоны.</p><span class="pr"><small>программы</small>от 2 500 ₽</span></a>
-  </div>
-  <section style="border:0"><div class="btns"><a class="btn" href="#zapis">Собрать запись</a></div></section>
-</div>
-
-<!-- ШУГАРИНГ -->
-<div class="page" id="shugaring">
-  <div class="phead">
-    <p class="k">Бережно к чувствительной коже</p>
-    <h1>Шугаринг и ваксинг</h1>
-    <div class="crumbs" data-sub="shugaring"></div>
-    <div class="three">
-      <div><b>Природные составы</b><p>Составы на основе натуральных ингредиентов, подходят даже для чувствительной кожи.</p></div>
-      <div><b>Профессиональный подход</b><p>Сертифицированные средства для подготовки, очищения и восстановления кожи.</p></div>
-      <div><b>Мягкость надолго</b><p>Тщательное удаление волос и мягкое очищение делают кожу бархатистой.</p></div>
+<!-- О МАСТЕРЕ -->
+<section id="o-mastere" class="about">
+  <figure><img class="photo" src="img/hero.jpg" width="1536" height="1024" alt="Наталья Марусина в студии"></figure>
+  <div>
+    <p class="k">О мастере</p>
+    <h2>Наталья Марусина</h2>
+    <p class="lead">Косметик-эстетист, мастер депиляции и массажист. Путь начался в 2019 году в Смоленске, потом повышение квалификации в Москве, чемпионаты, победы и судейство. Основала свою студию в Смоленске и обучаю мастеров.</p>
+    <div class="fcards">
+      <div><i>🏆</i>Чемпионка по депиляции</div>
+      <div><i>⚖️</i>Судья профильных чемпионатов</div>
+      <div><i>🎓</i>Сертифицированный преподаватель-технолог</div>
+      <div><i>✨</i>Своя студия и команда мастеров</div>
     </div>
   </div>
-  <div class="pt"><h3>Комплексы</h3><table class="price" data-set="sh-kompleks"></table></div>
-  <div class="split">
-    <div>
-      <div class="pt"><h3>Бикини</h3><table class="price" data-set="sh-w-bikini"></table></div>
-      <div class="pt"><h3>Ноги и руки</h3><table class="price" data-set="sh-w-nogi"></table><table class="price" data-set="sh-w-ruki"></table></div>
-      <div class="pt"><h3>Тело и лицо</h3><table class="price" data-set="sh-w-telo"></table><table class="price" data-set="sh-w-litso"></table></div>
+</section>
+
+<!-- СТУДИЯ -->
+<section id="studiya">
+  <p class="k">Студия изнутри</p>
+  <h2>Кабинеты и награды</h2>
+  <p class="lead">Настоящие фото студии на ул. Тухачевского, 5. Кубки Натальи стоят прямо в кабинете.</p>
+  <div class="scar" id="scar">
+    <figure><img src="img/room-1.jpg" width="1448" height="1086" alt="Кабинет ухода за лицом"><figcaption>Кабинет ухода за лицом</figcaption></figure>
+    <figure><img src="img/trophies.jpg" width="1086" height="1448" alt="Кубки и награды"><figcaption>Кубки и награды</figcaption></figure>
+    <figure><img src="img/room-2.jpg" width="1086" height="1448" alt="Кабинет массажа и депиляции"><figcaption>Кабинет массажа и депиляции</figcaption></figure>
+    <figure><img src="img/cart.jpg" width="800" height="1067" alt="Профессиональная косметика"><figcaption>Профессиональная косметика</figcaption></figure>
+    <figure><img src="img/building.jpg" width="1086" height="1448" alt="Вход в студию"><figcaption>Вид со стороны улицы</figcaption></figure>
+  </div>
+  <div class="cnav"><button type="button" data-car="scar" data-d="-1" aria-label="Назад">‹</button><button type="button" data-car="scar" data-d="1" aria-label="Вперёд">›</button></div>
+  <div class="btns" style="margin-top:22px"><a class="btn" href="#zapis">Хочу к вам →</a></div>
+</section>
+
+<!-- УЗНАЁШЬ СЕБЯ -->
+<section id="uznaesh">
+  <h2>Узнаёте себя?</h2>
+  <div class="pains">
+    <div><b>Бреетесь каждый день,</b> а к вечеру кожа снова колется</div>
+    <div><b>После бритвы</b> раздражение, красные точки и вросшие волосы</div>
+    <div><b>Боитесь, что депиляция — это больно,</b> и всё откладываете</div>
+    <div><b>Кожа лица уставшая,</b> овал «поплыл», хочется подтяжки без уколов</div>
+  </div>
+  <p class="pains-out">Всё это решаемо. Начните с консультации, и мы подберём процедуру под вашу кожу.</p>
+</section>
+
+<!-- ПОДХОД -->
+<section id="podhod">
+  <p class="k">Подход</p>
+  <h2>Как мы работаем</h2>
+  <p class="lead">Сначала разбираемся с задачей, потом процедура и уход дома. <b>Без лишнего и без навязывания, чтобы результат держался дольше.</b></p>
+  <ol class="steps3">
+    <li><b>Консультация</b><span>Мастер уточняет пожелания, оценивает состояние кожи и подсказывает, как сделать процедуру комфортнее.</span></li>
+    <li><b>Процедура</b><span>Шугаринг, воск, эпиляция, уход или массаж: бережно и с вниманием к ощущениям.</span></li>
+    <li><b>Уход после</b><span>Рекомендации до и после, чтобы кожа оставалась гладкой. Следующий визит — через 4 недели.</span></li>
+  </ol>
+</section>
+
+<!-- С ЧЕГО НАЧАТЬ -->
+<section id="start">
+  <p class="k">С чего начать</p>
+  <h2>Впервые на депиляции? Начните с&nbsp;малого</h2>
+  <div class="start2">
+    <div class="sc">
+      <span class="tag">Бесплатно</span>
+      <h3>Памятка: как подготовиться и ухаживать после</h3>
+      <details><summary>Открыть памятку</summary>
+        <ul>
+          <li><b>Перед процедурой:</b> душ, чистое бельё, длина волос около 5 мм. Без кремов и масел, свободная хлопковая одежда.</li>
+          <li><b>Первые 24 часа:</b> без спорта, бани и солярия.</li>
+          <li><b>Между процедурами:</b> без бритвы и жёстких скрабов, ежедневное увлажнение. Мягкие скрабы и энзимы раз в неделю.</li>
+          <li><b>Повтор:</b> обычно раз в 4 недели.</li>
+        </ul>
+      </details>
     </div>
-    <div class="pt"><h3>Для мужчин</h3><table class="price" data-set="sh-m"></table></div>
-  </div>
-  <div class="three" style="margin-top:64px">
-    <div><b>Перед процедурой</b><p>Душ, чистое бельё. Длина волос около 5 мм. Без кремов и масел, свободная хлопковая одежда.</p></div>
-    <div><b>Между процедурами</b><p>Повтор раз в 4 недели. Без бритвы и жёстких скрабов. Ежедневное увлажнение.</p></div>
-    <div><b>После процедуры</b><p>Первые 24 часа без спорта, бани и солярия. Мягкие скрабы и энзимы раз в неделю.</p></div>
-  </div>
-  <section style="border:0"><div class="btns"><a class="btn" href="#zapis">Записаться на шугаринг</a></div></section>
-</div>
-
-<!-- ЭПИЛЯЦИЯ -->
-<div class="page" id="epilyaciya">
-  <div class="phead">
-    <p class="k">Стойкая гладкость</p>
-    <h1>Аппаратная эпиляция</h1>
-    <div class="crumbs" data-sub="epilyaciya"></div>
-    <div class="three">
-      <div><b>Длительный эффект</b><p>Курс процедур даёт стойкую гладкость и сокращает необходимость частого удаления волос.</p></div>
-      <div><b>Ровная кожа</b><p>Аппаратный метод помогает решить проблему вросших волос и раздражения.</p></div>
-      <div><b>Быстро и комфортно</b><p>Современные системы охлаждения делают процедуру быстрой и комфортной.</p></div>
+    <div class="sc hi">
+      <span class="tag">Первый визит</span>
+      <h3>Шугаринг Light</h3>
+      <p class="big-price">2 000 ₽</p>
+      <ul>
+        <li>Бикини глубокое и подмышки</li>
+        <li>Разговор с мастером: ощущения, кожа, пожелания</li>
+        <li>Рекомендации по уходу после процедуры</li>
+      </ul>
+      <a class="btn" href="#zapis">Записаться на первый визит</a>
     </div>
   </div>
-  <div class="pt"><h3>Комплексы</h3><table class="price" data-set="epi-kompleks"></table></div>
-  <div class="split">
-    <div class="pt"><h3>Бикини</h3><table class="price" data-set="epi-bikini"></table></div>
-    <div class="pt"><h3>Ноги</h3><table class="price" data-set="epi-nogi"></table></div>
-    <div class="pt"><h3>Руки</h3><table class="price" data-set="epi-ruki"></table></div>
-    <div class="pt"><h3>Тело</h3><table class="price" data-set="epi-telo"></table></div>
-  </div>
-  <p class="note">Для мужских процедур стоимость выше на 20%.</p>
-  <section style="border:0"><div class="btns"><a class="btn" href="#zapis">Записаться на эпиляцию</a></div></section>
-</div>
+</section>
 
-<!-- ЛИЦО -->
-<div class="page" id="litso">
-  <div class="phead">
-    <p class="k">Очищение, увлажнение, сияние</p>
-    <h1>Уход за лицом</h1>
-    <div class="crumbs" data-sub="litso"></div>
+<!-- ПРАЙС -->
+<div class="band"><section class="w" id="uslugi" style="border:0">
+  <p class="k">Прайс</p>
+  <h2>Услуги и цены</h2>
+  <p class="lead">Основные процедуры и цены. Итоговую стоимость подтверждает мастер.</p>
+  <div class="ptabs" role="tablist" aria-label="Направление">
+    <button type="button" role="tab" aria-selected="true" data-p="sh">Шугаринг и воск</button>
+    <button type="button" role="tab" aria-selected="false" data-p="ep">Аппаратная эпиляция</button>
+    <button type="button" role="tab" aria-selected="false" data-p="li">Уход за лицом</button>
+    <button type="button" role="tab" aria-selected="false" data-p="ma">Массаж тела</button>
   </div>
-  <div class="split">
-    <div class="pt" style="margin-top:0"><h3>Вакуумный гидроуход · 4 500 ₽</h3><p class="muted" style="margin-top:14px">Мягкая аппаратная методика для обновления кожи. Глубокое увлажнение, ровный тон и сияние, меньше признаков усталости. Без восстановительного периода и агрессивных составов.</p></div>
-    <div class="pt" style="margin-top:0"><h3>Японский массаж Кобидо</h3><p class="muted" style="margin-top:14px">Техника, с помощью которой японские женщины веками сохраняли молодость без инъекций. Лифтинг-эффект, чёткий овал, расслабление мышц, здоровое сияние. Устойчивый результат даёт курс из 10–12 процедур.</p></div>
+  <div class="ppanel" data-p="sh">
+    <table class="price" data-set="sh-kompleks"></table>
+    <details class="more-p"><summary>Весь прайс: зоны и мужской прайс</summary>
+      <div class="split"><div><table class="price" data-set="sh-w-bikini"></table><table class="price" data-set="sh-w-nogi"></table><table class="price" data-set="sh-w-ruki"></table><table class="price" data-set="sh-w-telo"></table><table class="price" data-set="sh-w-litso"></table></div><div><p class="k" style="margin:14px 0 6px">Для мужчин</p><table class="price" data-set="sh-m"></table></div></div>
+    </details>
   </div>
-  <p class="k" style="margin-top:56px">Кобидо курсом</p>
-  <div class="course">
-    <div><b>Знакомство</b><span>Одна процедура, 40 минут</span><em>2 000 ₽</em><small>за процедуру</small></div>
-    <div class="hi"><b>Курс 10</b><span>10 процедур Кобидо. Подбор домашнего ухода в подарок</span><em>18 000 ₽</em><small>вместо 20 000 ₽</small></div>
-    <div><b>Курс 10 с уходом</b><span>10 визитов: Кобидо и эстетический уход, 1,5 часа</span><em>32 000 ₽</em><small>вместо 35 000 ₽</small></div>
+  <div class="ppanel" data-p="ep" hidden>
+    <table class="price" data-set="epi-kompleks"></table>
+    <details class="more-p"><summary>Весь прайс: отдельные зоны</summary>
+      <div class="split"><div><table class="price" data-set="epi-bikini"></table><table class="price" data-set="epi-nogi"></table></div><div><table class="price" data-set="epi-ruki"></table><table class="price" data-set="epi-telo"></table></div></div>
+      <p class="note">Для мужских процедур стоимость выше на 20%.</p>
+    </details>
   </div>
-  <div class="split" style="margin-top:20px">
-    <div class="pt"><h3>Косметический уход</h3><table class="price" data-set="l-uhod"></table></div>
-    <div class="pt"><h3>Очищение кожи</h3><table class="price" data-set="l-ochish"></table></div>
-    <div class="pt"><h3>Аппаратные уходы</h3><table class="price" data-set="l-app"></table></div>
-    <div class="pt"><h3>Дополнительные программы</h3><table class="price" data-set="l-dop"></table></div>
-    <div class="pt"><h3>Массажи лица</h3><table class="price" data-set="l-massage"></table></div>
-    <div class="pt"><h3>Прессотерапия</h3><table class="price" data-set="l-press"></table></div>
+  <div class="ppanel" data-p="li" hidden>
+    <table class="price" data-set="l-massage"></table>
+    <table class="price" data-set="l-ochish"></table>
+    <details class="more-p"><summary>Весь прайс: уходы, аппаратные программы, прессотерапия</summary>
+      <div class="split"><div><table class="price" data-set="l-uhod"></table><table class="price" data-set="l-app"></table></div><div><table class="price" data-set="l-dop"></table><table class="price" data-set="l-press"></table></div></div>
+    </details>
   </div>
-  <section style="border:0"><div class="btns"><a class="btn" href="#zapis">Записаться на уход</a></div></section>
-</div>
+  <div class="ppanel" data-p="ma" hidden>
+    <table class="price" data-set="m-class"></table>
+    <table class="price" data-set="m-sport"></table>
+    <details class="more-p"><summary>Весь прайс: антицеллюлитный и отдельные зоны</summary>
+      <div class="split"><div><table class="price" data-set="m-anti"></table><table class="price" data-set="m-sportz"></table></div><div><table class="price" data-set="m-zones"></table></div></div>
+    </details>
+  </div>
+  <div class="btns" style="margin-top:30px"><a class="btn" href="#zapis">Записаться →</a></div>
+</section></div>
 
-<!-- МАССАЖ -->
-<div class="page" id="massazh">
-  <div class="phead">
-    <p class="k">Классические и спортивные техники</p>
-    <h1>Массаж тела</h1>
-    <div class="crumbs" data-sub="massazh"></div>
-  </div>
-  <div class="split">
-    <div class="pt" style="margin-top:0"><h3>Классический</h3><table class="price" data-set="m-class"></table></div>
-    <div class="pt" style="margin-top:0"><h3>Спортивный</h3><table class="price" data-set="m-sport"></table><table class="price" data-set="m-sportz"></table></div>
-    <div class="pt"><h3>Антицеллюлитный</h3><table class="price" data-set="m-anti"></table></div>
-    <div class="pt"><h3>Отдельные зоны</h3><table class="price" data-set="m-zones"></table></div>
-  </div>
-  <section style="border:0"><div class="btns"><a class="btn" href="#zapis">Записаться на массаж</a></div></section>
-</div>
+<!-- ОТЗЫВЫ -->
+<section id="otzyvy">
+  <div class="rhead"><p class="k">Отзывы</p><h2>Что говорят гостьи</h2><p class="lead">Фрагменты отзывов из переписок с гостями студии.</p></div>
+  <div class="rcar" id="rcar"><figure class="rc"><blockquote>Наташенька, сегодня 6-й день после шугаринга, я в полном восторге! Всё как вы и говорили. А ведь мне есть с чем сравнить!</blockquote><figcaption>Гостья студии · шугаринг</figcaption></figure><figure class="rc"><blockquote>Всё прошло хорошо, раздражения не было, и совсем не больно. Теперь только к вам, спасибо большое!</blockquote><figcaption>Екатерина · депиляция</figcaption></figure><figure class="rc"><blockquote>У меня всё замечательно! Ни покраснений, ничего. И сам процесс был максимально комфортен.</blockquote><figcaption>Гостья студии · депиляция</figcaption></figure><figure class="rc"><blockquote>Огромное спасибо Наталье за прекрасно проделанную процедуру! Результатом очень довольна. Отличный мастер и позитивный человек. Всем рекомендую!</blockquote><figcaption>Гостья студии</figcaption></figure><figure class="rc"><blockquote>Приятная уютная обстановка, которая сразу располагает. И очень важный момент — общение!</blockquote><figcaption>Гостья студии · атмосфера</figcaption></figure><figure class="rc"><blockquote>После шугаринга всё шикарно, очень довольна.</blockquote><figcaption>Гостья студии · шугаринг</figcaption></figure><figure class="rc"><blockquote>Всё хорошо, ни раздражений, даже красноты нет. Я очень довольна.</blockquote><figcaption>Гостья студии</figcaption></figure><figure class="rc"><blockquote>Слушай, всё хорошо! Прям идеально.</blockquote><figcaption>Гостья студии</figcaption></figure></div>
+  <div class="cnav"><button type="button" data-car="rcar" data-d="-1" aria-label="Назад">‹</button><button type="button" data-car="rcar" data-d="1" aria-label="Вперёд">›</button></div>
+  <p style="text-align:center;margin-top:18px"><a class="link" id="revLink" href="https://yandex.ru/maps/" target="_blank" rel="noopener">Отзывы на Яндекс Картах <span>→</span></a></p>
+</section>
 
 <!-- МАСТЕРА -->
-<div class="page" id="mastera">
-  <div class="phead">
-    <p class="k">Команда студии</p>
-    <h1>Мастера</h1>
-    <p class="lead">Каждый мастер прошёл проверку качества у Натальи. Не знаете, кого выбрать? Опишите задачу, и мы подскажем.</p>
-  </div>
+<section id="mastera">
+  <p class="k">Команда</p>
+  <h2>Мастера студии</h2>
+  <p class="lead">Каждый мастер прошёл проверку качества у Натальи. Не знаете, кого выбрать? Мы подскажем.</p>
   <div class="pick" id="pick">
     <div>
       <p class="k" style="margin-bottom:12px">Выбор мастера</p>
@@ -743,7 +828,6 @@ footer{color:#4a3824}
   </div>
   <div class="team" id="team" style="margin-top:0">
     <article class="mcard" data-m="natalya" id="mc-natalya">
-      <div class="crop"><img src="img/natalya.jpg" width="900" height="1124" alt="Наталья Марусина"></div>
       <span class="role">Основательница</span><h3>Наталья Марусина</h3>
       <p>Косметик-эстетист, мастер депиляции и массажист. Чемпионка по депиляции, мастер-преподаватель и судья чемпионатов. В профессии с октября 2019 года.</p>
       <ul><li>Эпиляция</li><li>Шугаринг и ваксинг</li><li>Массаж</li><li>Обучение</li></ul>
@@ -751,7 +835,6 @@ footer{color:#4a3824}
       <button class="other" type="button" data-other>Выбрать другого мастера ↺</button>
     </article>
     <article class="mcard" data-m="viktoriya" id="mc-viktoriya">
-      <div class="crop"><img src="img/viktoriya.jpg" width="900" height="1124" alt="Виктория Сергеева"></div>
       <span class="role">Косметик-эстетист</span><h3>Виктория Сергеева</h3>
       <p>Дипломированный косметик-эстетист. Каждая программа начинается с диалога: Виктория оценивает кожу и подбирает профессиональный и домашний уход.</p>
       <ul><li>Уход за лицом</li><li>Домашний уход</li></ul>
@@ -759,7 +842,6 @@ footer{color:#4a3824}
       <button class="other" type="button" data-other>Выбрать другого мастера ↺</button>
     </article>
     <article class="mcard" data-m="lyudmila" id="mc-lyudmila">
-      <div class="crop"><img class="ly" src="img/lyudmila.jpg" width="840" height="1050" alt="Людмила Родченкова"></div>
       <span class="role">Мастер депиляции</span><h3>Людмила Родченкова</h3>
       <p>В профессии с 2015 года. Обучение в школе SUGASCHOOL (Санкт-Петербург), повышение квалификации по скоростным техникам и работе с воском.</p>
       <ul><li>Шугаринг</li><li>Ваксинг</li></ul>
@@ -767,70 +849,32 @@ footer{color:#4a3824}
       <button class="other" type="button" data-other>Выбрать другого мастера ↺</button>
     </article>
   </div>
-  <section style="border:0"></section>
-</div>
+</section>
 
-<!-- О СТУДИИ -->
-<div class="page" id="o-studii">
-  <div class="phead">
-    <p class="k">История</p>
-    <h1>«Маруся» — место, где заботятся о&nbsp;вас</h1>
+<!-- ОБУЧЕНИЕ -->
+<div class="band"><section class="w train" id="obuchenie" style="border:0">
+  <div>
+    <p class="k">Для специалистов</p>
+    <h2>Хотите войти в&nbsp;профессию или пройти повышение квалификации?</h2>
+    <p class="lead">Наталья — сертифицированный преподаватель-технолог, чемпионка и судья чемпионатов по депиляции. В студии проходят семинары и мастер-классы по депиляции и эстетическому уходу.</p>
+    <div class="btns"><a class="btn" href="https://vk.me/nata_shuga_sml" target="_blank" rel="noopener">Записаться на обучение</a></div>
   </div>
-  <div class="founder">
-    <figure><img src="img/hero.jpg" width="1536" height="1024" alt="Наталья Марусина"></figure>
-    <div>
-      <p>Меня зовут Наталья Марусина. Я основательница студии эстетики лица и тела «Маруся», чемпионка по депиляции, практикующий мастер-преподаватель и судья чемпионатов.</p>
-      <p class="muted">Мой путь начался в октябре 2019 года в Смоленске. Я искала увлечение, а нашла профессию, в которую влюбилась. В 2020 году поехала в Москву на повышение квалификации и узнала о чемпионатах по депиляции: подготовка, часы практики, выступления и победы.</p>
-      <p class="muted">Я получила подготовку преподавателя-технолога, освоила профессию косметика-эстетиста и прошла путь от участницы соревнований до судьи и организатора.</p>
-      <p class="muted">Каждый мастер моей команды прошёл проверку качества работы и совершенствовал навыки под моим руководством. Буду рада встретить вас в «Марусе».</p>
-    </div>
-  </div>
-  <section>
-    <p class="k">Признание</p>
-    <h2>Награды и судейство</h2>
-    <div class="three">
-      <div><b>Чемпионка</b><p>Многократные победы на профильных чемпионатах по депиляции.</p></div>
-      <div><b>Судья</b><p>Опыт судейства и организации профильных чемпионатов.</p></div>
-      <div><b>Преподаватель</b><p>Сертифицированный преподаватель-технолог.</p></div>
-    </div>
-    <div class="gal mix">
-      <figure><img src="img/trophies.jpg" width="1086" height="1448" alt="Кубки и награды"><figcaption>Кубки и награды</figcaption></figure>
-      <figure><img class="wide" src="img/room-1.jpg" width="1448" height="1086" alt="Кабинет ухода за лицом с наградами"><figcaption>Кабинет ухода за лицом</figcaption></figure>
-      <figure><img src="img/room-2.jpg" width="1086" height="1448" alt="Кабинет массажа и депиляции"><figcaption>Кабинет массажа и депиляции</figcaption></figure>
-    </div>
-  </section>
-  <section>
-    <p class="k">Для мастеров</p>
-    <h2>Обучение</h2>
-    <div class="three">
-      <div><b>Базовое обучение депиляции</b><p>Для начинающих мастеров.</p></div>
-      <div><b>Повышение квалификации</b><p>Для практикующих мастеров, которые хотят расти в профессии.</p></div>
-      <div><b>Подготовка к чемпионатам</b><p>С опытом судьи и чемпионки по депиляции.</p></div>
-    </div>
-    <p class="note">В студии проходят семинары и мастер-классы по депиляции и эстетическому уходу.</p>
-    <div class="btns" style="margin-top:24px"><a class="btn ghost" href="https://vk.me/nata_shuga_sml" target="_blank" rel="noopener">Узнать о программах</a></div>
-  </section>
-  <section>
-    <p class="k">Отзывы</p>
-    <h2>Слово гостий</h2>
-    <div class="revs">
-      <figure><blockquote>У меня всё замечательно! Ни покраснений, ничего. И сам процесс был максимально комфортен.</blockquote><figcaption>Гостья студии</figcaption></figure>
-      <figure><blockquote>Огромное спасибо Наталье! Результатом очень довольна. Отличный мастер и позитивный человек. Всем рекомендую!</blockquote><figcaption>Гостья студии</figcaption></figure>
-      <figure><blockquote>После шугаринга всё шикарно, ни раздражений, ни красноты. Очень довольна.</blockquote><figcaption>Гостья студии · Шугаринг</figcaption></figure>
-    </div>
-  </section>
-</div>
+  <ul class="tlist">
+    <li><span>Базовое обучение депиляции</span><b>для начинающих</b></li>
+    <li><span>Повышение квалификации</span><b>для практикующих</b></li>
+    <li><span>Подготовка к чемпионатам</span><b>с судьёй и чемпионкой</b></li>
+    <li><span>Семинары и мастер-классы по депиляции и уходу</span><b>по договорённости</b></li>
+  </ul>
+</section></div>
 
-<!-- ПОДАРИТЬ -->
-<div class="page" id="podarit">
-  <div class="phead">
-    <p class="k">Подарочный сертификат</p>
-    <h1>Подарите <em>гладкость</em></h1>
-    <p class="lead">Сертификат на сумму или на ритуал. Соберите его здесь, и мы оформим и подготовим его к вашему визиту.</p>
-  </div>
+<!-- ПОДАРОК -->
+<section id="podarit">
+  <p class="k">Подарочный сертификат</p>
+  <h2>Подарите <em>гладкость</em></h2>
+  <p class="lead">Сертификат на сумму или на процедуру. Соберите его здесь, и мы оформим его к визиту.</p>
   <div class="cert">
-    <div class="card" id="certCard" aria-live="polite"><div class="twinkles" aria-hidden="true"></div>
-      <div class="cl">Маруся</div>
+    <div class="card" id="certCard" aria-live="polite">
+      <div class="cl">Студия Натальи Марусиной</div>
       <div class="ca" id="certAmt">5 000 ₽</div>
       <div class="cf"><div>Для<b id="certTo">Вашей близкой</b></div><div style="text-align:right">От<b id="certFrom">С любовью</b></div></div>
     </div>
@@ -850,20 +894,13 @@ footer{color:#4a3824}
       <p class="stat" id="certStat" role="status">Нажмите, и текст заказа скопируется. Вставьте его в открывшийся чат.</p>
     </div>
   </div>
-  <section>
-    <p class="k">Поделитесь визитом</p>
-    <h2>Благодарность за&nbsp;рассказ</h2>
-    <p class="lead">Если вы рассказали о процедуре в своих соцсетях или сделали репост поста Натальи с отметкой перед визитом, на комплексы действует специальная цена. Например, персональный комплекс аппаратной эпиляции: любые 4 зоны за 5 900 ₽.</p>
-  </section>
-</div>
+</section>
 
 <!-- ЗАПИСЬ -->
-<div class="page" id="zapis">
-  <div class="phead">
-    <p class="k">Запись и контакты</p>
-    <h1>Запись</h1>
-    <p class="lead">Отметьте процедуры, и мы посчитаем сумму и подготовим сообщение. Чат с администратором откроется сразу.</p>
-  </div>
+<section id="zapis">
+  <p class="k">Запись</p>
+  <h2>Записаться онлайн</h2>
+  <p class="lead">Отметьте процедуры: посчитаем сумму и подготовим сообщение. Чат во ВКонтакте откроется сразу.</p>
   <div class="calc" id="calc">
     <div>
       <fieldset><legend>Шугаринг и ваксинг</legend><label class="opt"><input type="checkbox" data-n="Шугаринг Light" data-p="2000"><span class="ck"></span><span class="nm">Light: бикини глубокое, подмышки</span><span class="pr">2 000 ₽</span></label><label class="opt"><input type="checkbox" data-n="Шугаринг Standard" data-p="3000"><span class="ck"></span><span class="nm">Standard: + голени</span><span class="pr">3 000 ₽</span></label><label class="opt"><input type="checkbox" data-n="Шугаринг Medium" data-p="4000"><span class="ck"></span><span class="nm">Medium: + ноги полностью</span><span class="pr">4 000 ₽</span></label><label class="opt"><input type="checkbox" data-n="Шугаринг VIP" data-p="5000"><span class="ck"></span><span class="nm">VIP: + ноги и руки</span><span class="pr">5 000 ₽</span></label></fieldset>
@@ -882,24 +919,48 @@ footer{color:#4a3824}
       <p class="stat" style="font-size:13px">Сумма по прайсу, итог подтверждает мастер.</p>
     </aside>
   </div>
-  <section>
-    <p class="k">Контакты</p>
-    <h2>Как нас найти</h2>
-    <div class="contacts">
-      <div><b>Адрес</b><span class="big">Смоленск, ул.&nbsp;Тухачевского,&nbsp;5</span><br><a class="copy" id="mapLink" href="https://yandex.ru/maps/" target="_blank" rel="noopener" style="display:inline-block;text-decoration:none">Открыть на карте</a></div>
-      <div><b>Телефон</b><span class="big">+7 (903) 892-74-78</span><br><button class="copy" type="button" data-copy="+7 (903) 892-74-78">Скопировать</button></div>
-      <div><b>Часы</b><span class="big">Ежедневно 9:00–21:00</span><br><span class="muted" style="font-size:14px">по предварительной записи</span></div>
-      <div><b>ВКонтакте</b><a class="big" href="https://vk.ru/nata_shuga_sml" target="_blank" rel="noopener" style="text-decoration:none">vk.ru/nata_shuga_sml</a></div>
-    </div>
-    <div class="gal" style="grid-template-columns:minmax(0,1fr) minmax(0,1fr)">
-      <figure><img src="img/building.jpg" width="1086" height="1448" alt="Здание на улице Тухачевского, 5"><figcaption>Вид со стороны улицы</figcaption></figure>
-      <figure><img src="img/cart.jpg" width="800" height="1067" alt="Профессиональная косметика в кабинете"><figcaption>Профессиональная косметика</figcaption></figure>
-    </div>
-  </section>
-</div>
+</section>
+
+<!-- КОНТАКТЫ -->
+<section id="kontakty" class="contact2">
+  <div>
+    <p class="k">Как добраться</p>
+    <h2>Студия эстетики и тела Натальи Марусиной</h2>
+    <p class="lead">Смоленск, ул. Тухачевского, 5. Ежедневно с 9:00 до 21:00, по предварительной записи.</p>
+    <ul class="clist">
+      <li><i>📍</i><a id="mapLink" href="https://yandex.ru/maps/" target="_blank" rel="noopener">Открыть на Яндекс Картах</a></li>
+      <li><i>📞</i><span class="sel">+7 (903) 892-74-78</span> <button class="copy" type="button" data-copy="+7 (903) 892-74-78">Скопировать</button></li>
+      <li><i>💬</i><a href="https://vk.ru/nata_shuga_sml" target="_blank" rel="noopener">vk.ru/nata_shuga_sml</a></li>
+    </ul>
+  </div>
+  <div class="map"><iframe id="ymap" title="Студия на карте" loading="lazy" src="https://yandex.ru/map-widget/v1/?mode=search&amp;text=%D0%A1%D0%BC%D0%BE%D0%BB%D0%B5%D0%BD%D1%81%D0%BA%2C%20%D1%83%D0%BB.%20%D0%A2%D1%83%D1%85%D0%B0%D1%87%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%2C%205&amp;z=16"></iframe></div>
+</section>
+
+<!-- ВОПРОСЫ -->
+<section id="voprosy">
+  <p class="k">Вопросы</p>
+  <h2>Частые вопросы</h2>
+  <div class="qa">
+    <details><summary>Не знаю, какая процедура мне нужна. С чего начать?</summary><p>Напишите задачу или просто «подберите мне». Мастер уточнит пожелания и состояние кожи и предложит процедуру без лишнего.</p></details>
+    <details><summary>Больно ли делать шугаринг и эпиляцию?</summary><p>Ощущения зависят от зоны и чувствительности кожи. Скажите мастеру заранее, как вы переносите процедуры: мастер подскажет, как сделать их комфортнее.</p></details>
+    <details><summary>Какая длина волос нужна?</summary><p>Около 5 мм. Перед процедурой — душ, чистое бельё, без кремов и масел.</p></details>
+    <details><summary>Как часто повторять депиляцию?</summary><p>Обычно раз в 4 недели. Между процедурами не используйте бритву и жёсткие скрабы, ежедневно увлажняйте кожу.</p></details>
+    <details><summary>Сколько процедур Кобидо нужно?</summary><p>Для устойчивого результата рекомендуется курс из 10–12 процедур.</p></details>
+    <details><summary>Принимаете ли вы мужчин?</summary><p>Да, есть мужской прайс на шугаринг: борода, спина, грудь, бикини. В аппаратной эпиляции для мужских процедур стоимость выше на 20%.</p></details>
+    <details><summary>Есть ли противопоказания?</summary><p>Мастер уточнит пожелания и состояние кожи перед процедурой. Если есть вопросы о здоровье, лучше заранее проконсультироваться с врачом.</p></details>
+    <details><summary>Как записаться и можно ли перенести визит?</summary><p>Соберите запись в калькуляторе выше или напишите во ВКонтакте, можно позвонить. Перенести визит можно заранее — просто напишите в студию.</p></details>
+  </div>
+</section>
+
+<!-- ФИНАЛ -->
+<div class="band"><section class="w final" style="border:0">
+  <h2>Запишитесь — и&nbsp;займёмся вашей гладкостью</h2>
+  <p class="lead">Смоленск, ул. Тухачевского, 5. Ответим во ВКонтакте и подберём удобное время.</p>
+  <div class="btns" style="justify-content:center"><a class="btn" href="#zapis">Записаться онлайн →</a><a class="btn ghost" href="https://vk.me/nata_shuga_sml" target="_blank" rel="noopener">Написать во ВК</a></div>
+</section></div>
 
 <footer>
-  <div><a class="logo" href="#home">Маруся</a><div style="margin-top:8px">Студия эстетики лица и тела · Смоленск, ул. Тухачевского, 5</div></div>
+  <div><b style="font:500 20px var(--f-d)">Студия эстетики и тела Натальи Марусиной</b><div style="margin-top:8px">Смоленск, ул. Тухачевского, 5</div></div>
   <div>+7 (903) 892-74-78 · ежедневно 9:00–21:00<br><a href="https://vk.ru/nata_shuga_sml" target="_blank" rel="noopener">ВКонтакте</a></div>
 </footer>
 </main>
@@ -908,24 +969,25 @@ footer{color:#4a3824}
 
 <script>
 (function(){try{
-  /* страницы */
-  var ids=['home','uslugi','shugaring','epilyaciya','litso','massazh','mastera','o-studii','podarit','zapis'];
-  var alias={'m-natalya':'mastera','m-viktoriya':'mastera','m-lyudmila':'mastera',vybor:'mastera',dostizheniya:'o-studii',obuchenie:'o-studii',otzyvy:'o-studii',akcii:'podarit','kak-dobratsya':'zapis'};
-  var grp={shugaring:'uslugi',epilyaciya:'uslugi',litso:'uslugi',massazh:'uslugi'};
+  /* меню и якоря */
   var top=document.getElementById('top'),mb=document.getElementById('menubtn');
-  function show(){var h=(location.hash||'').slice(1);h=alias[h]||h;if(ids.indexOf(h)<0)h='home';
-    ids.forEach(function(i){document.getElementById(i).classList.toggle('on',i===h)});
-    var g=grp[h]||h;document.querySelectorAll('#nav a').forEach(function(a){if(a.getAttribute('data-g')===g)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
-    top.classList.remove('open');mb.setAttribute('aria-expanded','false');window.scrollTo(0,0);setTimeout(function(){window.scrollTo(0,0)},0);requestAnimationFrame(function(){window.scrollTo(0,0)})}
-  try{history.scrollRestoration='manual'}catch(e){}
-  addEventListener('hashchange',show);show();
+  function close(){top.classList.remove('open');mb.setAttribute('aria-expanded','false')}
   mb.addEventListener('click',function(){var o=top.classList.toggle('open');mb.setAttribute('aria-expanded',String(o))});
-  document.addEventListener('click',function(e){if(top.classList.contains('open')&&!top.contains(e.target)){top.classList.remove('open');mb.setAttribute('aria-expanded','false')}});
-
+  document.addEventListener('click',function(e){if(top.classList.contains('open')&&!top.contains(e.target))close()});
+  document.querySelectorAll('#nav a').forEach(function(a){a.addEventListener('click',close)});
+  var links=[].slice.call(document.querySelectorAll('#nav a'));
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){var id=x.target.id;links.forEach(function(l){if(l.getAttribute('href')==='#'+id)l.setAttribute('aria-current','page');else l.removeAttribute('aria-current')})}})},{rootMargin:'-45% 0px -50% 0px'});
+    links.forEach(function(l){var s=document.querySelector(l.getAttribute('href'));if(s)io.observe(s)})}
   var addr='Смоленск, ул. Тухачевского, 5',ym='https://yandex.ru/maps/?text='+encodeURIComponent(addr);
   ['mapLink','revLink'].forEach(function(id){var a=document.getElementById(id);if(a)a.href=ym});
-
-}catch(e){console.error(e);var h=document.getElementById('home');if(h)h.classList.add('on')}})();
+  /* вкладки прайса */
+  var pt=[].slice.call(document.querySelectorAll('.ptabs [role="tab"]'));
+  function tab(k){pt.forEach(function(b){b.setAttribute('aria-selected',String(b.getAttribute('data-p')===k))});document.querySelectorAll('.ppanel').forEach(function(p){p.hidden=p.getAttribute('data-p')!==k})}
+  pt.forEach(function(b){b.addEventListener('click',function(){tab(b.getAttribute('data-p'))})});
+  document.querySelectorAll('[data-tab]').forEach(function(a){a.addEventListener('click',function(){tab(a.getAttribute('data-tab'))})});
+  /* карусели */
+  document.querySelectorAll('[data-car]').forEach(function(b){b.addEventListener('click',function(){var c=document.getElementById(b.getAttribute('data-car'));if(!c)return;var f=c.firstElementChild;c.scrollBy({left:(+b.getAttribute('data-d'))*((f?f.offsetWidth:300)+20),behavior:'smooth'})})});
+}catch(e){console.error(e)}})();
 (function(){try{
   /* прайс */
   var D={
@@ -975,7 +1037,7 @@ footer{color:#4a3824}
   var box=document.getElementById('calc'),tot=document.getElementById('calcTot'),msg=document.getElementById('calcMsg'),mas=document.getElementById('calcMaster'),wh=document.getElementById('calcWhen'),nm=document.getElementById('calcName'),st=document.getElementById('calcStat');
   function build(){var sum=0,lines=[];box.querySelectorAll('.opt input:checked').forEach(function(i){var p=+i.getAttribute('data-p');sum+=p;lines.push('— '+i.getAttribute('data-n')+': '+money(p))});
     tot.textContent=money(sum);
-    var t='Здравствуйте! Хочу записаться в студию «Маруся».\n';
+    var t='Здравствуйте! Хочу записаться в студию Натальи Марусиной.\n';
     t+=lines.length?'Процедуры:\n'+lines.join('\n')+'\nИтого по прайсу: '+money(sum)+'\n':'Подскажите, пожалуйста, какую процедуру выбрать.\n';
     if(mas.value)t+='Мастер: '+mas.value+'\n';
     if(wh.value.trim())t+='Удобное время: '+wh.value.trim()+'\n';
@@ -991,88 +1053,10 @@ footer{color:#4a3824}
     document.getElementById('certTo').textContent=toIn.value.trim()||'Вашей близкой';document.getElementById('certFrom').textContent=frIn.value.trim()||'С любовью'}
   chips.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;chips.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});amt=b.getAttribute('data-v');card()});
   toIn.addEventListener('input',card);frIn.addEventListener('input',card);
-  document.getElementById('certGo').addEventListener('click',function(){var t='Здравствуйте! Хочу подарочный сертификат студии «Маруся»: '+amt+'.'+(toIn.value.trim()?' Для: '+toIn.value.trim()+'.':'')+(frIn.value.trim()?' От: '+frIn.value.trim()+'.':'');
+  document.getElementById('certGo').addEventListener('click',function(){var t='Здравствуйте! Хочу подарочный сертификат студии Натальи Марусиной: '+amt+'.'+(toIn.value.trim()?' Для: '+toIn.value.trim()+'.':'')+(frIn.value.trim()?' От: '+frIn.value.trim()+'.':'');
     var s=document.getElementById('certStat');copyText(t,function(){s.textContent='Текст заказа скопирован. Вставьте его в чат.'},function(){s.textContent=t})});
 }catch(e){console.error(e)}})();
 
-
-/* ===== шёлк на фоне, золотая пыль, искры ===== */
-(function(){try{
-  var calm=matchMedia('(prefers-reduced-motion:reduce)').matches;
-  var lite=false;try{lite=(navigator.hardwareConcurrency&&navigator.hardwareConcurrency<=4)||(navigator.deviceMemory&&navigator.deviceMemory<=2)}catch(e){}
-  /* звёзды */
-  function stars(box,n,min,max){for(var i=0;i<n;i++){var s=document.createElement('span');
-    s.style.cssText='left:'+(Math.random()*98).toFixed(1)+'%;top:'+(Math.random()*98).toFixed(1)+'%;--sz:'+(min+Math.random()*(max-min)).toFixed(0)+'px;--d:'+(2.4+Math.random()*3.4).toFixed(1)+'s;--dl:'+(Math.random()*7).toFixed(1)+'s;--o:'+(.45+Math.random()*.55).toFixed(2);box.appendChild(s)}}
-  if(!calm){var sky=document.querySelector('.sky');if(sky)stars(sky,innerWidth<700?22:(lite?30:54),5,15);
-    document.querySelectorAll('.twinkles').forEach(function(t){stars(t,innerWidth<700?14:26,7,20)})}
-
-  /* шёлк */
-  var cv=document.getElementById('silk'),gl=null;
-  try{gl=cv.getContext('webgl',{alpha:false,antialias:false,powerPreference:'low-power'})}catch(e){}
-  var mx=.5,my=.4,tmx=.5,tmy=.4;
-  addEventListener('pointermove',function(e){tmx=e.clientX/innerWidth;tmy=1-e.clientY/innerHeight},{passive:true});
-  if(gl){
-    var vs='attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
-    var fs=['precision mediump float;uniform vec2 R;uniform float T;uniform vec2 M;uniform vec2 C;uniform float A;uniform float W;',
-    'float H(vec2 u,float t){return sin(u.x*2.6+sin(u.y*1.9+t*.16)*1.7+t*.09)+.62*sin(u.x*1.15-u.y*2.8+t*.13+sin(u.x*1.8+t*.07))+.32*sin((u.x+u.y)*4.6-t*.2);}',
-    'float RP(vec2 u){float d=distance(u,C);return W*sin(d*30.-A*16.)*exp(-pow(d-A*.55,2.)*12.)*exp(-A*.8);}',
-    'float G(vec2 u,float t){return H(u,t)/1.94+RP(u);}',
-    'void main(){vec2 q=gl_FragCoord.xy/R;vec2 u=gl_FragCoord.xy/R.y*1.25;',
-    ' float h=G(u,T);float e=.01;float hx=(G(u+vec2(e,0.),T)-h)/e;float hy=(G(u+vec2(0.,e),T)-h)/e;',
-    ' vec3 n=normalize(vec3(-hx*.35,-hy*.35,1.));vec3 L=normalize(vec3(M.x-q.x,M.y-q.y,.9));',
-    ' float dif=.55+.45*dot(n,normalize(vec3(-.4,.5,1.)));',
-    ' float spec=pow(max(dot(reflect(-L,n),vec3(0.,0.,1.)),0.),18.);',
-    ' vec3 sh=vec3(.55,.44,.31),mid=vec3(.76,.66,.51),hi=vec3(.92,.85,.72);',
-    ' float l=.5+.5*h;vec3 c=mix(sh,mid,smoothstep(.0,.62,l));c=mix(c,hi,smoothstep(.62,1.,l));',
-    ' c*=dif;',
-    ' float d=distance(q*vec2(R.x/R.y,1.),M*vec2(R.x/R.y,1.));',
-    ' c+=vec3(1.,.84,.52)*spec*.3*exp(-d*1.6);',
-    ' c+=vec3(1.,.86,.55)*.09*exp(-d*d*5.);',
-    ' c*=1.-.14*pow(distance(q,vec2(.5)),2.);',
-    ' gl_FragColor=vec4(c,1.);}'].join('\n');
-    function sh(ty,s){var o=gl.createShader(ty);gl.shaderSource(o,s);gl.compileShader(o);return o}
-    var pr=gl.createProgram();gl.attachShader(pr,sh(gl.VERTEX_SHADER,vs));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,fs));gl.linkProgram(pr);
-    if(gl.getProgramParameter(pr,gl.LINK_STATUS)){
-      gl.useProgram(pr);var b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
-      var lp=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(lp);gl.vertexAttribPointer(lp,2,gl.FLOAT,false,0,0);
-      var uR=gl.getUniformLocation(pr,'R'),uT=gl.getUniformLocation(pr,'T'),uM=gl.getUniformLocation(pr,'M'),uC=gl.getUniformLocation(pr,'C'),uA=gl.getUniformLocation(pr,'A'),uW=gl.getUniformLocation(pr,'W');
-      var rc=[0,0],rt=-99;
-      window.marusyaRipple=function(x,y){rc=[x/innerHeight*1.25,(innerHeight-y)/innerHeight*1.25];rt=performance.now()};
-      addEventListener('pointerdown',function(e){window.marusyaRipple(e.clientX,e.clientY)},{passive:true});
-      var sc=lite?.45:.6;
-      function size(){cv.width=Math.max(2,Math.round(innerWidth*sc));cv.height=Math.max(2,Math.round(innerHeight*sc));gl.viewport(0,0,cv.width,cv.height)}
-      size();addEventListener('resize',size);
-      var t0=performance.now(),last=0,run=true;
-      document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(fr)});
-      function draw(now){mx+=(tmx-mx)*.05;my+=(tmy-my)*.05;gl.uniform2f(uR,cv.width,cv.height);gl.uniform1f(uT,(now-t0)/1000*(calm?0:1)+40.);var age=(now-rt)/1000;gl.uniform2f(uC,rc[0],rc[1]);gl.uniform1f(uA,age);gl.uniform1f(uW,age<5?.55:0.);gl.uniform2f(uM,mx,my);gl.drawArrays(gl.TRIANGLE_STRIP,0,4)}
-      function fr(now){if(!run)return;if(now-last>32){last=now;draw(now)}if(!calm)requestAnimationFrame(fr)}
-      draw(performance.now());if(!calm)requestAnimationFrame(fr);
-    }else{cv.remove()}
-  }else{cv.remove()}
-
-  /* искры за курсором и пальцем + золотая пыль */
-  if(calm)return;
-  var fx=document.createElement('canvas');fx.id='fx';fx.setAttribute('aria-hidden','true');document.body.appendChild(fx);
-  var cx=fx.getContext('2d'),P=[],W=0,Hh=0,dpr=Math.min(devicePixelRatio||1,2);
-  function rs(){W=innerWidth;Hh=innerHeight;fx.width=W*dpr;fx.height=Hh*dpr;cx.setTransform(dpr,0,0,dpr,0,0)}
-  rs();addEventListener('resize',rs);
-  var D=[];for(var i=0;i<(lite?16:34);i++)D.push({x:Math.random(),y:Math.random(),r:.6+Math.random()*1.7,s:.00012+Math.random()*.00035,a:Math.random()*6.3});
-  function star(x,y,r,rot){cx.beginPath();for(var k=0;k<8;k++){var a=rot+k*Math.PI/4,d=k%2?r*.28:r;cx.lineTo(x+Math.cos(a)*d,y+Math.sin(a)*d)}cx.closePath();cx.fill()}
-  function spawn(x,y,n){for(var k=0;k<n;k++)P.push({x:x+(Math.random()-.5)*10,y:y+(Math.random()-.5)*10,vx:(Math.random()-.5)*1.5,vy:Math.random()*1.3-.4,r:2+Math.random()*5,l:1,rot:Math.random()*3,h:38+Math.random()*10})}
-  var lx=0,ly=0;
-  addEventListener('pointermove',function(e){var x=e.clientX,y=e.clientY;if(Math.hypot(x-lx,y-ly)>9){lx=x;ly=y;spawn(x,y,e.pointerType==='touch'?4:3)}},{passive:true});
-  window.marusyaBurst=function(x,y,n){spawn(x,y,n||30)};
-  var orch=document.querySelector('.orch'),gt=0;
-  addEventListener('pointerdown',function(e){spawn(e.clientX,e.clientY,24);if(orch){orch.classList.remove('gust');void orch.offsetWidth;orch.classList.add('gust');clearTimeout(gt);gt=setTimeout(function(){orch.classList.remove('gust')},2200)}},{passive:true});
-  function tick(t){cx.clearRect(0,0,W,Hh);
-    for(var j=0;j<D.length;j++){var d=D[j];d.y-=d.s*16;if(d.y<-.02){d.y=1.02;d.x=Math.random()}
-      cx.globalAlpha=.25+.55*Math.abs(Math.sin(t/900+d.a));cx.fillStyle='#ffe2a0';cx.shadowColor='#e0a840';cx.shadowBlur=8;cx.beginPath();cx.arc(d.x*W,d.y*Hh,d.r,0,6.3);cx.fill()}
-    for(var k=P.length-1;k>=0;k--){var p=P[k];p.x+=p.vx;p.y+=p.vy;p.vy+=.03;p.l-=.021;p.rot+=.05;if(p.l<=0){P.splice(k,1);continue}
-      cx.globalAlpha=p.l;cx.shadowColor='hsl('+p.h+',100%,60%)';cx.shadowBlur=10;cx.fillStyle='hsl('+p.h+',95%,'+(62+p.l*22)+'%)';star(p.x,p.y,p.r*p.l+1,p.rot)}
-    cx.globalAlpha=1;cx.shadowBlur=0;if(!document.hidden)requestAnimationFrame(tick)}
-  requestAnimationFrame(tick);
-  document.addEventListener('visibilitychange',function(){if(!document.hidden)requestAnimationFrame(tick)});
-}catch(e){console.error(e)}})();
 
 
 /* ===== выбор мастера ===== */
@@ -1083,7 +1067,7 @@ footer{color:#4a3824}
   var chips=document.getElementById('pickChips'),out=document.getElementById('pickOut'),team=document.getElementById('team');
   if(!chips)return;
   function setCalc(v){var s=document.getElementById('calcMaster');if(!s)return;s.value=v;s.dispatchEvent(new Event('change',{bubbles:true}))}
-  function fx(el){try{var r=el.getBoundingClientRect(),x=r.left+r.width/2,y=r.top+r.height/2;if(window.marusyaBurst)window.marusyaBurst(x,y,34);if(window.marusyaRipple)window.marusyaRipple(x,y)}catch(e){}}
+  function fx(el){try{var r=el.getBoundingClientRect(),x=r.left+r.width/2,y=r.top+r.height/2;}catch(e){}}
   function pick(m,src){
     chips.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-pressed',String(b.getAttribute('data-m')===m))});
     team.querySelectorAll('.mcard').forEach(function(c){c.classList.toggle('sel',c.getAttribute('data-m')===m)});
@@ -1109,98 +1093,8 @@ footer{color:#4a3824}
 }catch(e){console.error(e)}})();
 
 
-/* ===== 3D-наклон, магнит, капля света ===== */
-(function(){try{
-  var calm=matchMedia('(prefers-reduced-motion:reduce)').matches,fine=matchMedia('(hover:hover) and (pointer:fine)').matches;
-  function tilt(el,max){var g=document.createElement('div');g.className='glare';el.appendChild(g);
-    if(calm||!fine)return;
-    el.addEventListener('pointermove',function(e){var r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
-      var base=el.classList.contains('sel')?' translateY(-6px)':'';
-      el.style.transform='rotateY('+((x-.5)*max).toFixed(2)+'deg) rotateX('+((.5-y)*max).toFixed(2)+'deg)'+base;
-      el.style.setProperty('--gx',(x*100).toFixed(1)+'%');el.style.setProperty('--gy',(y*100).toFixed(1)+'%');el.classList.add('tilt')});
-    el.addEventListener('pointerleave',function(){el.style.transform='';el.classList.remove('tilt')})}
-  document.querySelectorAll('.mcard').forEach(function(c){tilt(c,14)});
-  var card=document.getElementById('certCard');if(card)tilt(card,12);
-  /* магнит */
-  if(fine&&!calm){var cur=null;
-    document.addEventListener('pointermove',function(e){
-      var b=e.target.closest&&e.target.closest('.btn');
-      if(cur&&cur!==b){cur.style.transform='';cur.classList.remove('mag');cur=null}
-      if(!b)return;cur=b;var r=b.getBoundingClientRect(),dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height/2);
-      b.classList.add('mag');b.style.transform='translate('+(dx*.18).toFixed(1)+'px,'+(dy*.3).toFixed(1)+'px)'},{passive:true})}
-  /* капля света */
-  document.addEventListener('pointerdown',function(e){var b=e.target.closest&&e.target.closest('.btn,.chips button,.dock a');if(!b||calm)return;
-    var r=b.getBoundingClientRect(),d=document.createElement('span');d.className='drop';d.style.left=(e.clientX-r.left)+'px';d.style.top=(e.clientY-r.top)+'px';
-    if(getComputedStyle(b).position==='static')b.style.position='relative';b.style.overflow='hidden';b.appendChild(d);setTimeout(function(){d.remove()},850)},{passive:true});
-}catch(e){console.error(e)}})();
 
 
-/* ===== кнопка «На главную» ===== */
-(function(){try{
-  var sub={shugaring:1,epilyaciya:1,litso:1,massazh:1};
-  document.querySelectorAll('.page').forEach(function(pg){if(pg.id==='home')return;
-    var a=document.createElement('a');a.className='backhome';
-    if(sub[pg.id]){a.href='#uslugi';a.innerHTML='<span>←</span> Все услуги';
-      var h=document.createElement('a');h.className='backhome';h.href='#home';h.style.marginLeft='10px';h.innerHTML='<span>⌂</span> Главная';
-      pg.insertBefore(h,pg.firstChild)}
-    else{a.href='#home';a.innerHTML='<span>←</span> На главную'}
-    pg.insertBefore(a,pg.firstChild)});
-}catch(e){console.error(e)}})();
-
-/* ===== шёлковый занавес ===== */
-(function(){try{
-  var veil=document.getElementById('veil'),de=document.documentElement,finished=false;
-  function finish(){if(finished)return;finished=true;de.classList.remove('veiled');veil.classList.add('done');setTimeout(function(){veil.hidden=true},600)}
-  if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
-  var seen=false;try{seen=sessionStorage.getItem('marusyaVeil')==='1'}catch(e){}
-  if(seen&&location.hash!=='#intro')return;
-  try{sessionStorage.setItem('marusyaVeil','1')}catch(e){}
-  veil.hidden=false;de.classList.add('veiled');
-  setTimeout(function(){veil.classList.add('go');de.classList.remove('veiled')},1400);
-  setTimeout(function(){finish()},3600);
-  var cv=veil.querySelector('canvas'),gl=null;
-  try{gl=cv.getContext('webgl',{premultipliedAlpha:false,alpha:true})}catch(e){}
-  var HOLD=950,OPEN=2100,t0=performance.now();
-  veil.addEventListener('click',function(){t0=performance.now()-HOLD-OPEN*.55;veil.classList.add('go')});
-  if(!gl){var fb=document.createElement('div');fb.className='fb';fb.innerHTML='<i></i><i></i>';veil.insertBefore(fb,veil.firstChild);cv.remove();
-    setTimeout(function(){veil.classList.add('go');de.classList.remove('veiled')},HOLD);setTimeout(finish,HOLD+1900);return}
-  var vs='attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
-  var fs=[
-  'precision mediump float;uniform vec2 R;uniform float T;uniform float O;',
-  'float fold(float u,float y,float t,float k){return sin(u*k+sin(y*2.6+t*.8+u*3.)*1.1+sin(u*k*.37-y*1.7+t*.55)*1.3);}',
-  'void main(){vec2 uv=gl_FragCoord.xy/R;float y=uv.y;',
-  ' float hw=.5*(1.-O);',
-  ' float sway=(1.-O)*.012*sin(y*7.+T*1.4)+O*.05*pow(1.-y,2.)*sin(T*.6);',
-  ' float left=step(uv.x,.5);float d=left>.5?uv.x:1.-uv.x;',
-  ' float edge=hw+sway;if(d>edge){gl_FragColor=vec4(0.);return;}',
-  ' float u=d/max(edge,.001);float k=26.+O*44.;',
-  ' float h=fold(u,y,T,k);float h2=fold(u+.004,y,T,k);float nx=(h2-h)*6.;',
-  ' float light=.55+.45*h;float spec=pow(max(0.,.5+.5*h-abs(nx)*.2),14.);',
-  ' vec3 sh=vec3(.46,.34,.21),base=vec3(.86,.76,.6),hi=vec3(1.,.96,.88);',
-  ' vec3 c=mix(sh,base,light)+hi*spec*.55;',
-  ' c*=.9+.1*y;',
-  ' float inner=smoothstep(edge-.03,edge,d);c*=1.-inner*.35;',
-  ' c+=vec3(.08,.06,.03)*sin(y*3.+T*.3);',
-  ' float a=1.-smoothstep(.9,1.,O);',
-  ' gl_FragColor=vec4(c,a);}'].join('\n');
-  function sh(t,s){var o=gl.createShader(t);gl.shaderSource(o,s);gl.compileShader(o);return o}
-  var pr=gl.createProgram();gl.attachShader(pr,sh(gl.VERTEX_SHADER,vs));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,fs));gl.linkProgram(pr);
-  if(!gl.getProgramParameter(pr,gl.LINK_STATUS)){veil.hidden=true;de.classList.remove('veiled');return}
-  gl.useProgram(pr);var b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
-  var lp=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(lp);gl.vertexAttribPointer(lp,2,gl.FLOAT,false,0,0);
-  var uR=gl.getUniformLocation(pr,'R'),uT=gl.getUniformLocation(pr,'T'),uO=gl.getUniformLocation(pr,'O');
-  gl.enable(gl.BLEND);gl.blendFunc(gl.SRC_ALPHA,gl.ONE_MINUS_SRC_ALPHA);
-  function size(){var dpr=Math.min(devicePixelRatio||1,1.5);cv.width=innerWidth*dpr;cv.height=innerHeight*dpr;gl.viewport(0,0,cv.width,cv.height)}
-  size();addEventListener('resize',size);
-  function ease(x){return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2}
-  var opened=false;
-  function frame(now){var el=now-t0,o=Math.max(0,Math.min(1,(el-HOLD)/OPEN));
-    if(el>HOLD&&!opened){opened=true;veil.classList.add('go');de.classList.remove('veiled')}
-    gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT);
-    gl.uniform2f(uR,cv.width,cv.height);gl.uniform1f(uT,el/1000);gl.uniform1f(uO,ease(o));gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
-    if(o<1)requestAnimationFrame(frame);else finish()}
-  requestAnimationFrame(frame);
-}catch(e){console.error(e);try{document.getElementById('veil').hidden=true;document.documentElement.classList.remove('veiled')}catch(x){}}})();
 </script>
 
 </body></html>
