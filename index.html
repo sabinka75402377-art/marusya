@@ -642,6 +642,9 @@ body{background-color:#cdbdad!important;background-image:
 .cookie button{font:600 13px var(--f-b);padding:10px 14px;border-radius:99px;border:1px solid var(--accent);background:transparent;color:var(--ink);cursor:pointer}
 .cookie button[data-ck="all"]{background:var(--accent);color:var(--accent-ink)}
 @media (max-width:760px){.cookie{bottom:calc(84px + env(safe-area-inset-bottom,0px))}}
+
+.hero h1{font-size:clamp(36px,4.6vw,64px)!important;line-height:1.08}
+.hero-lead{max-width:52ch;margin:0 0 28px;color:var(--ink)!important;font-size:17px}
 </style>
 
 <script>document.documentElement.classList.add('js')</script>
@@ -668,27 +671,22 @@ body{background-color:#cdbdad!important;background-image:
 <!-- ПЕРВЫЙ ЭКРАН -->
 <section class="hero" id="home">
   <div class="txt">
-    <p class="k">Студия эстетики лица и тела Натальи Марусиной · Смоленск</p>
-    <h1>Гладкость по&nbsp;стандарту <em>чемпионки</em></h1>
-    <ul class="hl-list">
-      <li>Я Наталья Марусина — чемпионка по депиляции и судья профильных чемпионатов</li>
-      <li>Удаляю нежелательные волосы бережно: шугаринг, воск и аппаратная эпиляция</li>
-      <li>Ухаживаю за кожей лица: японский массаж Кобидо, гидроуход, чистки</li>
-      <li>Делаю массаж тела и обучаю мастеров</li>
-    </ul>
+    <p class="k">Смоленск · ул. Тухачевского, 5</p>
+    <h1>Шугаринг, уход за&nbsp;лицом и&nbsp;массаж <em>у&nbsp;чемпионки по&nbsp;депиляции</em></h1>
+    <p class="lead hero-lead">Меня зовут Наталья Марусина. Я чемпионка по депиляции и судья профильных чемпионатов, а с 2019 года помогаю женщинам в Смоленске забыть о бритве и уставшей коже. В студии вас ждут шугаринг и воск, аппаратная эпиляция, уход за лицом и массаж.</p>
     <div class="btns"><a class="btn" href="#zapis">Записаться →</a><a class="btn ghost" href="#uslugi">Услуги и цены ↓</a></div>
-    <p class="trust">✦ В профессии с 2019 года · ✦ Чемпионка и судья · ✦ Ежедневно 9:00–21:00</p>
+    <p class="trust">В профессии с 2019 года · Каждый день с 9:00 до 21:00 · Запись во ВКонтакте и по телефону</p>
   </div>
   <figure><img src="img/hero-m.jpg" width="900" height="1097" alt="Наталья Марусина"><figcaption>Наталья Марусина, основательница</figcaption></figure>
 </section>
 <!-- ТОП УСЛУГИ -->
 <div class="topchips">
-  <span class="tc-k">★ Популярные услуги</span>
-  <a href="#uslugi" data-tab="sh">Шугаринг Light: бикини + подмышки <b>2 000 ₽</b></a>
-  <a href="#uslugi" data-tab="ep">Эпиляция S: бикини + подмышки <b>2 500 ₽</b></a>
-  <a href="#uslugi" data-tab="li">Массаж лица Кобидо <b>2 000 ₽</b></a>
+  <span class="tc-k">Чаще всего записываются на</span>
+  <a href="#uslugi" data-tab="sh">Шугаринг: глубокое бикини и подмышки <b>2 000 ₽</b></a>
+  <a href="#uslugi" data-tab="ep">Эпиляция: глубокое бикини и подмышки <b>2 500 ₽</b></a>
+  <a href="#uslugi" data-tab="li">Японский массаж лица Кобидо <b>2 000 ₽</b></a>
   <a href="#uslugi" data-tab="li">Вакуумный гидроуход <b>4 500 ₽</b></a>
-  <a href="#uslugi" data-tab="ma">Классический массаж, 60 мин <b>2 500 ₽</b></a>
+  <a href="#uslugi" data-tab="ma">Классический массаж, 60 минут <b>2 500 ₽</b></a>
 </div>
 
 <!-- О МАСТЕРЕ -->
@@ -697,11 +695,11 @@ body{background-color:#cdbdad!important;background-image:
   <div>
     <p class="k">О мастере</p>
     <h2>Наталья Марусина</h2>
-    <p class="lead">Косметик-эстетист, мастер депиляции и массажист. Путь начался в 2019 году в Смоленске, потом повышение квалификации в Москве, чемпионаты, победы и судейство. Основала свою студию в Смоленске и обучаю мастеров.</p>
+    <p class="lead">Я косметик-эстетист, мастер депиляции и массажист. Начинала в 2019 году здесь, в Смоленске, а в 2020-м прошла повышение квалификации в Москве и впервые вышла на чемпионат по депиляции. С тех пор я побеждала на соревнованиях, а теперь сама сужу их. Этот опыт я вложила в свою студию и передаю мастерам на обучении.</p>
     <div class="fcards">
       <div><i>🏆</i>Чемпионка по депиляции</div>
       <div><i>⚖️</i>Судья профильных чемпионатов</div>
-      <div><i>🎓</i>Сертифицированный преподаватель-технолог</div>
+      <div><i>🎓</i>Преподаватель-технолог с сертификатом</div>
       <div><i>✨</i>Своя студия и команда мастеров</div>
     </div>
   </div>
@@ -711,7 +709,7 @@ body{background-color:#cdbdad!important;background-image:
 <section id="studiya">
   <p class="k">Студия изнутри</p>
   <h2>Кабинеты и награды</h2>
-  <p class="lead">Настоящие фото студии на ул. Тухачевского, 5. Кубки Натальи стоят прямо в кабинете.</p>
+  <p class="lead">Так выглядит студия на ул. Тухачевского, 5. Кубки Натальи стоят прямо в кабинете, их можно рассмотреть во время визита.</p>
   <div class="scar" id="scar">
     <figure><img src="img/room-1.jpg" width="1448" height="1086" alt="Кабинет ухода за лицом"><figcaption>Кабинет ухода за лицом</figcaption></figure>
     <figure><img src="img/trophies.jpg" width="1086" height="1448" alt="Кубки и награды"><figcaption>Кубки и награды</figcaption></figure>
@@ -720,42 +718,42 @@ body{background-color:#cdbdad!important;background-image:
     <figure><img src="img/building.jpg" width="1086" height="1448" alt="Вход в студию"><figcaption>Вид со стороны улицы</figcaption></figure>
   </div>
   <div class="cnav"><button type="button" data-car="scar" data-d="-1" aria-label="Назад">‹</button><button type="button" data-car="scar" data-d="1" aria-label="Вперёд">›</button></div>
-  <div class="btns" style="margin-top:22px"><a class="btn" href="#zapis">Хочу к вам →</a></div>
+  <div class="btns" style="margin-top:22px"><a class="btn" href="#zapis">Записаться в студию</a></div>
 </section>
 
 <!-- УЗНАЁШЬ СЕБЯ -->
 <section id="uznaesh">
-  <h2>Узнаёте себя?</h2>
+  <h2>Знакомо?</h2>
   <div class="pains">
-    <div><b>Бреетесь каждый день,</b> а к вечеру кожа снова колется</div>
-    <div><b>После бритвы</b> раздражение, красные точки и вросшие волосы</div>
-    <div><b>Боитесь, что депиляция — это больно,</b> и всё откладываете</div>
-    <div><b>Кожа лица уставшая,</b> овал «поплыл», хочется подтяжки без уколов</div>
+    <div>Бреете ноги утром, а к вечеру кожа снова колется</div>
+    <div>После бритвы остаются раздражение, красные точки и вросшие волосы</div>
+    <div>Хочется попробовать шугаринг, но страшно, что будет больно</div>
+    <div>Кожа лица выглядит уставшей, а овал уже не такой чёткий</div>
   </div>
-  <p class="pains-out">Всё это решаемо. Начните с консультации, и мы подберём процедуру под вашу кожу.</p>
+  <p class="pains-out">С этим мы работаем каждый день. Расскажите, что вас беспокоит, и мастер подберёт процедуру под вашу кожу.</p>
 </section>
 
 <!-- ПОДХОД -->
 <section id="podhod">
   <p class="k">Подход</p>
-  <h2>Как мы работаем</h2>
-  <p class="lead">Сначала разбираемся с задачей, потом процедура и уход дома. <b>Без лишнего и без навязывания, чтобы результат держался дольше.</b></p>
+  <h2>Как проходит визит</h2>
+  <p class="lead">Сначала разговор, потом процедура и советы по уходу. Никаких лишних услуг: только то, что действительно нужно вашей коже.</p>
   <ol class="steps3">
-    <li><b>Консультация</b><span>Мастер уточняет пожелания, оценивает состояние кожи и подсказывает, как сделать процедуру комфортнее.</span></li>
-    <li><b>Процедура</b><span>Шугаринг, воск, эпиляция, уход или массаж: бережно и с вниманием к ощущениям.</span></li>
-    <li><b>Уход после</b><span>Рекомендации до и после, чтобы кожа оставалась гладкой. Следующий визит — через 4 недели.</span></li>
+    <li><b>Знакомство</b><span>Мастер расспросит о пожеланиях, посмотрит кожу и расскажет, как пройдёт процедура и что вы будете чувствовать.</span></li>
+    <li><b>Процедура</b><span>Работаем бережно и всё время спрашиваем о самочувствии. Если нужно, сделаем паузу.</span></li>
+    <li><b>Уход дома</b><span>Подскажем, как ухаживать за кожей, чтобы результат держался дольше, и запишем на следующий визит примерно через 4 недели.</span></li>
   </ol>
 </section>
 
 <!-- С ЧЕГО НАЧАТЬ -->
 <section id="start">
-  <p class="k">С чего начать</p>
-  <h2>Впервые на депиляции? Начните с&nbsp;малого</h2>
+  <p class="k">Если вы у нас впервые</p>
+  <h2>С чего начать</h2>
   <div class="start2">
     <div class="sc">
-      <span class="tag">Бесплатно</span>
-      <h3>Памятка: как подготовиться и ухаживать после</h3>
-      <details><summary>Открыть памятку</summary>
+      <span class="tag">Памятка</span>
+      <h3>Как подготовиться к депиляции и ухаживать за кожей после</h3>
+      <details><summary>Читать памятку</summary>
         <ul>
           <li><b>Перед процедурой:</b> душ, чистое бельё, длина волос около 5 мм. Без кремов и масел, свободная хлопковая одежда.</li>
           <li><b>Первые 24 часа:</b> без спорта, бани и солярия.</li>
@@ -765,15 +763,15 @@ body{background-color:#cdbdad!important;background-image:
       </details>
     </div>
     <div class="sc hi">
-      <span class="tag">Первый визит</span>
-      <h3>Шугаринг Light</h3>
+      <span class="tag">Для первого визита</span>
+      <h3>Шугаринг: глубокое бикини и подмышки</h3>
       <p class="big-price">2 000 ₽</p>
       <ul>
-        <li>Бикини глубокое и подмышки</li>
-        <li>Разговор с мастером: ощущения, кожа, пожелания</li>
-        <li>Рекомендации по уходу после процедуры</li>
+        <li>Самый популярный комплекс в студии</li>
+        <li>До начала мастер ответит на все ваши вопросы</li>
+        <li>После расскажем, как ухаживать за кожей</li>
       </ul>
-      <a class="btn" href="#zapis">Записаться на первый визит</a>
+      <a class="btn" href="#zapis">Записаться</a>
     </div>
   </div>
 </section>
@@ -782,7 +780,7 @@ body{background-color:#cdbdad!important;background-image:
 <div class="band"><section class="w" id="uslugi" style="border:0">
   <p class="k">Прайс</p>
   <h2>Услуги и цены</h2>
-  <p class="lead">Основные процедуры и цены. Итоговую стоимость подтверждает мастер.</p>
+  <p class="lead">Цены на основные процедуры. Точную стоимость мастер назовёт перед началом.</p>
   <div class="ptabs" role="tablist" aria-label="Направление">
     <button type="button" role="tab" aria-selected="true" data-p="sh">Шугаринг и воск</button>
     <button type="button" role="tab" aria-selected="false" data-p="ep">Аппаратная эпиляция</button>
@@ -791,28 +789,28 @@ body{background-color:#cdbdad!important;background-image:
   </div>
   <div class="ppanel" data-p="sh">
     <table class="price" data-set="sh-kompleks"></table>
-    <details class="more-p"><summary>Весь прайс: зоны и мужской прайс</summary>
+    <details class="more-p"><summary>Показать все зоны и мужской прайс</summary>
       <div class="split"><div><table class="price" data-set="sh-w-bikini"></table><table class="price" data-set="sh-w-nogi"></table><table class="price" data-set="sh-w-ruki"></table><table class="price" data-set="sh-w-telo"></table><table class="price" data-set="sh-w-litso"></table></div><div><p class="k" style="margin:14px 0 6px">Для мужчин</p><table class="price" data-set="sh-m"></table></div></div>
     </details>
   </div>
   <div class="ppanel" data-p="ep" hidden>
     <table class="price" data-set="epi-kompleks"></table>
-    <details class="more-p"><summary>Весь прайс: отдельные зоны</summary>
+    <details class="more-p"><summary>Показать отдельные зоны</summary>
       <div class="split"><div><table class="price" data-set="epi-bikini"></table><table class="price" data-set="epi-nogi"></table></div><div><table class="price" data-set="epi-ruki"></table><table class="price" data-set="epi-telo"></table></div></div>
-      <p class="note">Для мужских процедур стоимость выше на 20%.</p>
+      <p class="note">Мужская эпиляция стоит на 20% дороже.</p>
     </details>
   </div>
   <div class="ppanel" data-p="li" hidden>
     <table class="price" data-set="l-massage"></table>
     <table class="price" data-set="l-ochish"></table>
-    <details class="more-p"><summary>Весь прайс: уходы, аппаратные программы, прессотерапия</summary>
+    <details class="more-p"><summary>Показать все уходы, аппаратные процедуры и прессотерапию</summary>
       <div class="split"><div><table class="price" data-set="l-uhod"></table><table class="price" data-set="l-app"></table></div><div><table class="price" data-set="l-dop"></table><table class="price" data-set="l-press"></table></div></div>
     </details>
   </div>
   <div class="ppanel" data-p="ma" hidden>
     <table class="price" data-set="m-class"></table>
     <table class="price" data-set="m-sport"></table>
-    <details class="more-p"><summary>Весь прайс: антицеллюлитный и отдельные зоны</summary>
+    <details class="more-p"><summary>Показать антицеллюлитный массаж и отдельные зоны</summary>
       <div class="split"><div><table class="price" data-set="m-anti"></table><table class="price" data-set="m-sportz"></table></div><div><table class="price" data-set="m-zones"></table></div></div>
     </details>
   </div>
@@ -821,8 +819,8 @@ body{background-color:#cdbdad!important;background-image:
 
 <!-- ОТЗЫВЫ -->
 <section id="otzyvy">
-  <div class="rhead"><p class="k">Отзывы</p><h2>Что говорят гостьи</h2><p class="lead">Фрагменты отзывов из переписок с гостями студии.</p></div>
-  <div class="rcar" id="rcar"><figure class="rc"><blockquote>Наташенька, сегодня 6-й день после шугаринга, я в полном восторге! Всё как вы и говорили. А ведь мне есть с чем сравнить!</blockquote><figcaption>Гостья студии · шугаринг</figcaption></figure><figure class="rc"><blockquote>Всё прошло хорошо, раздражения не было, и совсем не больно. Теперь только к вам, спасибо большое!</blockquote><figcaption>Екатерина · депиляция</figcaption></figure><figure class="rc"><blockquote>У меня всё замечательно! Ни покраснений, ничего. И сам процесс был максимально комфортен.</blockquote><figcaption>Гостья студии · депиляция</figcaption></figure><figure class="rc"><blockquote>Огромное спасибо Наталье за прекрасно проделанную процедуру! Результатом очень довольна. Отличный мастер и позитивный человек. Всем рекомендую!</blockquote><figcaption>Гостья студии</figcaption></figure><figure class="rc"><blockquote>Приятная уютная обстановка, которая сразу располагает. И очень важный момент — общение!</blockquote><figcaption>Гостья студии · атмосфера</figcaption></figure><figure class="rc"><blockquote>После шугаринга всё шикарно, очень довольна.</blockquote><figcaption>Гостья студии · шугаринг</figcaption></figure><figure class="rc"><blockquote>Всё хорошо, ни раздражений, даже красноты нет. Я очень довольна.</blockquote><figcaption>Гостья студии</figcaption></figure><figure class="rc"><blockquote>Слушай, всё хорошо! Прям идеально.</blockquote><figcaption>Гостья студии</figcaption></figure></div>
+  <div class="rhead"><p class="k">Отзывы</p><h2>Отзывы гостей</h2><p class="lead">Это сообщения, которые гостьи присылают Наталье после процедур.</p></div>
+  <div class="rcar" id="rcar"><figure class="rc"><blockquote>Наташенька, сегодня 6-й день после шугаринга, я в полном восторге! Всё как вы и говорили. А ведь мне есть с чем сравнить!</blockquote><figcaption>Гостья студии · шугаринг</figcaption></figure><figure class="rc"><blockquote>Всё прошло хорошо, раздражения не было, и совсем не больно. Теперь только к вам, спасибо большое!</blockquote><figcaption>Екатерина · депиляция</figcaption></figure><figure class="rc"><blockquote>У меня всё замечательно! Ни покраснений, ничего. И сам процесс был максимально комфортен.</blockquote><figcaption>Гостья студии · депиляция</figcaption></figure><figure class="rc"><blockquote>Огромное спасибо Наталье за прекрасно проделанную процедуру! Результатом очень довольна. Отличный мастер и позитивный человек. Всем рекомендую!</blockquote><figcaption>Гостья студии</figcaption></figure><figure class="rc"><blockquote>Приятная уютная обстановка, которая сразу располагает. И очень важный момент — общение!</blockquote><figcaption>Гостья студии · атмосфера</figcaption></figure><figure class="rc"><blockquote>После шугаринга всё шикарно, очень довольна.</blockquote><figcaption>Гостья студии · шугаринг</figcaption></figure><figure class="rc"><blockquote>Всё хорошо, ни раздражений, даже красноты нет. Я очень довольна.</blockquote><figcaption>Гостья студии</figcaption></figure></div>
   <div class="cnav"><button type="button" data-car="rcar" data-d="-1" aria-label="Назад">‹</button><button type="button" data-car="rcar" data-d="1" aria-label="Вперёд">›</button></div>
   <p style="text-align:center;margin-top:18px"><a class="link" id="revLink" href="https://yandex.ru/maps/" target="_blank" rel="noopener">Отзывы на Яндекс Картах <span>→</span></a></p>
 </section>
@@ -831,7 +829,7 @@ body{background-color:#cdbdad!important;background-image:
 <section id="mastera">
   <p class="k">Команда</p>
   <h2>Мастера студии</h2>
-  <p class="lead">Каждый мастер прошёл проверку качества у Натальи. Не знаете, кого выбрать? Мы подскажем.</p>
+  <p class="lead">Наталья сама обучала мастеров своей команды и проверяла их работу. Если не знаете, к кому записаться, мы подскажем.</p>
   <div class="pick" id="pick">
     <div>
       <p class="k" style="margin-bottom:12px">Выбор мастера</p>
@@ -843,28 +841,28 @@ body{background-color:#cdbdad!important;background-image:
       </div>
     </div>
     <div class="pick-out" id="pickOut" aria-live="polite">
-      <b>Кто вам подойдёт?</b>
-      <p>Нажмите на имя мастера или попросите подобрать. Выбор перенесётся в запись.</p>
+      <b>Выберите мастера</b>
+      <p>Нажмите на имя, и мастер сам подставится в форму записи. Или попросите нас подобрать.</p>
     </div>
   </div>
   <div class="team" id="team" style="margin-top:0">
     <article class="mcard" data-m="natalya" id="mc-natalya">
       <span class="role">Основательница</span><h3>Наталья Марусина</h3>
-      <p>Косметик-эстетист, мастер депиляции и массажист. Чемпионка по депиляции, мастер-преподаватель и судья чемпионатов. В профессии с октября 2019 года.</p>
+      <p>Основательница студии. Косметик-эстетист, мастер депиляции и массажист, чемпионка по депиляции и судья чемпионатов. В профессии с 2019 года.</p>
       <ul><li>Эпиляция</li><li>Шугаринг и ваксинг</li><li>Массаж</li><li>Обучение</li></ul>
       <a class="link" href="#zapis" data-master="К Наталье">Записаться к Наталье <span>→</span></a>
       <button class="other" type="button" data-other>Выбрать другого мастера ↺</button>
     </article>
     <article class="mcard" data-m="viktoriya" id="mc-viktoriya">
       <span class="role">Косметик-эстетист</span><h3>Виктория Сергеева</h3>
-      <p>Дипломированный косметик-эстетист. Каждая программа начинается с диалога: Виктория оценивает кожу и подбирает профессиональный и домашний уход.</p>
+      <p>Дипломированный косметик-эстетист. Начинает каждую процедуру с разговора: оценивает кожу и подбирает уход и в кабинете, и для дома.</p>
       <ul><li>Уход за лицом</li><li>Домашний уход</li></ul>
       <a class="link" href="#zapis" data-master="К Виктории">Записаться к Виктории <span>→</span></a>
       <button class="other" type="button" data-other>Выбрать другого мастера ↺</button>
     </article>
     <article class="mcard" data-m="lyudmila" id="mc-lyudmila">
       <span class="role">Мастер депиляции</span><h3>Людмила Родченкова</h3>
-      <p>В профессии с 2015 года. Обучение в школе SUGASCHOOL (Санкт-Петербург), повышение квалификации по скоростным техникам и работе с воском.</p>
+      <p>Мастер сахарной и восковой депиляции с 2015 года. Училась в петербургской школе SUGASCHOOL, затем освоила скоростные техники и работу с воском.</p>
       <ul><li>Шугаринг</li><li>Ваксинг</li></ul>
       <a class="link" href="#zapis" data-master="К Людмиле">Записаться к Людмиле <span>→</span></a>
       <button class="other" type="button" data-other>Выбрать другого мастера ↺</button>
@@ -876,14 +874,14 @@ body{background-color:#cdbdad!important;background-image:
 <div class="band"><section class="w train" id="obuchenie" style="border:0">
   <div>
     <p class="k">Для специалистов</p>
-    <h2>Хотите войти в&nbsp;профессию или пройти повышение квалификации?</h2>
-    <p class="lead">Наталья — сертифицированный преподаватель-технолог, чемпионка и судья чемпионатов по депиляции. В студии проходят семинары и мастер-классы по депиляции и эстетическому уходу.</p>
+    <h2>Хотите освоить депиляцию или повысить квалификацию?</h2>
+    <p class="lead">Наталья — сертифицированный преподаватель-технолог. Она учит тому, что сама показывает на чемпионатах и оценивает как судья. В студии проходят семинары и мастер-классы по депиляции и уходу за кожей.</p>
     <div class="btns"><a class="btn" href="https://vk.me/nata_shuga_sml" target="_blank" rel="noopener">Записаться на обучение</a></div>
   </div>
   <ul class="tlist">
-    <li><span>Базовое обучение депиляции</span><b>для начинающих</b></li>
-    <li><span>Повышение квалификации</span><b>для практикующих</b></li>
-    <li><span>Подготовка к чемпионатам</span><b>с судьёй и чемпионкой</b></li>
+    <li><span>Базовое обучение депиляции</span><b>для новичков</b></li>
+    <li><span>Повышение квалификации</span><b>для практикующих мастеров</b></li>
+    <li><span>Подготовка к чемпионатам</span><b>от действующего судьи</b></li>
     <li><span>Семинары и мастер-классы по депиляции и уходу</span><b>по договорённости</b></li>
   </ul>
 </section></div>
@@ -892,7 +890,7 @@ body{background-color:#cdbdad!important;background-image:
 <section id="podarit">
   <p class="k">Подарочный сертификат</p>
   <h2>Подарите <em>гладкость</em></h2>
-  <p class="lead">Сертификат на сумму или на процедуру. Соберите его здесь, и мы оформим его к визиту.</p>
+  <p class="lead">Сертификат можно оформить на сумму или на конкретную процедуру. Выберите вариант, впишите имена и отправьте заказ нам во ВКонтакте.</p>
   <div class="cert">
     <div class="card" id="certCard" aria-live="polite">
       <div class="cl">Студия Натальи Марусиной</div>
@@ -900,7 +898,7 @@ body{background-color:#cdbdad!important;background-image:
       <div class="cf"><div>Для<b id="certTo">Вашей близкой</b></div><div style="text-align:right">От<b id="certFrom">С любовью</b></div></div>
     </div>
     <div class="form">
-      <div class="fld">Номинал или ритуал
+      <div class="fld">Сумма или процедура
         <div class="chips" id="certChips">
           <button type="button" aria-pressed="false" data-v="3 000 ₽">3 000 ₽</button>
           <button type="button" aria-pressed="true" data-v="5 000 ₽">5 000 ₽</button>
@@ -921,8 +919,8 @@ body{background-color:#cdbdad!important;background-image:
 <!-- ЗАПИСЬ -->
 <section id="zapis">
   <p class="k">Запись</p>
-  <h2>Записаться онлайн</h2>
-  <p class="lead">Отметьте процедуры: посчитаем сумму и подготовим сообщение. Чат во ВКонтакте откроется сразу.</p>
+  <h2>Онлайн-запись</h2>
+  <p class="lead">Отметьте нужные процедуры: мы посчитаем сумму и составим сообщение. Останется отправить его нам во ВКонтакте.</p>
   <div class="calc" id="calc">
     <div>
       <fieldset><legend>Шугаринг и ваксинг</legend><label class="opt"><input type="checkbox" data-n="Шугаринг Light" data-p="2000"><span class="ck"></span><span class="nm">Light: бикини глубокое, подмышки</span><span class="pr">2 000 ₽</span></label><label class="opt"><input type="checkbox" data-n="Шугаринг Standard" data-p="3000"><span class="ck"></span><span class="nm">Standard: + голени</span><span class="pr">3 000 ₽</span></label><label class="opt"><input type="checkbox" data-n="Шугаринг Medium" data-p="4000"><span class="ck"></span><span class="nm">Medium: + ноги полностью</span><span class="pr">4 000 ₽</span></label><label class="opt"><input type="checkbox" data-n="Шугаринг VIP" data-p="5000"><span class="ck"></span><span class="nm">VIP: + ноги и руки</span><span class="pr">5 000 ₽</span></label></fieldset>
@@ -947,9 +945,9 @@ body{background-color:#cdbdad!important;background-image:
 <!-- КОНТАКТЫ -->
 <section id="kontakty" class="contact2">
   <div>
-    <p class="k">Как добраться</p>
+    <p class="k">Как нас найти</p>
     <h2>Студия эстетики лица и тела Натальи Марусиной</h2>
-    <p class="lead">Смоленск, ул. Тухачевского, 5. Ежедневно с 9:00 до 21:00, по предварительной записи.</p>
+    <p class="lead">Смоленск, ул. Тухачевского, 5. Работаем каждый день с 9:00 до 21:00 по предварительной записи.</p>
     <ul class="clist">
       <li><i>📍</i><a id="mapLink" href="https://yandex.ru/maps/" target="_blank" rel="noopener">Открыть на Яндекс Картах</a></li>
       <li><i>📞</i><span class="sel">+7 (903) 892-74-78</span> <button class="copy" type="button" data-copy="+7 (903) 892-74-78">Скопировать</button></li>
@@ -964,22 +962,22 @@ body{background-color:#cdbdad!important;background-image:
   <p class="k">Вопросы</p>
   <h2>Частые вопросы</h2>
   <div class="qa">
-    <details><summary>Не знаю, какая процедура мне нужна. С чего начать?</summary><p>Напишите задачу или просто «подберите мне». Мастер уточнит пожелания и состояние кожи и предложит процедуру без лишнего.</p></details>
+    <details><summary>Не знаю, какая процедура мне нужна. С чего начать?</summary><p>Напишите нам, что вас беспокоит, или просто «подберите мне процедуру». Мастер задаст пару вопросов и предложит подходящий вариант без лишних услуг.</p></details>
     <details><summary>Больно ли делать шугаринг и эпиляцию?</summary><p>Ощущения зависят от зоны и чувствительности кожи. Скажите мастеру заранее, как вы переносите процедуры: мастер подскажет, как сделать их комфортнее.</p></details>
-    <details><summary>Какая длина волос нужна?</summary><p>Около 5 мм. Перед процедурой — душ, чистое бельё, без кремов и масел.</p></details>
+    <details><summary>Какая длина волос нужна?</summary><p>Около 5 мм. Перед процедурой примите душ и не наносите кремы и масла.</p></details>
     <details><summary>Как часто повторять депиляцию?</summary><p>Обычно раз в 4 недели. Между процедурами не используйте бритву и жёсткие скрабы, ежедневно увлажняйте кожу.</p></details>
     <details><summary>Сколько процедур Кобидо нужно?</summary><p>Для устойчивого результата рекомендуется курс из 10–12 процедур.</p></details>
     <details><summary>Принимаете ли вы мужчин?</summary><p>Да, есть мужской прайс на шугаринг: борода, спина, грудь, бикини. В аппаратной эпиляции для мужских процедур стоимость выше на 20%.</p></details>
     <details><summary>Есть ли противопоказания?</summary><p>Мастер уточнит пожелания и состояние кожи перед процедурой. Если есть вопросы о здоровье, лучше заранее проконсультироваться с врачом.</p></details>
-    <details><summary>Как записаться и можно ли перенести визит?</summary><p>Соберите запись в калькуляторе выше или напишите во ВКонтакте, можно позвонить. Перенести визит можно заранее — просто напишите в студию.</p></details>
+    <details><summary>Как записаться и можно ли перенести визит?</summary><p>Отметьте процедуры в форме записи выше, напишите нам во ВКонтакте или позвоните. Если планы изменились, предупредите заранее, и мы перенесём визит на удобное время.</p></details>
   </div>
 </section>
 
 <!-- ФИНАЛ -->
 <div class="band"><section class="w final" style="border:0">
-  <h2>Запишитесь — и&nbsp;займёмся вашей гладкостью</h2>
-  <p class="lead">Смоленск, ул. Тухачевского, 5. Ответим во ВКонтакте и подберём удобное время.</p>
-  <div class="btns" style="justify-content:center"><a class="btn" href="#zapis">Записаться онлайн →</a><a class="btn ghost" href="https://vk.me/nata_shuga_sml" target="_blank" rel="noopener">Написать во ВК</a></div>
+  <h2>Ждём вас в&nbsp;студии</h2>
+  <p class="lead">Напишите нам во ВКонтакте или позвоните, и мы подберём удобное время и мастера.</p>
+  <div class="btns" style="justify-content:center"><a class="btn" href="#zapis">Записаться</a><a class="btn ghost" href="https://vk.me/nata_shuga_sml" target="_blank" rel="noopener">Написать во ВК</a></div>
 </section></div>
 
 <footer>
@@ -1112,7 +1110,7 @@ body{background-color:#cdbdad!important;background-image:
   team.addEventListener('click',function(e){
     if(e.target.closest('[data-other]')){e.preventDefault();team.classList.remove('chosen');team.querySelectorAll('.mcard').forEach(function(c){c.classList.remove('sel')});
       chips.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-pressed','false')});
-      out.innerHTML='<b>Кто вам подойдёт?</b><p>Выберите другого мастера или попросите подобрать.</p>';out.classList.remove('anim');void out.offsetWidth;out.classList.add('anim');
+      out.innerHTML='<b>Выберите мастера</b><p>Нажмите на другое имя или попросите нас подобрать.</p>';out.classList.remove('anim');void out.offsetWidth;out.classList.add('anim');
       document.getElementById('pick').scrollIntoView({behavior:'smooth',block:'center'});fx(chips);return}
     var c=e.target.closest('.mcard');if(c&&e.target.closest('.crop')){pick(c.getAttribute('data-m'),'card');fx(c.querySelector('.crop'))}
   });
