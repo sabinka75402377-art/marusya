@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 820">
+<style>
+.f{transform-box:fill-box;transform-origin:50% 70%;animation:br 7s ease-in-out infinite}
+.f2{animation-duration:9s;animation-delay:-3s}.f3{animation-duration:8s;animation-delay:-5s}
+.b{transform-box:fill-box;transform-origin:50% 100%;animation:bud 6s ease-in-out infinite}
+.st{transform-box:fill-box;transform-origin:0% 100%;animation:sw 12s ease-in-out infinite}
+.sp{animation:tws 3.2s ease-in-out infinite}.sp2{animation-delay:-1.1s}.sp3{animation-delay:-2.2s}
+@keyframes br{0%,100%{transform:rotate(-3deg) scale(1)}50%{transform:rotate(3.5deg) scale(1.05)}}
+@keyframes bud{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(6deg)}}
+@keyframes sw{0%,100%{transform:rotate(-1.2deg)}50%{transform:rotate(1.4deg)}}
+@keyframes tws{0%,100%{opacity:.15}50%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.f,.b,.st,.sp{animation:none}}
+</style>
+<defs>
+<radialGradient id="pg" cx="50%" cy="60%" r="65%"><stop offset="0" stop-color="#fffaf2" stop-opacity=".98"/><stop offset=".55" stop-color="#f8e2d0" stop-opacity=".85"/><stop offset="1" stop-color="#e6bf88" stop-opacity=".75"/></radialGradient>
+<linearGradient id="gd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e8c982"/><stop offset=".5" stop-color="#b98a3c"/><stop offset="1" stop-color="#e0bd75"/></linearGradient>
+<linearGradient id="lf" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#d8bd88" stop-opacity=".1"/><stop offset="1" stop-color="#c9a35a" stop-opacity=".55"/></linearGradient>
+<g id="fl" stroke="url(#gd)" stroke-width="1.6" fill="url(#pg)" stroke-linejoin="round">
+<ellipse cx="70" cy="140" rx="19" ry="44" transform="rotate(35 70 140)"/>
+<ellipse cx="130" cy="140" rx="19" ry="44" transform="rotate(-35 130 140)"/>
+<ellipse cx="100" cy="42" rx="22" ry="42"/>
+<ellipse cx="58" cy="76" rx="46" ry="36" transform="rotate(-24 58 76)"/>
+<ellipse cx="142" cy="76" rx="46" ry="36" transform="rotate(24 142 76)"/>
+<path d="M100 98 C 84 104 82 128 100 138 C 118 128 116 104 100 98Z" fill="#f3dcae"/>
+<ellipse cx="100" cy="90" rx="9" ry="7" fill="#d9a93f" stroke="none"/>
+<path d="M100 60V92M64 78C80 82 92 88 98 94M136 78C120 82 108 88 102 94" fill="none" stroke-width=".9" opacity=".7"/>
+</g>
+<g id="bd" stroke="url(#gd)" stroke-width="1.4" fill="url(#pg)"><ellipse cx="0" cy="0" rx="13" ry="20"/><path d="M0-18V16" fill="none" stroke-width=".8"/></g>
+</defs>
+<g class="st"><g fill="none" stroke="url(#gd)" stroke-width="2.4" stroke-linecap="round">
+<path d="M-20 830C110 660 250 540 320 330S420 60 560-30"/>
+</g>
+<g fill="url(#lf)" stroke="url(#gd)" stroke-width="1.2">
+<path d="M-10 800C60 700 140 640 250 610C170 660 110 720 -10 800Z"/>
+<path d="M30 830C110 740 200 700 320 700C230 730 150 780 30 830Z"/>
+</g>
+</g>
+<g class="f"><use href="#fl" transform="translate(230 440) rotate(-18) scale(1.05)"/></g>
+<g class="f f2"><use href="#fl" transform="translate(322 250) rotate(14) scale(.9)"/></g>
+<g class="f f3"><use href="#fl" transform="translate(420 82) rotate(-8) scale(.72)"/></g>
+<g class="b"><use href="#bd" transform="translate(372 330) rotate(24)"/></g>
+<g class="b"><use href="#bd" transform="translate(455 168) rotate(18) scale(.8)"/></g>
+<g class="b"><use href="#bd" transform="translate(300 540) rotate(-26) scale(1.1)"/></g>
+<g fill="#f6d98a"><circle class="sp" cx="325" cy="310" r="3"/><circle class="sp sp2" cx="238" cy="505" r="2.6"/><circle class="sp sp3" cx="430" cy="140" r="2.4"/><circle class="sp sp2" cx="180" cy="610" r="2"/></g>
+</svg>
