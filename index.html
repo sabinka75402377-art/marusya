@@ -611,6 +611,16 @@ h2::after{background:var(--accent)!important;height:1px;width:64px}
 .dock a{border-color:var(--line)!important;color:var(--ink)}
 ::selection{background:#d8c7b2}
 footer{color:var(--muted)!important}
+/* фон: матовый бежевый шёлк, неподвижный */
+:root{--bg:#cdbdad;--paper:#efe6dc}
+body{background-color:#cdbdad!important;background-image:
+  radial-gradient(120% 60% at 15% 10%,rgba(232,222,212,.55),transparent 60%),
+  radial-gradient(90% 50% at 90% 85%,rgba(150,128,108,.35),transparent 60%),
+  linear-gradient(118deg,#cbb9a7 0%,#d9ccbf 11%,#ad9784 22%,#cdbcab 31%,#ddd2c7 40%,#b7a28f 51%,#cfbead 60%,#dbcfc3 70%,#a9937f 81%,#cbb8a6 90%,#d5c6b8 100%)!important;
+  background-attachment:fixed!important;background-size:cover!important}
+.top{background:rgba(214,200,186,.96)!important}
+@media (max-width:900px){.top nav{background:#e3d7ca!important}}
+.dock{background:rgba(214,200,186,.97)!important}
 .band{margin-inline:0!important;padding-inline:0!important;box-shadow:0 0 0 100vmax var(--dark)!important;clip-path:inset(0 -100vmax)}
 .link{border-bottom-color:var(--accent)!important;color:var(--ink)!important}
 .mcard .role{color:var(--accent)!important}
