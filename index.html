@@ -782,6 +782,7 @@ h2::after{background:linear-gradient(90deg,#8f6a33,#c9a465)!important;height:2px
   </div>
   <div class="team" id="team" style="margin-top:0">
     <article class="mcard" data-m="natalya" id="mc-natalya">
+      <img class="master-portrait" src="img/master-natalya.webp" width="1254" height="1254" alt="Наталья Марусина" loading="lazy">
       <span class="role">Основательница</span><h3>Наталья Марусина</h3>
       <p>Косметик-эстетист, мастер депиляции и массажист. Проводит процедуры и обучение мастеров.</p>
       <ul><li>Эпиляция</li><li>Шугаринг и ваксинг</li><li>Массаж</li><li>Обучение</li></ul>
@@ -789,6 +790,7 @@ h2::after{background:linear-gradient(90deg,#8f6a33,#c9a465)!important;height:2px
       <button class="other" type="button" data-other>Выбрать другого мастера ↺</button>
     </article>
     <article class="mcard" data-m="viktoriya" id="mc-viktoriya">
+      <img class="master-portrait" src="img/master-viktoriya.webp" width="1254" height="1254" alt="Виктория Сергеева" loading="lazy">
       <span class="role">Косметик-эстетист</span><h3>Виктория Сергеева</h3>
       <p>Дипломированный косметик-эстетист. Специализируется на уходе за лицом и подборе домашнего ухода.</p>
       <ul><li>Уход за лицом</li><li>Домашний уход</li></ul>
@@ -796,6 +798,7 @@ h2::after{background:linear-gradient(90deg,#8f6a33,#c9a465)!important;height:2px
       <button class="other" type="button" data-other>Выбрать другого мастера ↺</button>
     </article>
     <article class="mcard" data-m="lyudmila" id="mc-lyudmila">
+      <img class="master-portrait" src="img/master-lyudmila.webp" width="1254" height="1254" alt="Людмила Родченкова" loading="lazy">
       <span class="role">Мастер депиляции</span><h3>Людмила Родченкова</h3>
       <p>Мастер сахарной и восковой депиляции. Работает с 2015 года, прошла обучение в школе SUGASCHOOL.</p>
       <ul><li>Шугаринг</li><li>Ваксинг</li></ul>
@@ -855,9 +858,9 @@ h2::after{background:linear-gradient(90deg,#8f6a33,#c9a465)!important;height:2px
   <p class="lead">Светлые кабинеты, спокойная обстановка и отдельные пространства для процедур по уходу за лицом и телом.</p>
   <div class="scar" id="scar">
     <figure><img src="img/room-1.jpg" width="1448" height="1086" alt="Кабинет ухода за лицом"><figcaption>Кабинет ухода за лицом</figcaption></figure>
-    <figure><img src="img/trophies.jpg" width="1086" height="1448" alt="Профессиональные награды Натальи"><figcaption>Профессиональные награды Натальи</figcaption></figure>
-    <figure><img src="img/room-2.jpg" width="1086" height="1448" alt="Кабинет массажа и депиляции"><figcaption>Кабинет массажа и депиляции</figcaption></figure>
-    <figure><img src="img/cart.jpg" width="800" height="1067" alt="Профессиональная косметика"><figcaption>Профессиональная косметика</figcaption></figure>
+    <figure><img src="img/studio-awards.webp" width="1086" height="1448" alt="Профессиональные награды Натальи"><figcaption>Профессиональные награды Натальи</figcaption></figure>
+    <figure><img src="img/studio-massage.webp" width="1254" height="1254" alt="Кабинет массажа и депиляции"><figcaption>Кабинет массажа и депиляции</figcaption></figure>
+    <figure><img src="img/studio-cosmetics.webp" width="1254" height="1254" alt="Профессиональная косметика"><figcaption>Профессиональная косметика</figcaption></figure>
     <figure><img src="img/building.jpg" width="1086" height="1448" alt="Вход в студию"><figcaption>Вид со стороны улицы</figcaption></figure>
   </div>
   <div class="cnav"><button type="button" data-car="scar" data-d="-1" aria-label="Назад">‹</button><button type="button" data-car="scar" data-d="1" aria-label="Вперёд">›</button></div>
@@ -1169,5 +1172,8 @@ h1,h2,h1 em,h2 em{
 .top nav a,.logo span{color:#34271e!important}
 section[id]{scroll-margin-top:112px}
 @media(max-width:900px){section[id]{scroll-margin-top:88px}}
+</style>
+<style id="updated-master-portraits">
+.mcard .master-portrait{display:block;width:100%;max-width:330px;height:auto;aspect-ratio:1;object-fit:contain;border-radius:50%;margin:0 auto 16px;flex-shrink:0}
 </style>
 </body></html>
