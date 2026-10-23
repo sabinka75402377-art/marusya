@@ -695,10 +695,26 @@ h2::after{background:linear-gradient(90deg,#8f6a33,#c9a465)!important;height:2px
 /* шёлк на фоне: очень медленное, спокойное движение */
 @keyframes silkcalm{0%{background-position:0% 0%,100% 100%,0% 50%}100%{background-position:6% 4%,94% 96%,60% 50%}}
 @media (prefers-reduced-motion:no-preference){body{background-size:130% 130%,130% 130%,200% 200%!important;animation:silkcalm 45s ease-in-out infinite alternate!important}}
+
+/* ===== премиальный шёлк и золотые заголовки ===== */
+#silk{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;display:block;opacity:0;transition:opacity 1.6s ease}
+#silk.on{opacity:1}
+.top,main,footer,.dock{position:relative;z-index:2}
+.top{position:sticky!important}
+.dock{position:fixed!important}
+/* непрерывный перелив золота на заголовках */
+:root{--gold-flow:linear-gradient(100deg,#5a3d1c 0%,#86602d 18%,#c7a465 32%,#ecd6a4 40%,#c7a465 48%,#86602d 62%,#5a3d1c 80%,#5a3d1c 100%)}
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+  h1,h2{background:var(--gold-flow)!important;background-size:200% 100%!important;background-repeat:repeat!important;-webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important}
+  .band h2{background:linear-gradient(100deg,#d9bd88 0%,#f3e2bd 25%,#fff6dc 40%,#e8cf9c 55%,#d9bd88 80%,#d9bd88 100%)!important;background-size:200% 100%!important;-webkit-background-clip:text!important;background-clip:text!important}
+}
+@keyframes goldflow{from{background-position:0% 0}to{background-position:-200% 0}}
+@media (prefers-reduced-motion:no-preference){h1,h2{animation:goldflow 9s linear infinite!important}}
 </style>
 
 <script>document.documentElement.classList.add('js')</script>
 
+<canvas id="silk" aria-hidden="true"></canvas>
 <header class="top" id="top">
   <div class="w">
     <a class="logo" href="#home" aria-label="На главную"><span>Студия эстетики лица и тела</span><b>Натальи Марусиной</b></a>
@@ -1173,4 +1189,45 @@ h2::after{background:linear-gradient(90deg,#8f6a33,#c9a465)!important;height:2px
 
 </script>
 
+
+<script>
+/* шёлк: мягкие складки бежевой ткани, медленное движение */
+(function(){try{
+  var cv=document.getElementById('silk');if(!cv)return;
+  var calm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var gl=cv.getContext('webgl',{alpha:false,antialias:false,powerPreference:'low-power'});if(!gl)return;
+  var vs='attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
+  var fs=['precision mediump float;uniform vec2 R;uniform float T;',
+  'float H(vec2 u,float t){',
+  ' float a=sin(u.x*1.9+u.y*1.1+sin(u.y*1.3+t*.21)*1.4+t*.13);',
+  ' float b=.55*sin(u.x*1.05-u.y*2.1+t*.17+sin(u.x*1.7-t*.11)*.9);',
+  ' float c=.28*sin((u.x+u.y)*3.4-t*.23);',
+  ' return (a+b+c)/1.83;}',
+  'void main(){vec2 q=gl_FragCoord.xy/R;vec2 u=vec2(q.x*R.x/R.y,q.y)*1.6;u=mat2(.86,-.5,.5,.86)*u;',
+  ' float h=H(u,T);float e=.01;float hx=(H(u+vec2(e,0.),T)-h)/e;float hy=(H(u+vec2(0.,e),T)-h)/e;',
+  ' vec3 n=normalize(vec3(-hx*.32,-hy*.32,1.));',
+  ' float dif=dot(n,normalize(vec3(-.45,.55,.9)));',
+  ' float spec=pow(max(dot(reflect(normalize(vec3(.3,-.4,-1.)),n),vec3(0.,0.,1.)),0.),22.);',
+  ' vec3 sh=vec3(.60,.52,.45),mid=vec3(.79,.72,.65),hi=vec3(.90,.85,.80);',
+  ' float l=.5+.5*h;vec3 c=mix(sh,mid,smoothstep(.0,.6,l));c=mix(c,hi,smoothstep(.6,1.,l));',
+  ' c*=.82+.25*dif;c+=vec3(1.,.96,.9)*spec*.22;',
+  ' c*=1.-.10*pow(distance(q,vec2(.5)),2.);',
+  ' gl_FragColor=vec4(c,1.);}'].join('\n');
+  function sh(ty,s){var o=gl.createShader(ty);gl.shaderSource(o,s);gl.compileShader(o);return o}
+  var pr=gl.createProgram();gl.attachShader(pr,sh(gl.VERTEX_SHADER,vs));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,fs));gl.linkProgram(pr);
+  if(!gl.getProgramParameter(pr,gl.LINK_STATUS))return;
+  gl.useProgram(pr);var b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
+  var lp=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(lp);gl.vertexAttribPointer(lp,2,gl.FLOAT,false,0,0);
+  var uR=gl.getUniformLocation(pr,'R'),uT=gl.getUniformLocation(pr,'T');
+  var lite=false;try{lite=(navigator.hardwareConcurrency||8)<=4}catch(e){}
+  var sc=lite?.4:.55;
+  function size(){cv.width=Math.max(2,Math.round(innerWidth*sc));cv.height=Math.max(2,Math.round(innerHeight*sc));gl.viewport(0,0,cv.width,cv.height)}
+  size();addEventListener('resize',size);
+  var t0=performance.now(),last=0,run=true;
+  function draw(now){gl.uniform2f(uR,cv.width,cv.height);gl.uniform1f(uT,calm?12.:12.+(now-t0)/1000*.55);gl.drawArrays(gl.TRIANGLE_STRIP,0,4)}
+  function fr(now){if(!run)return;if(now-last>40){last=now;draw(now)}requestAnimationFrame(fr)}
+  draw(performance.now());cv.classList.add('on');
+  if(!calm){requestAnimationFrame(fr);document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(fr)})}
+}catch(e){}})();
+</script>
 </body></html>
