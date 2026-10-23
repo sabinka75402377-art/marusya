@@ -1147,4 +1147,27 @@ h2::after{background:linear-gradient(90deg,#8f6a33,#c9a465)!important;height:2px
   if(!calm){requestAnimationFrame(fr);document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(fr)})}
 }catch(e){}})();
 </script>
+<style id="navigation-layer-fix">
+/* Keep navigation above page content, including photographs and headings. */
+#top{z-index:100!important;background:#d6c8ba!important}
+#top::before{background:#d6c8ba!important}
+@media(max-width:900px){
+  #top nav{top:100%;z-index:101;background:#e3d7ca!important;max-height:calc(100dvh - 160px);overflow-y:auto;overscroll-behavior:contain}
+  #top nav a{position:relative;display:block;background:#e3d7ca!important}
+}
+</style>
+<style id="readability-fix">
+:root{--ink:#241b15;--muted:#3f3026}
+h1,h2,h1 em,h2 em{
+  background:none!important;
+  -webkit-text-fill-color:currentColor!important;
+  color:#50351f!important;
+  animation:none!important;
+  font-weight:400;
+}
+.band h2,.band h2 em{color:#f4e8d4!important}
+.top nav a,.logo span{color:#34271e!important}
+section[id]{scroll-margin-top:112px}
+@media(max-width:900px){section[id]{scroll-margin-top:88px}}
+</style>
 </body></html>
