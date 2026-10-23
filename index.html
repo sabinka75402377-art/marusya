@@ -675,6 +675,15 @@ h2::after{background:linear-gradient(90deg,#8f6a33,#c9a465)!important;height:2px
 .logo{background:none!important;-webkit-text-fill-color:initial!important;animation:none!important}
 .logo span{color:var(--muted)!important;-webkit-text-fill-color:var(--muted)!important;background:none!important}
 .pains div::before{content:"✓"!important}
+
+/* золотой перелив на заголовках и меню */
+:root{--gold-text:linear-gradient(100deg,#5a3d1c 0%,#8a6530 30%,#c9a465 45%,#f0d9a6 50%,#c9a465 55%,#8a6530 70%,#5a3d1c 100%)}
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+  h1,h2,.logo b,.top nav a{background:var(--gold-text)!important;background-size:300% 100%!important;-webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important}
+}
+@keyframes goldsheen{0%{background-position:100% 0}100%{background-position:0% 0}}
+@media (prefers-reduced-motion:no-preference){h1,h2,.logo b{animation:goldsheen 7s ease-in-out infinite alternate!important}.top nav a{animation:goldsheen 9s ease-in-out infinite alternate!important}}
+.about .lead+.lead{margin-top:-6px}
 </style>
 
 <script>document.documentElement.classList.add('js')</script>
@@ -703,7 +712,7 @@ h2::after{background:linear-gradient(90deg,#8f6a33,#c9a465)!important;height:2px
   <div class="txt">
     <p class="k">Смоленск · ул. Тухачевского, 5</p>
     <h1>Шугаринг, уход за&nbsp;лицом и&nbsp;массаж <em>в&nbsp;Смоленске</em></h1>
-    <p class="lead hero-lead">Меня зовут Наталья Марусина. Я мастер депиляции и косметик-эстетист, побеждала на профильных чемпионатах, а сегодня сама сужу их. В своей студии я собрала всё, что люблю в профессии: бережную депиляцию, уход за лицом, массаж и внимание к каждой гостье.</p>
+    <p class="lead hero-lead">Студия Натальи Марусиной — победительницы и судьи профильных чемпионатов по депиляции. Шугаринг и воск, аппаратная эпиляция, эстетический уход за лицом и массаж с вниманием к комфорту каждой клиентки.</p>
     <div class="btns"><a class="btn" href="#zapis">Записаться →</a><a class="btn ghost" href="#uslugi">Услуги и цены ↓</a></div>
     <p class="trust">В профессии с 2019 года · Каждый день с 9:00 до 21:00</p>
   </div>
@@ -725,7 +734,8 @@ h2::after{background:linear-gradient(90deg,#8f6a33,#c9a465)!important;height:2px
   <div>
     <p class="k">О мастере</p>
     <h2>Наталья Марусина</h2>
-    <p class="lead">Я косметик-эстетист, мастер депиляции и массажист. Начинала в 2019 году здесь, в Смоленске, а в 2020-м прошла повышение квалификации в Москве и впервые вышла на чемпионат по депиляции. С тех пор я побеждала на соревнованиях, а сегодня сама сужу их. Этот опыт я вложила в свою студию и передаю мастерам на обучении.</p>
+    <p class="lead">Косметик-эстетист, мастер депиляции и массажист с 2019 года. Повышала квалификацию в Москве, неоднократно побеждала на профильных чемпионатах по депиляции, а сегодня входит в число их судей.</p>
+    <p class="lead">Как сертифицированный преподаватель-технолог Наталья обучает мастеров депиляции. В своей студии она объединила профессиональные стандарты, современные техники и внимательный сервис.</p>
     <div class="fcards">
       <div><i>🏆</i>Чемпионка по депиляции</div>
       <div><i>⚖️</i>Судья профильных чемпионатов</div>
@@ -753,13 +763,13 @@ h2::after{background:linear-gradient(90deg,#8f6a33,#c9a465)!important;height:2px
 
 <!-- УЗНАЁШЬ СЕБЯ -->
 <section id="uznaesh">
-  <p class="k">Почему выбирают нас</p>
-  <h2>За что гостьи возвращаются</h2>
+  <p class="k">Преимущества</p>
+  <h2>Почему клиенты выбирают нас</h2>
   <div class="pains">
     <div><b>Гладкость надолго.</b> Повторять депиляцию достаточно примерно раз в месяц.</div>
     <div><b>Бережно к коже.</b> Работаем профессиональными средствами, которые подходят даже чувствительной коже.</div>
-    <div><b>Опыт судьи чемпионатов.</b> Наталья лично обучала мастеров студии и следит за качеством их работы.</div>
-    <div><b>Спокойная атмосфера.</b> Уютные кабинеты и мастера, с которыми легко договориться обо всём.</div>
+    <div><b>Опыт судьи чемпионатов.</b> Наталья лично обучила мастеров студии и контролирует качество их работы.</div>
+    <div><b>Комфорт и уют.</b> Спокойная атмосфера, уютные кабинеты и внимательные мастера.</div>
   </div>
   <p class="pains-out">Не знаете, с чего начать? Напишите нам, и мы подберём процедуру под ваши задачи.</p>
 </section>
@@ -850,8 +860,8 @@ h2::after{background:linear-gradient(90deg,#8f6a33,#c9a465)!important;height:2px
 
 <!-- ОТЗЫВЫ -->
 <section id="otzyvy">
-  <div class="rhead"><p class="k">Отзывы</p><h2>Отзывы гостей</h2><p class="lead">Это сообщения, которые гостьи присылают Наталье после процедур.</p></div>
-  <div class="rcar" id="rcar"><figure class="rc"><blockquote>Наташенька, сегодня 6-й день после шугаринга, я в полном восторге! Всё как вы и говорили. А ведь мне есть с чем сравнить!</blockquote><figcaption>Гостья студии · шугаринг</figcaption></figure><figure class="rc"><blockquote>Всё прошло хорошо, раздражения не было, и совсем не больно. Теперь только к вам, спасибо большое!</blockquote><figcaption>Екатерина · депиляция</figcaption></figure><figure class="rc"><blockquote>У меня всё замечательно! Ни покраснений, ничего. И сам процесс был максимально комфортен.</blockquote><figcaption>Гостья студии · депиляция</figcaption></figure><figure class="rc"><blockquote>Огромное спасибо Наталье за прекрасно проделанную процедуру! Результатом очень довольна. Отличный мастер и позитивный человек. Всем рекомендую!</blockquote><figcaption>Гостья студии</figcaption></figure><figure class="rc"><blockquote>Приятная уютная обстановка, которая сразу располагает. И очень важный момент — общение!</blockquote><figcaption>Гостья студии · атмосфера</figcaption></figure><figure class="rc"><blockquote>После шугаринга всё шикарно, очень довольна.</blockquote><figcaption>Гостья студии · шугаринг</figcaption></figure><figure class="rc"><blockquote>Всё хорошо, ни раздражений, даже красноты нет. Я очень довольна.</blockquote><figcaption>Гостья студии</figcaption></figure></div>
+  <div class="rhead"><p class="k">Отзывы</p><h2>Отзывы клиентов</h2><p class="lead">Сообщения, которые клиенты присылают Наталье после процедур.</p></div>
+  <div class="rcar" id="rcar"><figure class="rc"><blockquote>Наташенька, сегодня 6-й день после шугаринга, я в полном восторге! Всё как вы и говорили. А ведь мне есть с чем сравнить!</blockquote><figcaption>Отзыв о шугаринге</figcaption></figure><figure class="rc"><blockquote>Всё прошло хорошо, раздражения не было, и совсем не больно. Теперь только к вам, спасибо большое!</blockquote><figcaption>Екатерина · депиляция</figcaption></figure><figure class="rc"><blockquote>У меня всё замечательно! Ни покраснений, ничего. И сам процесс был максимально комфортен.</blockquote><figcaption>Отзыв о депиляции</figcaption></figure><figure class="rc"><blockquote>Огромное спасибо Наталье за прекрасно проделанную процедуру! Результатом очень довольна. Отличный мастер и позитивный человек. Всем рекомендую!</blockquote><figcaption>Отзыв клиентки</figcaption></figure><figure class="rc"><blockquote>Приятная уютная обстановка, которая сразу располагает. И очень важный момент — общение!</blockquote><figcaption>Отзыв о студии</figcaption></figure><figure class="rc"><blockquote>После шугаринга всё шикарно, очень довольна.</blockquote><figcaption>Отзыв о шугаринге</figcaption></figure><figure class="rc"><blockquote>Всё хорошо, ни раздражений, даже красноты нет. Я очень довольна.</blockquote><figcaption>Отзыв клиентки</figcaption></figure></div>
   <div class="cnav"><button type="button" data-car="rcar" data-d="-1" aria-label="Назад">‹</button><button type="button" data-car="rcar" data-d="1" aria-label="Вперёд">›</button></div>
   <p style="text-align:center;margin-top:18px"><a class="link" id="revLink" href="https://yandex.ru/maps/" target="_blank" rel="noopener">Отзывы на Яндекс Картах <span>→</span></a></p>
 </section>
@@ -1006,7 +1016,7 @@ h2::after{background:linear-gradient(90deg,#8f6a33,#c9a465)!important;height:2px
 
 <!-- ФИНАЛ -->
 <div class="band"><section class="w final" style="border:0">
-  <h2>Ждём вас в&nbsp;студии</h2>
+  <h2>Ждём вас в&nbsp;студии «Маруся»</h2>
   <p class="lead">Напишите нам или позвоните, и мы подберём удобное время и мастера.</p>
   <div class="btns" style="justify-content:center"><a class="btn" href="#zapis">Записаться</a><a class="btn ghost" href="https://vk.me/nata_shuga_sml" target="_blank" rel="noopener">Написать нам</a></div>
 </section></div>
