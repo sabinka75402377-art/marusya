@@ -4,7 +4,7 @@
 <title>Студия эстетики лица и тела Натальи Марусиной — шугаринг, эпиляция, уход за лицом, массаж в Смоленске</title>
 <meta name="description" content="Студия эстетики лица и тела Натальи Марусиной, чемпионки по депиляции и судьи чемпионатов. Шугаринг, аппаратная эпиляция, Кобидо, уход за лицом, массаж. Смоленск, ул. Тухачевского, 5. Ежедневно 9:00–21:00.">
 <meta property="og:title" content="Студия эстетики лица и тела Натальи Марусиной, Смоленск">
-<meta property="og:description" content="Гладкость по стандарту чемпионки. Шугаринг, эпиляция, уход за лицом, массаж.">
+<meta property="og:description" content="Шугаринг, аппаратная эпиляция, уход за лицом и массаж в Смоленске. Студия Натальи Марусиной, чемпионки и судьи чемпионатов по депиляции.">
 <meta property="og:image" content="img/hero.jpg">
 <meta property="og:type" content="website">
 <style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
@@ -545,10 +545,8 @@ footer{color:#4a3824}
 
 /* ===== МАТОВАЯ БЕЖЕВАЯ ТЕМА (без золота, шёлка и анимаций) ===== */
 :root{--bg:#e9dfd1;--paper:#f4ede3;--ink:#2b2119;--muted:#5d4e40;--line:#d3c4b2;--accent:#7a5c45;--accent-ink:#f7f1e9;--dark:#3a2d23;--dark-ink:#f3eadf;--dark-muted:#cdbfae}
-*,*::before,*::after{animation:none!important;transition:none!important}
 html{scroll-behavior:smooth}
 body{background:var(--bg)!important;background-image:none!important;color:var(--ink)}
-h1,h2,h3,.logo,.packs .pr,.facts b,.course em,.tot b,.card .ca,.dir .pr,h1 em,h2 em{background:none!important;-webkit-text-fill-color:currentColor!important;color:var(--ink)!important;filter:none!important}
 h1 em,h2 em{color:var(--accent)!important;font-style:italic}
 h2::after{background:var(--accent)!important;height:1px;width:64px}
 .k{color:var(--accent)!important}
@@ -645,6 +643,38 @@ body{background-color:#cdbdad!important;background-image:
 
 .hero h1{font-size:clamp(36px,4.6vw,64px)!important;line-height:1.08}
 .hero-lead{max-width:52ch;margin:0 0 28px;color:var(--ink)!important;font-size:17px}
+
+/* ===== финальная полировка: фото, лёгкая анимация, золотые заголовки ===== */
+.about figure img,.about .photo{display:block;width:100%;height:auto!important;aspect-ratio:3/2;object-fit:cover;object-position:60% 35%;border-radius:8px}
+@media (min-width:861px){.about{align-items:center}}
+/* фон: шёлк очень медленно «дышит» */
+@keyframes silkdrift{0%{background-position:0% 0%,100% 100%,0% 50%}50%{background-position:8% 6%,92% 94%,100% 50%}100%{background-position:0% 0%,100% 100%,0% 50%}}
+@media (prefers-reduced-motion:no-preference){body{background-size:140% 140%,140% 140%,220% 220%!important;animation:silkdrift 38s ease-in-out infinite}}
+/* золотой градиент */
+:root{--gold-text:linear-gradient(100deg,#5a3d1c 0%,#8f6a33 25%,#b88f4f 45%,#7d5a2a 65%,#5a3d1c 100%)}
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+  h1,h2,.logo b,.top nav a{background:var(--gold-text)!important;background-size:220% 100%!important;-webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important;color:#6e4e25!important}
+  h1 em,h2 em{background:inherit!important;-webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important}
+  .band h2,.band h3{background:linear-gradient(100deg,#e9d3a6,#f7e7c4 40%,#d9b97f 70%,#f0dcb3)!important;-webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important}
+}
+@keyframes goldshift{0%,100%{background-position:0% 0}50%{background-position:100% 0}}
+@media (prefers-reduced-motion:no-preference){h1,h2{animation:goldshift 14s ease-in-out infinite}}
+h2::after{background:linear-gradient(90deg,#8f6a33,#c9a465)!important;height:2px!important}
+.top nav a{border-bottom:2px solid transparent!important;transition:border-color .3s}
+.top nav a:hover,.top nav a[aria-current="page"]{border-color:#b88f4f!important}
+/* кнопки слегка отзываются */
+.btn,.topchips a,.cnav button,.chips button,.ptabs button,.dock a,.cookie button{transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s,background-color .3s,filter .3s!important}
+@media (hover:hover){
+  .btn:hover{transform:translateY(-2px)!important;box-shadow:0 12px 24px -12px rgba(70,45,20,.55)!important;filter:brightness(1.06)}
+  .btn.ghost:hover{background:rgba(255,250,242,.45)!important}
+  .topchips a:hover,.cnav button:hover,.chips button:hover,.ptabs button:hover{transform:translateY(-2px);box-shadow:0 10px 20px -12px rgba(70,45,20,.5)!important}
+}
+.btn:active{transform:translateY(0) scale(.98)!important}
+.pains div b{display:block;margin-bottom:4px;font-weight:600}
+
+.logo{background:none!important;-webkit-text-fill-color:initial!important;animation:none!important}
+.logo span{color:var(--muted)!important;-webkit-text-fill-color:var(--muted)!important;background:none!important}
+.pains div::before{content:"✓"!important}
 </style>
 
 <script>document.documentElement.classList.add('js')</script>
@@ -672,10 +702,10 @@ body{background-color:#cdbdad!important;background-image:
 <section class="hero" id="home">
   <div class="txt">
     <p class="k">Смоленск · ул. Тухачевского, 5</p>
-    <h1>Шугаринг, уход за&nbsp;лицом и&nbsp;массаж <em>у&nbsp;чемпионки по&nbsp;депиляции</em></h1>
-    <p class="lead hero-lead">Меня зовут Наталья Марусина. Я чемпионка по депиляции и судья профильных чемпионатов, а с 2019 года помогаю женщинам в Смоленске забыть о бритве и уставшей коже. В студии вас ждут шугаринг и воск, аппаратная эпиляция, уход за лицом и массаж.</p>
+    <h1>Шугаринг, уход за&nbsp;лицом и&nbsp;массаж <em>в&nbsp;Смоленске</em></h1>
+    <p class="lead hero-lead">Меня зовут Наталья Марусина. Я мастер депиляции и косметик-эстетист, побеждала на профильных чемпионатах, а сегодня сама сужу их. В своей студии я собрала всё, что люблю в профессии: бережную депиляцию, уход за лицом, массаж и внимание к каждой гостье.</p>
     <div class="btns"><a class="btn" href="#zapis">Записаться →</a><a class="btn ghost" href="#uslugi">Услуги и цены ↓</a></div>
-    <p class="trust">В профессии с 2019 года · Каждый день с 9:00 до 21:00 · Запись во ВКонтакте и по телефону</p>
+    <p class="trust">В профессии с 2019 года · Каждый день с 9:00 до 21:00</p>
   </div>
   <figure><img src="img/hero-m.jpg" width="900" height="1097" alt="Наталья Марусина"><figcaption>Наталья Марусина, основательница</figcaption></figure>
 </section>
@@ -695,7 +725,7 @@ body{background-color:#cdbdad!important;background-image:
   <div>
     <p class="k">О мастере</p>
     <h2>Наталья Марусина</h2>
-    <p class="lead">Я косметик-эстетист, мастер депиляции и массажист. Начинала в 2019 году здесь, в Смоленске, а в 2020-м прошла повышение квалификации в Москве и впервые вышла на чемпионат по депиляции. С тех пор я побеждала на соревнованиях, а теперь сама сужу их. Этот опыт я вложила в свою студию и передаю мастерам на обучении.</p>
+    <p class="lead">Я косметик-эстетист, мастер депиляции и массажист. Начинала в 2019 году здесь, в Смоленске, а в 2020-м прошла повышение квалификации в Москве и впервые вышла на чемпионат по депиляции. С тех пор я побеждала на соревнованиях, а сегодня сама сужу их. Этот опыт я вложила в свою студию и передаю мастерам на обучении.</p>
     <div class="fcards">
       <div><i>🏆</i>Чемпионка по депиляции</div>
       <div><i>⚖️</i>Судья профильных чемпионатов</div>
@@ -723,14 +753,15 @@ body{background-color:#cdbdad!important;background-image:
 
 <!-- УЗНАЁШЬ СЕБЯ -->
 <section id="uznaesh">
-  <h2>Знакомо?</h2>
+  <p class="k">Почему выбирают нас</p>
+  <h2>За что гостьи возвращаются</h2>
   <div class="pains">
-    <div>Бреете ноги утром, а к вечеру кожа снова колется</div>
-    <div>После бритвы остаются раздражение, красные точки и вросшие волосы</div>
-    <div>Хочется попробовать шугаринг, но страшно, что будет больно</div>
-    <div>Кожа лица выглядит уставшей, а овал уже не такой чёткий</div>
+    <div><b>Гладкость надолго.</b> Повторять депиляцию достаточно примерно раз в месяц.</div>
+    <div><b>Бережно к коже.</b> Работаем профессиональными средствами, которые подходят даже чувствительной коже.</div>
+    <div><b>Опыт судьи чемпионатов.</b> Наталья лично обучала мастеров студии и следит за качеством их работы.</div>
+    <div><b>Спокойная атмосфера.</b> Уютные кабинеты и мастера, с которыми легко договориться обо всём.</div>
   </div>
-  <p class="pains-out">С этим мы работаем каждый день. Расскажите, что вас беспокоит, и мастер подберёт процедуру под вашу кожу.</p>
+  <p class="pains-out">Не знаете, с чего начать? Напишите нам, и мы подберём процедуру под ваши задачи.</p>
 </section>
 
 <!-- ПОДХОД -->
@@ -757,7 +788,7 @@ body{background-color:#cdbdad!important;background-image:
         <ul>
           <li><b>Перед процедурой:</b> душ, чистое бельё, длина волос около 5 мм. Без кремов и масел, свободная хлопковая одежда.</li>
           <li><b>Первые 24 часа:</b> без спорта, бани и солярия.</li>
-          <li><b>Между процедурами:</b> без бритвы и жёстких скрабов, ежедневное увлажнение. Мягкие скрабы и энзимы раз в неделю.</li>
+          <li><b>Между процедурами:</b> увлажняйте кожу каждый день, а раз в неделю используйте мягкий скраб или энзимный пилинг.</li>
           <li><b>Повтор:</b> обычно раз в 4 недели.</li>
         </ul>
       </details>
@@ -875,7 +906,7 @@ body{background-color:#cdbdad!important;background-image:
   <div>
     <p class="k">Для специалистов</p>
     <h2>Хотите освоить депиляцию или повысить квалификацию?</h2>
-    <p class="lead">Наталья — сертифицированный преподаватель-технолог. Она учит тому, что сама показывает на чемпионатах и оценивает как судья. В студии проходят семинары и мастер-классы по депиляции и уходу за кожей.</p>
+    <p class="lead">Наталья — сертифицированный преподаватель-технолог, чемпионка и судья чемпионатов по депиляции. Она передаёт ученицам техники, которые применяет сама, и помогает подготовиться к первым соревнованиям.</p>
     <div class="btns"><a class="btn" href="https://vk.me/nata_shuga_sml" target="_blank" rel="noopener">Записаться на обучение</a></div>
   </div>
   <ul class="tlist">
@@ -888,9 +919,9 @@ body{background-color:#cdbdad!important;background-image:
 
 <!-- ПОДАРОК -->
 <section id="podarit">
-  <p class="k">Подарочный сертификат</p>
-  <h2>Подарите <em>гладкость</em></h2>
-  <p class="lead">Сертификат можно оформить на сумму или на конкретную процедуру. Выберите вариант, впишите имена и отправьте заказ нам во ВКонтакте.</p>
+  <p class="k">Подарок</p>
+  <h2>Подарочные <em>сертификаты</em></h2>
+  <p class="lead">Красивый подарок для мамы, подруги или коллеги. Сертификат можно оформить на любую сумму или на конкретную процедуру.</p>
   <div class="cert">
     <div class="card" id="certCard" aria-live="polite">
       <div class="cl">Студия Натальи Марусиной</div>
@@ -909,9 +940,9 @@ body{background-color:#cdbdad!important;background-image:
       </div>
       <label class="fld">Кому<input id="certToIn" type="text" maxlength="28" placeholder="Например, Анне"></label>
       <label class="fld">От кого<input id="certFromIn" type="text" maxlength="28" placeholder="Например, от Сергея"></label>
-      <div class="btns"><a class="btn" id="certGo" href="https://vk.me/nata_shuga_sml" target="_blank" rel="noopener">Заказать во ВК</a></div>
+      <div class="btns"><a class="btn" id="certGo" href="https://vk.me/nata_shuga_sml" target="_blank" rel="noopener">Заказать сертификат</a></div>
       <p class="stat" style="font-size:12.5px">Оформляя заказ, вы соглашаетесь с <a href="offer.html">публичной офертой</a> и <a href="policy.html">политикой конфиденциальности</a>.</p>
-      <p class="stat" id="certStat" role="status">Нажмите, и текст заказа скопируется. Вставьте его в открывшийся чат.</p>
+      <p class="stat" id="certStat" role="status">Мы скопируем текст заказа и откроем чат с нами. Останется вставить и отправить.</p>
     </div>
   </div>
 </section>
@@ -920,7 +951,7 @@ body{background-color:#cdbdad!important;background-image:
 <section id="zapis">
   <p class="k">Запись</p>
   <h2>Онлайн-запись</h2>
-  <p class="lead">Отметьте нужные процедуры: мы посчитаем сумму и составим сообщение. Останется отправить его нам во ВКонтакте.</p>
+  <p class="lead">Отметьте процедуры, выберите мастера и удобное время. Мы посчитаем стоимость и подготовим заявку, а вам останется её отправить.</p>
   <div class="calc" id="calc">
     <div>
       <fieldset><legend>Шугаринг и ваксинг</legend><label class="opt"><input type="checkbox" data-n="Шугаринг Light" data-p="2000"><span class="ck"></span><span class="nm">Light: бикини глубокое, подмышки</span><span class="pr">2 000 ₽</span></label><label class="opt"><input type="checkbox" data-n="Шугаринг Standard" data-p="3000"><span class="ck"></span><span class="nm">Standard: + голени</span><span class="pr">3 000 ₽</span></label><label class="opt"><input type="checkbox" data-n="Шугаринг Medium" data-p="4000"><span class="ck"></span><span class="nm">Medium: + ноги полностью</span><span class="pr">4 000 ₽</span></label><label class="opt"><input type="checkbox" data-n="Шугаринг VIP" data-p="5000"><span class="ck"></span><span class="nm">VIP: + ноги и руки</span><span class="pr">5 000 ₽</span></label></fieldset>
@@ -934,10 +965,10 @@ body{background-color:#cdbdad!important;background-image:
       <label class="fld">Удобные день и время<input id="calcWhen" type="text" placeholder="Например, суббота после 15:00"></label>
       <label class="fld">Ваше имя<input id="calcName" type="text" placeholder="Как к вам обращаться"></label>
       <label class="fld">Сообщение<textarea id="calcMsg" rows="7"></textarea></label>
-      <a class="btn" id="calcGo" href="https://vk.me/nata_shuga_sml" target="_blank" rel="noopener" style="justify-content:center">Отправить во ВК</a>
-      <p class="stat" id="calcStat" role="status">Текст скопируется, а чат откроется сразу. Останется вставить и отправить.</p>
+      <a class="btn" id="calcGo" href="https://vk.me/nata_shuga_sml" target="_blank" rel="noopener" style="justify-content:center">Отправить заявку</a>
+      <p class="stat" id="calcStat" role="status">Мы скопируем текст заявки и откроем чат с нами ВКонтакте. Останется вставить сообщение и отправить.</p>
       <p class="stat" style="font-size:13px">Сумма по прайсу, итог подтверждает мастер.</p>
-      <p class="stat" style="font-size:12.5px">Отправляя сообщение, вы соглашаетесь с <a href="policy.html">политикой конфиденциальности</a> и даёте <a href="consent.html">согласие на обработку данных</a>.</p>
+      <p class="stat" style="font-size:12.5px">Отправляя заявку, вы соглашаетесь с <a href="policy.html">политикой конфиденциальности</a> и даёте <a href="consent.html">согласие на обработку данных</a>.</p>
     </aside>
   </div>
 </section>
@@ -951,7 +982,7 @@ body{background-color:#cdbdad!important;background-image:
     <ul class="clist">
       <li><i>📍</i><a id="mapLink" href="https://yandex.ru/maps/" target="_blank" rel="noopener">Открыть на Яндекс Картах</a></li>
       <li><i>📞</i><span class="sel">+7 (903) 892-74-78</span> <button class="copy" type="button" data-copy="+7 (903) 892-74-78">Скопировать</button></li>
-      <li><i>💬</i><a href="https://vk.ru/nata_shuga_sml" target="_blank" rel="noopener">vk.ru/nata_shuga_sml</a></li>
+      <li><i>💬</i><a href="https://vk.ru/nata_shuga_sml" target="_blank" rel="noopener">Сообщество студии ВКонтакте</a></li>
     </ul>
   </div>
   <div class="map"><iframe id="ymap" title="Студия на карте" loading="lazy" src="https://yandex.ru/map-widget/v1/?mode=search&amp;text=%D0%A1%D0%BC%D0%BE%D0%BB%D0%B5%D0%BD%D1%81%D0%BA%2C%20%D1%83%D0%BB.%20%D0%A2%D1%83%D1%85%D0%B0%D1%87%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%2C%205&amp;z=16"></iframe></div>
@@ -962,22 +993,22 @@ body{background-color:#cdbdad!important;background-image:
   <p class="k">Вопросы</p>
   <h2>Частые вопросы</h2>
   <div class="qa">
-    <details><summary>Не знаю, какая процедура мне нужна. С чего начать?</summary><p>Напишите нам, что вас беспокоит, или просто «подберите мне процедуру». Мастер задаст пару вопросов и предложит подходящий вариант без лишних услуг.</p></details>
+    <details><summary>Не знаю, какая процедура мне нужна. С чего начать?</summary><p>Напишите нам, чего хотите добиться, или просто попросите подобрать процедуру. Мастер задаст пару вопросов и предложит подходящий вариант без лишних услуг.</p></details>
     <details><summary>Больно ли делать шугаринг и эпиляцию?</summary><p>Ощущения зависят от зоны и чувствительности кожи. Скажите мастеру заранее, как вы переносите процедуры: мастер подскажет, как сделать их комфортнее.</p></details>
-    <details><summary>Какая длина волос нужна?</summary><p>Около 5 мм. Перед процедурой примите душ и не наносите кремы и масла.</p></details>
-    <details><summary>Как часто повторять депиляцию?</summary><p>Обычно раз в 4 недели. Между процедурами не используйте бритву и жёсткие скрабы, ежедневно увлажняйте кожу.</p></details>
+    <details><summary>Какая длина волос нужна?</summary><p>Около 5 мм. В день процедуры примите душ и не наносите на кожу кремы и масла.</p></details>
+    <details><summary>Как часто повторять депиляцию?</summary><p>Обычно раз в четыре недели. Чтобы результат держался дольше, увлажняйте кожу каждый день и раз в неделю делайте мягкий пилинг.</p></details>
     <details><summary>Сколько процедур Кобидо нужно?</summary><p>Для устойчивого результата рекомендуется курс из 10–12 процедур.</p></details>
     <details><summary>Принимаете ли вы мужчин?</summary><p>Да, есть мужской прайс на шугаринг: борода, спина, грудь, бикини. В аппаратной эпиляции для мужских процедур стоимость выше на 20%.</p></details>
     <details><summary>Есть ли противопоказания?</summary><p>Мастер уточнит пожелания и состояние кожи перед процедурой. Если есть вопросы о здоровье, лучше заранее проконсультироваться с врачом.</p></details>
-    <details><summary>Как записаться и можно ли перенести визит?</summary><p>Отметьте процедуры в форме записи выше, напишите нам во ВКонтакте или позвоните. Если планы изменились, предупредите заранее, и мы перенесём визит на удобное время.</p></details>
+    <details><summary>Как записаться и можно ли перенести визит?</summary><p>Выберите процедуры в форме записи, напишите нам ВКонтакте или позвоните. Если планы изменятся, предупредите заранее, и мы перенесём визит на удобное время.</p></details>
   </div>
 </section>
 
 <!-- ФИНАЛ -->
 <div class="band"><section class="w final" style="border:0">
   <h2>Ждём вас в&nbsp;студии</h2>
-  <p class="lead">Напишите нам во ВКонтакте или позвоните, и мы подберём удобное время и мастера.</p>
-  <div class="btns" style="justify-content:center"><a class="btn" href="#zapis">Записаться</a><a class="btn ghost" href="https://vk.me/nata_shuga_sml" target="_blank" rel="noopener">Написать во ВК</a></div>
+  <p class="lead">Напишите нам или позвоните, и мы подберём удобное время и мастера.</p>
+  <div class="btns" style="justify-content:center"><a class="btn" href="#zapis">Записаться</a><a class="btn ghost" href="https://vk.me/nata_shuga_sml" target="_blank" rel="noopener">Написать нам</a></div>
 </section></div>
 
 <footer>
@@ -989,7 +1020,7 @@ body{background-color:#cdbdad!important;background-image:
 
 <div class="cookie" id="cookie" hidden><p>Мы используем файлы cookie, чтобы сайт и карта работали корректно. Оставаясь на сайте, вы соглашаетесь с обработкой данных согласно <a href="policy.html">Политике конфиденциальности</a>.</p><div><button type="button" data-ck="min">Только необходимые</button><button type="button" data-ck="all">Принять все</button></div></div>
 <script>(function(){try{var c=document.getElementById('cookie'),k='marusyaCookie',v=null;try{v=localStorage.getItem(k)}catch(e){}if(!v)c.hidden=false;c.addEventListener('click',function(e){var b=e.target.closest('[data-ck]');if(!b)return;try{localStorage.setItem(k,b.getAttribute('data-ck'))}catch(x){}c.hidden=true})}catch(e){}})();</script>
-<nav class="dock" aria-label="Быстрая связь"><a href="#zapis">Записаться</a><a href="https://vk.me/nata_shuga_sml" target="_blank" rel="noopener">ВК</a><a href="tel:+79038927478">Звонок</a></nav>
+<nav class="dock" aria-label="Быстрая связь"><a href="#zapis">Записаться</a><a href="https://vk.me/nata_shuga_sml" target="_blank" rel="noopener">Написать</a><a href="tel:+79038927478">Позвонить</a></nav>
 
 <script>
 (function(){try{
@@ -1068,7 +1099,7 @@ body{background-color:#cdbdad!important;background-image:
     t+=nm.value.trim()?'Меня зовут '+nm.value.trim()+'.':'';
     msg.value=t}
   box.addEventListener('input',build);box.addEventListener('change',build);build();
-  document.getElementById('calcGo').addEventListener('click',function(){copyText(msg.value,function(){st.textContent='Текст скопирован. Вставьте его в открывшийся чат и отправьте.'},function(){msg.focus();msg.select();st.textContent='Текст выделен: скопируйте его и вставьте в чат.'})});
+  document.getElementById('calcGo').addEventListener('click',function(){copyText(msg.value,function(){st.textContent='Текст заявки скопирован. Вставьте его в чат и отправьте нам.'},function(){msg.focus();msg.select();st.textContent='Текст выделен: скопируйте его и вставьте в чат.'})});
   document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-master]');if(a){mas.value=a.getAttribute('data-master');build()}});
 
   /* сертификат */
