@@ -873,9 +873,9 @@ h2::after{background:linear-gradient(90deg,#8f6a33,#c9a465)!important;height:2px
   <p class="lead">Подарочный сертификат можно оформить на выбранную сумму или конкретную процедуру. При оформлении мы поможем уточнить детали и расскажем об условиях использования.</p>
   <div class="cert">
     <div class="card" id="certCard" aria-live="polite">
-      <div class="cl">Студия эстетики лица и тела Натальи Марусиной</div>
+      <div class="ch"><div class="cl">Студия Натальи Марусиной</div><div class="ct">Подарочный сертификат</div></div>
       <div class="ca" id="certAmt">5 000 ₽</div>
-      <div class="cf"><div>Для<b id="certTo">Вашей близкой</b></div><div>От<b id="certFrom">С любовью</b></div></div>
+      <div class="cf" id="certCf" hidden><div id="certToBox" hidden>Для<b id="certTo"></b></div><div id="certFromBox" hidden>От<b id="certFrom"></b></div></div>
     </div>
     <div class="form">
       <div class="fld">Сумма или процедура
@@ -1064,7 +1064,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 var chips=$('#certChips'),amt='5 000 ₽',toIn=$('#certToIn'),frIn=$('#certFromIn'),cm=$('#certMsg'),cst=$('#certStat'),ccc=$('#certConsent'),cgo=$('#certGo');
 var certDefault=cst.innerHTML;
 function card(){var a=$('#certAmt');a.textContent=amt;a.classList.toggle('long',!/₽/.test(amt));
-  $('#certTo').textContent=toIn.value.trim()||'Вашей близкой';$('#certFrom').textContent=frIn.value.trim()||'С любовью';
+  var tv=toIn.value.trim(),fv=frIn.value.trim();$('#certTo').textContent=tv;$('#certFrom').textContent=fv;$('#certToBox').hidden=!tv;$('#certFromBox').hidden=!fv;$('#certCf').hidden=!(tv||fv);
   cm.value='Здравствуйте! Хочу заказать подарочный сертификат студии Натальи Марусиной: '+amt+'.'+(toIn.value.trim()?' Для: '+toIn.value.trim()+'.':'')+(frIn.value.trim()?' От: '+frIn.value.trim()+'.':'')+(ccc.checked?'\nСогласие на обработку персональных данных для заказа сертификата дано на сайте (отметка поставлена).':'')}
 chips.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;$$('button',chips).forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});amt=b.getAttribute('data-v');card()});
 toIn.addEventListener('input',card);frIn.addEventListener('input',card);
@@ -1224,16 +1224,21 @@ h1 em,h2 em{color:var(--ink)!important;font-style:italic}
 /* сертификат: тёмный макет, золотая сумма, без обрезания */
 .cert>*,.form{min-width:0}
 .cert{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);align-items:start}
-.card{aspect-ratio:auto!important;display:grid;gap:18px;min-height:250px;padding:clamp(22px,4vw,38px)!important;border-radius:22px;background:linear-gradient(140deg,#2a221b,#14100c)!important;color:var(--on-dark);overflow:hidden;align-content:space-between;box-sizing:border-box}
-.card::before{inset:10px;border:1px solid rgba(220,188,119,.35)!important;border-radius:14px}
+.card{aspect-ratio:1.6/1!important;display:grid;gap:18px;padding:clamp(22px,4vw,38px)!important;border-radius:6px;background:radial-gradient(120% 90% at 88% 0%,rgba(222,184,104,.24),transparent 62%),linear-gradient(140deg,#2c241b,#15110c)!important;color:var(--on-dark);overflow:hidden;overflow:clip;align-content:space-between;box-sizing:border-box;box-shadow:0 40px 70px -40px rgba(0,0,0,.6)}
+.card::before{inset:10px;border:1px solid rgba(220,188,119,.45)!important;border-radius:2px}
 .card::after{display:none}
 .card .cl{font:500 12px/1.4 var(--f-b);letter-spacing:.2em;text-transform:uppercase;color:#e8d6b0!important;overflow-wrap:anywhere}
-.card .ca{font:500 clamp(40px,7vw,64px)/1.05 var(--f-d)!important;color:var(--gold)!important;-webkit-text-fill-color:var(--gold)!important;background:none!important;overflow-wrap:anywhere;word-break:break-word;min-width:0;font-variant-numeric:lining-nums}
+.card .ca{font:300 clamp(40px,7vw,72px)/1.05 var(--f-d)!important;color:#e6c67e!important;background:linear-gradient(100deg,#d4a94e 0%,#f4e2b0 38%,#dcb764 62%,#f1dc9e 100%)!important;-webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important;overflow-wrap:anywhere;word-break:break-word;min-width:0;font-variant-numeric:lining-nums}
 .card .ca.long{font-size:clamp(28px,4.8vw,42px)!important;line-height:1.15}
 .card .cf{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;font-size:13px;color:#d8c9ae!important;position:relative;z-index:1;letter-spacing:.1em}
 .card .cf b{display:block;margin-top:2px;font:500 20px/1.25 var(--f-d)!important;color:var(--on-dark)!important;overflow-wrap:anywhere;word-break:break-word;letter-spacing:0}
 .card .cf>div{min-width:0}
 .card .cf>div:last-child{text-align:right}
+.card .cf[hidden],.card .cf>[hidden]{display:none!important}
+.card .ch{min-width:0;display:grid;gap:6px}
+.card .ct{font:italic 400 clamp(22px,3vw,30px)/1.15 var(--f-d);color:#f1dfae;overflow-wrap:anywhere}
+.card:has(#certCf[hidden]){grid-template-rows:auto 1fr}
+.card:has(#certCf[hidden]) .ca{align-self:center}
 .form .chips{margin-top:8px;display:flex;flex-wrap:wrap;gap:8px}
 .chips button{max-width:100%;white-space:normal;text-align:left}
 /* согласия */
@@ -1254,6 +1259,25 @@ section[id]{scroll-margin-top:112px}
 @media(max-width:900px){section[id]{scroll-margin-top:88px}}
 @media (max-width:860px){.cert,.train,.contact2{grid-template-columns:minmax(0,1fr)!important}}
 .train>*,.contact2>*,.cert>*{min-width:0}
+/* ===== лёгкая золотая анимация в блоке «Обучение» ===== */
+.band:has(>#obuchenie){position:relative;overflow:visible;clip-path:inset(0 -100vw)}
+.band:has(>#obuchenie)>#obuchenie{position:relative;z-index:1}
+.band:has(>#obuchenie)::before{content:"";position:absolute;top:0;bottom:0;left:50%;width:140vw;margin-left:-70vw;pointer-events:none;z-index:0;
+  background:radial-gradient(ellipse 24% 36% at 30% 38%,rgba(214,172,92,.16),transparent),radial-gradient(ellipse 22% 34% at 72% 66%,rgba(232,194,118,.12),transparent)}
+#obuchenie .tlist{position:relative;overflow:hidden}
+#obuchenie .tlist::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 42%,rgba(232,196,120,.10) 50%,transparent 58%);transform:translateX(-70%)}
+html,body{overflow-x:clip}
+.band:has(>#uslugi){position:relative;overflow:visible;clip-path:inset(0 -100vw)}
+.band:has(>#uslugi)>#uslugi{position:relative;z-index:1}
+.band:has(>#uslugi)::before{content:"";position:absolute;top:-8%;bottom:-8%;left:50%;width:140vw;margin-left:-70vw;pointer-events:none;z-index:0;
+  background:radial-gradient(ellipse 30% 14% at 78% 12%,rgba(214,172,92,.15),transparent),radial-gradient(ellipse 26% 12% at 18% 42%,rgba(232,194,118,.11),transparent),radial-gradient(ellipse 30% 14% at 82% 72%,rgba(214,172,92,.13),transparent),radial-gradient(ellipse 26% 12% at 22% 94%,rgba(232,194,118,.10),transparent)}
+@keyframes goldDrift{0%{transform:translate3d(-6%,-5%,0)}100%{transform:translate3d(6%,5%,0)}}
+@keyframes goldSweep{0%,40%{transform:translateX(-70%)}100%{transform:translateX(70%)}}
+@media (prefers-reduced-motion:no-preference){
+  .band:has(>#obuchenie)::before{animation:goldDrift 16s ease-in-out infinite alternate}
+  .band:has(>#uslugi)::before{animation:goldDrift 20s ease-in-out infinite alternate}
+  #obuchenie .tlist::after{animation:goldSweep 9s ease-in-out infinite}
+}
 /* ===== адаптация первого экрана и нижней панели ===== */
 .hero{align-items:center}
 .hero .txt{padding-bottom:0}
