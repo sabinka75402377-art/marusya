@@ -1263,19 +1263,23 @@ section[id]{scroll-margin-top:112px}
 .band:has(>#obuchenie){position:relative;overflow:visible;clip-path:inset(0 -100vw)}
 .band:has(>#obuchenie)>#obuchenie{position:relative;z-index:1}
 .band:has(>#obuchenie)::before{content:"";position:absolute;top:0;bottom:0;left:50%;width:140vw;margin-left:-70vw;pointer-events:none;z-index:0;
-  background:radial-gradient(ellipse 24% 36% at 30% 38%,rgba(214,172,92,.16),transparent),radial-gradient(ellipse 22% 34% at 72% 66%,rgba(232,194,118,.12),transparent)}
+  background:radial-gradient(ellipse 24% 36% at 30% 38%,rgba(224,182,96,.32),transparent),radial-gradient(ellipse 22% 34% at 72% 66%,rgba(236,198,122,.26),transparent)}
 #obuchenie .tlist{position:relative;overflow:hidden}
 #obuchenie .tlist::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 42%,rgba(232,196,120,.10) 50%,transparent 58%);transform:translateX(-70%)}
 html,body{overflow-x:clip}
 .band:has(>#uslugi){position:relative;overflow:visible;clip-path:inset(0 -100vw)}
 .band:has(>#uslugi)>#uslugi{position:relative;z-index:1}
 .band:has(>#uslugi)::before{content:"";position:absolute;top:-8%;bottom:-8%;left:50%;width:140vw;margin-left:-70vw;pointer-events:none;z-index:0;
-  background:radial-gradient(ellipse 30% 14% at 78% 12%,rgba(214,172,92,.15),transparent),radial-gradient(ellipse 26% 12% at 18% 42%,rgba(232,194,118,.11),transparent),radial-gradient(ellipse 30% 14% at 82% 72%,rgba(214,172,92,.13),transparent),radial-gradient(ellipse 26% 12% at 22% 94%,rgba(232,194,118,.10),transparent)}
+  background:radial-gradient(ellipse 28% 13% at 72% 10%,rgba(224,182,96,.34),transparent),radial-gradient(ellipse 26% 12% at 24% 36%,rgba(236,198,122,.26),transparent),radial-gradient(ellipse 28% 13% at 78% 64%,rgba(224,182,96,.30),transparent),radial-gradient(ellipse 26% 12% at 26% 90%,rgba(236,198,122,.24),transparent)}
+.band:has(>#uslugi)::after,.band:has(>#obuchenie)::after{content:"";position:absolute;top:0;bottom:0;left:50%;width:140vw;margin-left:-70vw;pointer-events:none;z-index:0;
+  background:linear-gradient(105deg,transparent 40%,rgba(238,200,124,.13) 50%,transparent 60%);transform:translateX(-45%)}
 @keyframes goldDrift{0%{transform:translate3d(-6%,-5%,0)}100%{transform:translate3d(6%,5%,0)}}
+@keyframes goldBand{0%,15%{transform:translateX(-45%)}100%{transform:translateX(45%)}}
 @keyframes goldSweep{0%,40%{transform:translateX(-70%)}100%{transform:translateX(70%)}}
 @media (prefers-reduced-motion:no-preference){
-  .band:has(>#obuchenie)::before{animation:goldDrift 16s ease-in-out infinite alternate}
-  .band:has(>#uslugi)::before{animation:goldDrift 20s ease-in-out infinite alternate}
+  .band:has(>#obuchenie)::before{animation:goldDrift 12s ease-in-out infinite alternate}
+  .band:has(>#uslugi)::before{animation:goldDrift 12s ease-in-out infinite alternate}
+  .band:has(>#uslugi)::after,.band:has(>#obuchenie)::after{animation:goldBand 11s ease-in-out infinite}
   #obuchenie .tlist::after{animation:goldSweep 9s ease-in-out infinite}
 }
 /* ===== адаптация первого экрана и нижней панели ===== */
