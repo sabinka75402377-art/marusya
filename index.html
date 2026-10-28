@@ -1136,7 +1136,7 @@ cgo.addEventListener('click',function(e){
   ' vec3 n=normalize(vec3(-hx*.32,-hy*.32,1.));',
   ' float dif=dot(n,normalize(vec3(-.45,.55,.9)));',
   ' float spec=pow(max(dot(reflect(normalize(vec3(.3,-.4,-1.)),n),vec3(0.,0.,1.)),0.),22.);',
-  ' vec3 sh=vec3(.69,.61,.54),mid=vec3(.85,.79,.72),hi=vec3(.94,.90,.85);',
+  ' vec3 sh=vec3(.78,.71,.64),mid=vec3(.90,.85,.79),hi=vec3(.965,.935,.895);',
   ' float l=.5+.5*h;vec3 c=mix(sh,mid,smoothstep(.0,.6,l));c=mix(c,hi,smoothstep(.6,1.,l));',
   ' c*=.82+.25*dif;c+=vec3(1.,.96,.9)*spec*.22;',
   ' c*=1.-.10*pow(distance(q,vec2(.5)),2.);',
@@ -1170,13 +1170,13 @@ cgo.addEventListener('click',function(e){
 <style id="final-pass">
 /* ===== итоговый слой: чёрные заголовки без перелива, светлее фон, новые блоки ===== */
 :root{--ink:#15110d;--muted:#2b221a;--bg:#d9ccbe;--paper:#f3ebe1;--on-dark:#f4e8d4;--gold:#e6c67e}
-body{background-color:#d9ccbe!important;background-image:
-  radial-gradient(120% 60% at 15% 10%,rgba(240,232,223,.6),transparent 60%),
-  radial-gradient(90% 50% at 90% 85%,rgba(170,148,128,.28),transparent 60%),
-  linear-gradient(118deg,#d6c6b5 0%,#e2d7cb 11%,#c2af9c 22%,#d6c7b8 31%,#e6dcd2 40%,#c9b7a5 51%,#d8c9ba 60%,#e4dacf 70%,#bfab98 81%,#d4c3b2 90%,#dcd0c3 100%)!important}
-.top{background:rgba(222,210,197,.97)!important}
-.dock{background:rgba(222,210,197,.98)!important}
-@media (max-width:900px){.top nav{background:#e9dfd3!important}}
+body{background-color:#e3d8cb!important;background-image:
+  radial-gradient(120% 60% at 15% 10%,rgba(246,240,233,.65),transparent 60%),
+  radial-gradient(90% 50% at 90% 85%,rgba(185,166,148,.24),transparent 60%),
+  linear-gradient(118deg,#e0d3c5 0%,#eae1d6 11%,#cebdac 22%,#e0d3c5 31%,#eee6dd 40%,#d6c6b5 51%,#e2d6c8 60%,#ece3d9 70%,#cbb9a7 81%,#dfd1c2 90%,#e5dbcf 100%)!important}
+.top{background:rgba(232,222,210,.97)!important}
+.dock{background:rgba(232,222,210,.98)!important}
+@media (max-width:900px){.top nav{background:#f0e8de!important}}
 h1,h2,h3{color:var(--ink)}
 h1 em,h2 em{color:var(--ink)!important;font-style:italic}
 .band h2 em{color:var(--on-dark)!important}
@@ -1270,7 +1270,7 @@ section[id]{scroll-margin-top:112px}
   .hero figure{aspect-ratio:1/1.04!important;max-height:400px}
   .hero figure img{object-position:58% 50%!important}
 }
-.dock{background:#e0d4c6!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+.dock{background:#e8ddd0!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
 @media (max-width:760px){
   body{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
   footer{padding-bottom:24px!important}
