@@ -1347,7 +1347,8 @@ html,body{overflow-x:clip}
 }
 @media (prefers-reduced-motion:reduce){.band .price,.band .price td{transition:none}.band .price:hover,.band .price:active{transform:none}}
 /* крупнее пункты верхнего меню */
-.top nav a,.top .btn{white-space:nowrap}
+@media (min-width:901px){.top nav a,.top .btn{white-space:nowrap}}
+@media (max-width:900px){#top nav{overflow-x:hidden}#top nav a{white-space:normal;overflow-wrap:anywhere;hyphens:auto}}
 .top .btn{flex:0 0 auto}
 @media (min-width:901px){.top nav a{font-size:12.5px!important;font-weight:600;letter-spacing:.02em!important;color:var(--ink)!important}.top nav{gap:6px 14px}.top .logo{flex:0 0 200px}}
 @media (min-width:1181px){.top nav a{font-size:13px!important}.top nav{gap:6px 16px}}
@@ -1407,6 +1408,9 @@ html,body{overflow-x:clip}
 #obuchenie .tlist{background:rgba(24,17,11,.55)!important;border-color:rgba(236,220,180,.45)!important}
 #obuchenie .tlist li{color:#faf3e6!important;border-bottom-color:rgba(236,220,180,.28)!important}
 #obuchenie .tlist b{color:#ecdcb4!important;font-weight:500}
+/* узкие экраны: нижняя панель не выходит за край */
+@media (max-width:760px){.dock{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1.1fr)}.dock a{min-width:0}}
+@media (max-width:359px){.dock{gap:6px;padding-inline:max(8px,env(safe-area-inset-left,0px))}.dock a{font-size:11px;letter-spacing:.05em;padding-inline:2px}}
 /* ===== адаптация первого экрана и нижней панели ===== */
 .hero{align-items:center}
 .hero .txt{padding-bottom:0}
