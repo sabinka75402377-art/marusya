@@ -159,9 +159,8 @@ section+section{border-top:1px solid var(--line)}
 .sign{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:28px}
 
 /* мастера */
-.team{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px 28px;margin-top:44px}
-@media (max-width:860px){.team{grid-template-columns:1fr 1fr}}
-@media (max-width:520px){.team{grid-template-columns:1fr}}
+.team{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 32px;margin:44px auto 0;max-width:1040px}
+@media (max-width:640px){.team{grid-template-columns:1fr;max-width:460px}}
 .mcard{min-width:0;display:flex;flex-direction:column;gap:12px}
 .crop{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--line);cursor:pointer}
 .crop img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:50% 4%;transform:scale(1.07);transform-origin:50% 10%;transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
@@ -789,7 +788,7 @@ h2::after{background:linear-gradient(90deg,#8f6a33,#c9a465)!important;height:2px
 <section id="mastera">
   <p class="k">Команда</p>
   <h2>Мастера студии</h2>
-  <p class="lead">В нашей команде три мастера, и у каждого своё направление. Выбор мастера зависит от конкретной процедуры и личных предпочтений. Если сомневаетесь, мы поможем выбрать.</p>
+  <p class="lead">В нашей команде у каждого мастера своё направление. Выбор мастера зависит от конкретной процедуры и личных предпочтений. Если сомневаетесь, мы поможем выбрать.</p>
   <div class="pick" id="pick">
     <div>
       <p class="k" style="margin-bottom:12px">Выбор мастера</p>
@@ -797,6 +796,7 @@ h2::after{background:linear-gradient(90deg,#8f6a33,#c9a465)!important;height:2px
         <button type="button" aria-pressed="false" data-m="natalya">Наталья</button>
         <button type="button" aria-pressed="false" data-m="viktoriya">Виктория</button>
         <button type="button" aria-pressed="false" data-m="lyudmila">Людмила</button>
+        <button type="button" aria-pressed="false" data-m="evgeniy">Евгений</button>
         <button type="button" aria-pressed="false" data-m="any">Помогите выбрать</button>
       </div>
     </div>
@@ -828,6 +828,15 @@ h2::after{background:linear-gradient(90deg,#8f6a33,#c9a465)!important;height:2px
       <p>Мастер сахарной и восковой депиляции. Работает с 2015 года, прошла обучение в школе SUGASCHOOL.</p>
       <ul><li>Шугаринг</li><li>Ваксинг</li></ul>
       <a class="link" href="#zapis" data-master="К Людмиле">Записаться к Людмиле <span>→</span></a>
+      <button class="other" type="button" data-other>Выбрать другого мастера ↺</button>
+    </article>
+    <article class="mcard" data-m="evgeniy" id="mc-evgeniy">
+      <img class="master-portrait" src="img/master-evgeniy.webp" width="1254" height="1254" alt="Евгений, массажист" loading="lazy">
+      <span class="role">Массажист</span><h3>Евгений</h3>
+      <p>Евгений — массажист с опытом в спорте и любовью к активному образу жизни. Прошёл обучение массажу в Смоленске и уже год работает в профессии.</p>
+      <p>Если вы хотите записаться к Евгению, напишите нам — мы поможем выбрать процедуру и удобное время.</p>
+      <ul><li>Массаж тела</li></ul>
+      <a class="link" href="#zapis" data-master="К Евгению">Записаться к Евгению <span>→</span></a>
       <button class="other" type="button" data-other>Выбрать другого мастера ↺</button>
     </article>
   </div>
@@ -971,7 +980,7 @@ h2::after{background:linear-gradient(90deg,#8f6a33,#c9a465)!important;height:2px
     </div>
     <aside class="sum">
       <div class="tot"><span>Предварительная стоимость</span><b id="calcTot">0 ₽</b></div>
-      <label class="fld">Мастер<select id="calcMaster"><option value="">Помогите выбрать мастера</option><option>К Наталье</option><option>К Виктории</option><option>К Людмиле</option><option>Любой свободный мастер</option></select></label>
+      <label class="fld">Мастер<select id="calcMaster"><option value="">Помогите выбрать мастера</option><option>К Наталье</option><option>К Виктории</option><option>К Людмиле</option><option>К Евгению</option><option>Любой свободный мастер</option></select></label>
       <label class="fld">Желаемые день и время<input id="calcWhen" type="text" autocomplete="off" placeholder="Например, суббота после 15:00"></label>
       <label class="fld">Ваше имя<input id="calcName" type="text" autocomplete="off" placeholder="Как к вам обращаться"></label>
       <label class="fld">Текст заявки<textarea id="calcMsg" rows="7"></textarea></label>
@@ -1125,7 +1134,8 @@ cgo.addEventListener('click',function(e){
 (function(){try{
   var M={natalya:{n:'Наталья Марусина',to:'К Наталье',k:'Наталье',t:'Косметик-эстетист, мастер депиляции и массажист.'},
          viktoriya:{n:'Виктория Сергеева',to:'К Виктории',k:'Виктории',t:'Косметик-эстетист. Уход за лицом и подбор домашнего ухода.'},
-         lyudmila:{n:'Людмила Родченкова',to:'К Людмиле',k:'Людмиле',t:'Мастер шугаринга и ваксинга, в профессии с 2015 года.'}};
+         lyudmila:{n:'Людмила Родченкова',to:'К Людмиле',k:'Людмиле',t:'Мастер шугаринга и ваксинга, в профессии с 2015 года.'},
+         evgeniy:{n:'Евгений',to:'К Евгению',k:'Евгению',t:'Массажист. Массаж тела.'}};
   var chips=document.getElementById('pickChips'),out=document.getElementById('pickOut'),team=document.getElementById('team');
   if(!chips)return;
   function setCalc(v){var s=document.getElementById('calcMaster');if(!s)return;s.value=v;s.dispatchEvent(new Event('change',{bubbles:true}))}
@@ -1135,7 +1145,7 @@ cgo.addEventListener('click',function(e){
     team.querySelectorAll('.mcard').forEach(function(c){c.classList.toggle('sel',c.getAttribute('data-m')===m)});
     team.classList.toggle('chosen',m!=='any'&&!!m);
     if(m==='any'){
-      out.innerHTML='<b>Помощь с выбором мастера</b><ul class="hint"><li>Шугаринг и ваксинг: Наталья или Людмила</li><li>Аппаратная эпиляция и массаж: Наталья</li><li>Уход за лицом и Кобидо: Виктория</li></ul><a class="btn" href="#zapis">Записаться к свободному мастеру</a>';
+      out.innerHTML='<b>Помощь с выбором мастера</b><ul class="hint"><li>Шугаринг и ваксинг: Наталья или Людмила</li><li>Аппаратная эпиляция и массаж: Наталья</li><li>Массаж тела: Наталья или Евгений</li><li>Уход за лицом и Кобидо: Виктория</li></ul><a class="btn" href="#zapis">Записаться к свободному мастеру</a>';
       setCalc('Любой свободный мастер');
     }else{var d=M[m];
       out.innerHTML='<b>'+d.n+'</b><p>'+d.t+'</p><a class="btn" href="#zapis">Записаться к '+d.k+'</a>';
@@ -1436,6 +1446,8 @@ html,body{overflow-x:clip}
 
 <style id="updated-master-portraits">
 .mcard .master-portrait{display:block;width:100%;max-width:330px;height:auto;aspect-ratio:1;object-fit:contain;border-radius:50%;margin:0 auto 16px;flex-shrink:0}
+.mcard>ul{margin-bottom:auto}
+.mcard>p+p{margin-top:-2px}
 </style>
 <style id="arched-studio-gallery">
 #studiya{isolation:isolate}
